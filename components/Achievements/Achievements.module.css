@@ -2,62 +2,177 @@
   background: var(--clr-ivory);
 }
 
-.list {
-  max-width: 900px;
-  margin-inline: auto;
+.intro {
+  max-width: 60ch;
+  margin: 1.5rem auto 0;
+  color: var(--clr-text-mid);
+  font-size: 1rem;
+  line-height: 1.8;
+  text-align: center;
 }
 
-.item {
+/* Groups */
+.groups {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  padding-block: 1.5rem;
-  border-bottom: 1px solid var(--clr-cream);
+  flex-direction: column;
+  gap: 4rem;
 }
-.item:last-child {
+
+.group {
+  background: #fff;
+  border: 1px solid var(--clr-cream);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 2.5rem;
+  background: var(--clr-navy);
+  position: relative;
+  overflow: hidden;
+}
+.groupHeader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.groupIcon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
+}
+
+.groupTitle {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  flex-grow: 1;
+  letter-spacing: 0.01em;
+}
+
+.groupCount {
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.7;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Award Cards */
+.groupItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.awardCard {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+  padding: 1.75rem 2.5rem;
+  border-bottom: 1px solid var(--clr-cream);
+  position: relative;
+  transition: background var(--transition);
+  overflow: hidden;
+}
+.awardCard:last-child {
   border-bottom: none;
 }
-
-.yearCol {
-  flex-shrink: 0;
-  width: 140px;
-  padding-top: 0.25rem;
+.awardCard:hover {
+  background: var(--clr-ivory);
 }
 
-.year {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--clr-gold);
+/* The gold hover accent bar */
+.awardAccent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--clr-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s var(--ease-out-expo);
+}
+.awardCard:hover .awardAccent {
+  transform: scaleY(1);
 }
 
-.contentCol {
-  flex-grow: 1;
-}
-
-.title {
+.awardIndex {
   font-family: var(--ff-display);
-  font-size: 1.25rem;
-  font-weight: 500;
-  color: var(--clr-navy);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.35;
+  line-height: 1;
+  padding-top: 0.35rem;
+  transition: opacity var(--transition);
+  letter-spacing: -0.03em;
+}
+.awardCard:hover .awardIndex {
+  opacity: 0.7;
+}
+
+.awardBody {
+  padding-left: 0.5rem;
+}
+
+.awardMeta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
   margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.awardYear {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  white-space: nowrap;
+}
+
+.awardOrg {
+  font-size: 0.8rem;
+  color: var(--clr-text-soft);
+  letter-spacing: 0.02em;
+  border-left: 1px solid var(--clr-cream);
+  padding-left: 1.25rem;
   line-height: 1.4;
 }
 
-.org {
-  font-size: 0.95rem;
+.awardTitle {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+
+.awardDetail {
+  font-size: 0.9rem;
   color: var(--clr-text-mid);
   line-height: 1.6;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
-  .item {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-block: 1.5rem;
-  }
-  .yearCol {
-    width: auto;
-    padding-top: 0;
-  }
+  .groupHeader { padding: 1.5rem; }
+  .awardCard { grid-template-columns: 52px 1fr; padding: 1.5rem; }
+  .awardIndex { font-size: 2rem; }
+  .groupTitle { font-size: 1.25rem; }
+  .awardOrg { border-left: none; padding-left: 0; }
+  .awardMeta { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
 }
