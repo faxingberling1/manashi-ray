@@ -1,0 +1,201 @@
+/* ============================================================
+   MANASHI RAY — GLOBAL CSS
+   Design: Elegant Academic / Author Portfolio
+   Palette: Ivory · Deep Navy · Warm Gold · Blush
+   ============================================================ */
+
+/* ===== DESIGN TOKENS ===== */
+:root {
+  --clr-ivory:        #faf8f4;
+  --clr-ivory-mid:    #f2ede6;
+  --clr-cream:        #ede8df;
+  --clr-navy:         #1a2540;
+  --clr-navy-deep:    #111827;
+  --clr-navy-mid:     #253252;
+  --clr-gold:         #c9a84c;
+  --clr-gold-light:   #e2c97e;
+  --clr-gold-pale:    #f5edd8;
+  --clr-blush:        #e8d5d0;
+  --clr-text:         #2c2c2c;
+  --clr-text-mid:     #5a5a5a;
+  --clr-text-soft:    #888;
+
+  --ff-display:   var(--font-cormorant), Georgia, serif;
+  --ff-heading:   var(--font-playfair), Georgia, serif;
+  --ff-body:      var(--font-inter), -apple-system, sans-serif;
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.4, 0, 0.2, 1);
+  --transition:    0.35s var(--ease-in-out);
+
+  --shadow-sm:  0 2px 8px rgba(26,37,64,.07);
+  --shadow-md:  0 8px 32px rgba(26,37,64,.12);
+  --shadow-lg:  0 24px 64px rgba(26,37,64,.18);
+  --shadow-xl:  0 40px 100px rgba(26,37,64,.25);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--ff-body);
+  background-color: var(--clr-ivory);
+  color: var(--clr-text);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-decoration: none; }
+button { border: none; background: none; cursor: pointer; font-family: inherit; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--clr-ivory); }
+::-webkit-scrollbar-thumb { background: var(--clr-gold); border-radius: 3px; }
+
+/* ===== CONTAINER ===== */
+.container {
+  width: min(1180px, 100%);
+  margin-inline: auto;
+  padding-inline: clamp(1.25rem, 5vw, 4rem);
+}
+
+/* ===== SECTION COMMON ===== */
+.section { padding-block: clamp(5rem, 10vw, 9rem); }
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.sectionLabel {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: .75rem;
+}
+.sectionLabelGold { color: var(--clr-gold-light); }
+
+.sectionTitle {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 500;
+  color: var(--clr-navy);
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+}
+.sectionTitleLight { color: #fff; }
+
+.sectionRule {
+  width: 56px;
+  height: 2px;
+  background: var(--clr-gold);
+  margin-inline: auto;
+}
+.sectionRuleGold { background: var(--clr-gold-light); }
+
+/* ===== BUTTONS ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .85rem 2.2rem;
+  border-radius: 2px;
+  font-family: var(--ff-body);
+  font-size: .875rem;
+  font-weight: 500;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  transition: all var(--transition);
+  cursor: pointer;
+  white-space: nowrap;
+  border: none;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background: var(--clr-navy);
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+.btnPrimary:hover {
+  background: var(--clr-navy-mid);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btnGhost {
+  color: var(--clr-navy);
+  border: 1.5px solid var(--clr-navy);
+  background: transparent;
+}
+.btnGhost:hover {
+  background: var(--clr-navy);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btnGhostLight {
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,.5);
+  background: transparent;
+}
+.btnGhostLight:hover {
+  background: rgba(255,255,255,.1);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+.btnGold {
+  background: var(--clr-gold);
+  color: var(--clr-navy-deep);
+  font-weight: 600;
+  border: none;
+}
+.btnGold:hover {
+  background: var(--clr-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,168,76,.35);
+}
+
+.btnFull { width: 100%; justify-content: center; }
+
+/* ===== ANIMATION HELPERS ===== */
+.animateInit {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity .7s var(--ease-out-expo), transform .7s var(--ease-out-expo);
+}
+.animateVisible {
+  opacity: 1;
+  transform: none;
+}
+.delay100 { transition-delay: .1s; }
+.delay150 { transition-delay: .15s; }
+.delay200 { transition-delay: .2s; }
+.delay300 { transition-delay: .3s; }
+.delay400 { transition-delay: .4s; }
+
+/* ===== KEYFRAMES ===== */
+@keyframes slowRotate {
+  to { transform: rotate(360deg); }
+}
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: .4; transform: scaleY(.7); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: none; }
+}

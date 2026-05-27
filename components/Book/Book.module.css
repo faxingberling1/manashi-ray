@@ -1,0 +1,151 @@
+.book {
+  background: var(--clr-navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.bgTexture {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.showcase {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: clamp(3rem, 7vw, 7rem);
+  align-items: center;
+}
+
+.coverCol { display: flex; justify-content: center; }
+
+.coverWrap {
+  position: relative;
+  width: min(320px, 100%);
+  perspective: 1000px;
+}
+.coverImg {
+  width: 100%;
+  height: auto;
+  border-radius: 3px 12px 12px 3px;
+  box-shadow:
+    -8px 8px 0 rgba(0, 0, 0, 0.25),
+    0 24px 80px rgba(0, 0, 0, 0.5),
+    inset -3px 0 6px rgba(0, 0, 0, 0.2);
+  transform: rotateY(-8deg) rotateX(3deg);
+  transition: transform 0.5s var(--ease-out-expo);
+}
+.coverWrap:hover .coverImg {
+  /* The inline style from JS overrides this, but kept as a fallback */
+  transform: rotateY(-2deg) rotateX(1deg) scale(1.03);
+  box-shadow:
+    -12px 12px 0 rgba(0, 0, 0, 0.3),
+    0 40px 100px rgba(0, 0, 0, 0.6),
+    inset -3px 0 6px rgba(0, 0, 0, 0.2);
+}
+.coverShadow {
+  position: absolute;
+  bottom: -5%;
+  left: 10%;
+  right: 5%;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  filter: blur(20px);
+  border-radius: 50%;
+}
+
+.genre {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 0.75rem;
+}
+.title {
+  font-family: var(--ff-display);
+  font-size: clamp(2rem, 3.5vw, 3.25rem);
+  font-weight: 400;
+  color: #fff;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+.subtitle {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  color: var(--clr-gold-light);
+  margin-bottom: 2rem;
+}
+.description {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+}
+
+.meta {
+  display: flex;
+  gap: 2.5rem;
+  margin-block: 2.5rem;
+  padding-block: 2rem;
+  border-block: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+}
+.metaLabel {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 0.35rem;
+}
+.metaValue {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.quote {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  border-left: 3px solid var(--clr-gold);
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.author {
+  font-size: 0.8rem;
+  color: var(--clr-gold);
+  letter-spacing: 0.08em;
+  font-style: normal;
+}
+
+@media (max-width: 1024px) {
+  .showcase {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .showcase { grid-template-columns: 1fr; }
+  .coverWrap { width: min(220px, 60%); }
+  .meta { gap: 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .actions { flex-direction: column; }
+}

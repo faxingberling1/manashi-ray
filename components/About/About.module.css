@@ -1,0 +1,124 @@
+.about {
+  background: #fff;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.lead {
+  font-family: var(--ff-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 400;
+  color: var(--clr-navy);
+  line-height: 1.5;
+  margin-bottom: 1.75rem;
+}
+
+.text p {
+  color: var(--clr-text-mid);
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 3rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--clr-cream);
+  flex-wrap: wrap;
+}
+
+.stat { text-align: center; }
+.statNumber {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--clr-navy);
+  line-height: 1;
+  margin-bottom: 0.35rem;
+}
+.statLabel {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--clr-text-soft);
+}
+
+.imageCol { position: sticky; top: 7rem; }
+
+.portraitWrap { position: relative; margin-bottom: 2rem; }
+.portrait {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4/5;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px;
+  box-shadow: var(--shadow-lg);
+}
+.portraitCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(26, 37, 64, 0.85), transparent);
+  padding: 3rem 1.5rem 1.5rem;
+  border-radius: 0 0 4px 4px;
+}
+.portraitCaption span {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.links {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+.linkPill {
+  padding: 0.65rem 1.4rem;
+  border-radius: 2px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--clr-navy);
+  color: #fff;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.linkPill:hover {
+  background: var(--clr-navy-mid);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+.linkPillGhost {
+  background: transparent;
+  color: var(--clr-navy);
+  border: 1.5px solid var(--clr-navy);
+}
+.linkPillGhost:hover {
+  background: var(--clr-navy);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .grid { grid-template-columns: 1fr; }
+  .imageCol { position: static; order: -1; }
+  .portrait { aspect-ratio: 4/3; }
+}
+
+@media (max-width: 480px) {
+  .stats { justify-content: center; }
+}
