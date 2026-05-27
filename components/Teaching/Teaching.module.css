@@ -153,10 +153,16 @@
 
 /* Course Cards */
 .courseCard {
-  background: var(--clr-navy);
+  background: var(--clr-ivory);
+  border: 1px solid var(--clr-cream);
   border-radius: 6px;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.courseCard:hover {
   box-shadow: var(--shadow-md);
+  border-color: rgba(212, 175, 55, 0.35);
 }
 
 .courseCardHeader {
@@ -164,15 +170,15 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1.25rem 1.75rem;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-  background: rgba(255,255,255,.04);
+  border-bottom: 1px solid var(--clr-cream);
+  background: rgba(212, 175, 55, 0.04);
 }
 .courseCardIcon { font-size: 1.25rem; }
 .courseCardTitle {
   font-family: var(--ff-display);
-  font-size: 1.1rem;
-  color: #fff;
-  font-weight: 400;
+  font-size: 1.15rem;
+  color: var(--clr-navy);
+  font-weight: 500;
 }
 
 .tags {
@@ -187,47 +193,55 @@
   border-radius: 100px;
   font-size: 0.82rem;
   font-weight: 500;
-  background: rgba(255,255,255,.08);
-  color: rgba(255,255,255,.8);
-  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(26, 37, 64, 0.04);
+  color: var(--clr-navy-mid);
+  border: 1px solid rgba(26, 37, 64, 0.1);
   letter-spacing: 0.02em;
   transition: all var(--transition);
 }
 .tag:hover {
-  background: rgba(255,255,255,.14);
-  color: #fff;
+  background: rgba(26, 37, 64, 0.08);
+  color: var(--clr-navy-deep);
+  border-color: var(--clr-navy);
 }
 
 .tagGold {
-  background: rgba(212, 175, 55, 0.18);
-  color: var(--clr-gold-light);
+  background: rgba(212, 175, 55, 0.1);
+  color: #a48115;
   border-color: rgba(212, 175, 55, 0.3);
 }
 .tagGold:hover {
-  background: rgba(212, 175, 55, 0.28);
-  color: #fff;
+  background: rgba(212, 175, 55, 0.2);
+  color: #8f6e0b;
+  border-color: var(--clr-gold);
 }
 
 /* Platform card */
 .platformCard {
-  background: var(--clr-navy);
+  background: var(--clr-ivory);
+  border: 1px solid var(--clr-cream);
   border-radius: 6px;
   padding: 1.75rem;
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  box-shadow: var(--shadow-md);
+  gap: 0.75rem;
+  box-shadow: var(--shadow-sm);
   align-self: stretch;
-  justify-content: center;
+  justify-content: flex-start;
+  transition: box-shadow var(--transition), border-color var(--transition);
+}
+.platformCard:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(212, 175, 55, 0.35);
 }
 .platformIcon {
   font-size: 2rem;
 }
 .platformTitle {
   font-family: var(--ff-display);
-  font-size: 1rem;
-  font-weight: 400;
-  color: rgba(255,255,255,.75);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--clr-navy);
   line-height: 1.4;
 }
 .platformTags {
@@ -243,6 +257,12 @@
   letter-spacing: 0.08em;
   background: var(--clr-gold);
   color: var(--clr-navy-deep);
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.platformTag:hover {
+  background: var(--clr-gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
 }
 
 @media (max-width: 1024px) {
