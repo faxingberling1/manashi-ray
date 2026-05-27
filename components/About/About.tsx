@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './About.module.css';
 
 export default function About() {
@@ -15,40 +16,35 @@ export default function About() {
           {/* Text */}
           <div className="animateInit">
             <p className={styles.lead}>
-              Manashi Ray is a distinguished author, researcher, and public intellectual
-              whose work bridges the worlds of academia and lived experience.
+              Manashi Ray is a Professor of Sociology at West Virginia State University, where she has taught since 2011. Her work explores migration, identity, gender, and social inequality across national and transnational contexts.
             </p>
             <div className={styles.text}>
               <p>
-                With a career spanning over two decades, she has dedicated herself to
-                exploring the intersections of culture, identity, and social transformation.
-                Her writing draws on deep scholarly rigor while remaining accessible and
-                profoundly human.
+                Trained at Michigan State University, where she earned her doctorate with distinction, Dr. Ray's scholarship has taken her across continents — from fieldwork among Burmese refugees in Michigan to research on transnational Indian entrepreneurs — always following the human story at the heart of complex social phenomena.
               </p>
               <p>
-                Born and raised with a deep appreciation for literature and inquiry,
-                Manashi pursued her academic path with singular focus — earning accolades
-                at every stage of her journey. Today, she is recognized internationally
-                for her contributions to scholarship and public discourse.
+                Her academic career is distinguished by a rare ability to move between rigorous scholarly inquiry and deeply human storytelling. She has taught graduate and undergraduate courses spanning Social Inequality, Sociology of Gender, Sociology of Family, and the special-topics course <em>Migrants and Refugees: The American Experience</em>, shaping the intellectual lives of hundreds of students.
               </p>
               <p>
-                Her debut book is the culmination of years of research, reflection, and
-                a passionate desire to share knowledge with the world — to spark
-                conversations that matter.
+                The recipient of numerous prestigious fellowships and grants — including a fellowship at the Jawaharlal Nehru Institute of Advanced Study and the UNFPA Global Training Program at the Institute of Social Studies, The Hague — Dr. Ray brings a truly global perspective to her work. Her forthcoming memoir, <em>Charting My Own Course</em>, is the culmination of this extraordinary journey.
               </p>
             </div>
 
             {/* Stats */}
             <div className={styles.stats}>
               <div className={`${styles.stat} animateInit`}>
-                <span className={styles.statNumber}>20+</span>
-                <span className={styles.statLabel}>Years of Research</span>
+                <span className={styles.statNumber}>15+</span>
+                <span className={styles.statLabel}>Years at WVSU</span>
               </div>
               <div className={`${styles.stat} animateInit delay100`}>
-                <span className={styles.statNumber}>50+</span>
-                <span className={styles.statLabel}>Talks &amp; Lectures</span>
+                <span className={styles.statNumber}>14</span>
+                <span className={styles.statLabel}>Awards &amp; Honors</span>
               </div>
               <div className={`${styles.stat} animateInit delay200`}>
+                <span className={styles.statNumber}>5+</span>
+                <span className={styles.statLabel}>Courses Taught</span>
+              </div>
+              <div className={`${styles.stat} animateInit delay300`}>
                 <span className={styles.statNumber}>1</span>
                 <span className={styles.statLabel}>Landmark Book</span>
               </div>
@@ -60,20 +56,20 @@ export default function About() {
             <div className={styles.portraitWrap}>
               <Image
                 src="/manashi_portrait.png"
-                alt="Manashi Ray"
+                alt="Dr. Manashi Ray, Professor of Sociology"
                 width={500}
                 height={625}
                 className={styles.portrait}
               />
               <div className={styles.portraitCaption}>
-                <span>&quot;Every story worth telling begins with a question.&quot;</span>
+                <span>&ldquo;Every story worth telling begins with a question.&rdquo;</span>
               </div>
             </div>
             <div className={styles.links}>
-              <a href="#" className={styles.linkPill}>Download CV</a>
-              <a href="mailto:contact@manashiray.com" className={`${styles.linkPill} ${styles.linkPillGhost}`}>
+              <Link href="/speaking" className={styles.linkPill}>Awards &amp; Honors</Link>
+              <Link href="/contact" className={`${styles.linkPill} ${styles.linkPillGhost}`}>
                 Get in Touch
-              </a>
+              </Link>
             </div>
           </div>
         </div>

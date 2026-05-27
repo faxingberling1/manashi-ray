@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -15,20 +16,19 @@ export default function Hero() {
       <div className={styles.inner}>
         {/* Text */}
         <div className={`${styles.textCol} animateInit`}>
-          <p className={styles.eyebrow}>Welcome</p>
+          <p className={styles.eyebrow}>Professor &middot; Author &middot; Scholar</p>
           <h1 className={styles.name}>
             Manashi
             <br />
             <em>Ray</em>
           </h1>
-          <p className={styles.tagline}>Author &nbsp;·&nbsp; Scholar &nbsp;·&nbsp; Speaker</p>
+          <p className={styles.tagline}>Professor of Sociology &nbsp;·&nbsp; West Virginia State University</p>
           <p className={styles.bio}>
-            Illuminating the human experience through rigorous research,
-            powerful storytelling, and a lifelong commitment to learning.
+            Scholar of migration, identity, and social inequality. Award-winning researcher, educator, and forthcoming memoirist whose work bridges rigorous academia and deeply human storytelling.
           </p>
           <div className={styles.actions}>
-            <a href="#book" className="btn btnPrimary">Explore the Book</a>
-            <a href="#about" className="btn btnGhost">Learn More</a>
+            <Link href="/book" className="btn btnPrimary">Explore the Book</Link>
+            <Link href="/about" className="btn btnGhost">Biography</Link>
           </div>
         </div>
 
@@ -37,7 +37,7 @@ export default function Hero() {
           <div className={styles.imageFrame}>
             <Image
               src="/manashi_portrait.png"
-              alt="Portrait of Manashi Ray"
+              alt="Dr. Manashi Ray, Professor of Sociology at West Virginia State University"
               width={420}
               height={560}
               className={styles.portrait}
@@ -47,16 +47,16 @@ export default function Hero() {
           </div>
           <div className={styles.badge}>
             <span className={styles.badgeIcon}>✦</span>
-            <span>Author &amp; Scholar</span>
+            <span>Professor &amp; Author</span>
           </div>
         </div>
       </div>
 
       {/* Scroll cue */}
-      <a href="#about" className={styles.scrollCue} aria-label="Scroll to About">
+      <Link href="/about" className={styles.scrollCue} aria-label="Learn more about Manashi Ray">
         <span className={styles.scrollLine} />
-        <span className={styles.scrollLabel}>Scroll</span>
-      </a>
+        <span className={styles.scrollLabel}>Explore</span>
+      </Link>
     </section>
   );
 }

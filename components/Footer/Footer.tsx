@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -11,11 +12,11 @@ export default function Footer() {
           <span className={styles.tagline}>Author · Scholar · Speaker</span>
         </div>
         <nav className={styles.nav} aria-label="Footer navigation">
-          <a href="#about">About</a>
-          <a href="#book">Book</a>
-          <a href="#achievements">Achievements</a>
-          <a href="#speaking">Speaking</a>
-          <a href="#contact">Contact</a>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/book">Book</Link>
+          <Link href="/speaking">Speaking</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
         <p className={styles.copy}>
           &copy; {currentYear} Manashi Ray. All rights reserved.
