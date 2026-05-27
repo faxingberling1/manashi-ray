@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Manashi Ray — Personal Portfolio
 
-## Getting Started
+A professional, academic portfolio website designed and built for Dr. Manashi Ray. The site highlights her biography, forthcoming memoir (*Charting My Own Course*), speaking engagements, and timeline of achievements.
 
-First, run the development server:
+## Design & Architecture
+* **Framework:** Next.js 16 (App Router)
+* **Language:** TypeScript
+* **Styling:** Custom Vanilla CSS Modules (No Tailwind)
+* **Aesthetic:** Minimalist, Academic, Professional
+* **Color Palette:** Ivory, Deep Navy, Warm Gold
+* **Typography:** Cormorant Garamond (Headings) & Inter (Body)
 
+## Project Structure
+The website uses a modern multi-page architecture to separate content logically:
+* `/` - Home Page (Hero & Featured overview)
+* `/about` - Full biography and statistics
+* `/book` - Detailed showcase of the debut memoir, including an interactive 3D book cover
+* `/speaking` - Speaking topics and an interactive timeline of milestones
+* `/contact` - Functional contact form and social links
+
+## Setup and Development
+
+### Prerequisites
+Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
+
+### Installation
+1. Clone the repository and navigate into the project directory:
+   ```bash
+   cd manashi-ray
+   ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Development Server
+Start the Next.js development server:
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Building for Production
+To create an optimized production build, run:
+```bash
+npm run build
+```
+Once the build is complete, you can start the production server with:
+```bash
+npm run start
+```
