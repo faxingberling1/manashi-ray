@@ -7,8 +7,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 15% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 60%),
-    radial-gradient(ellipse at 85% 20%, rgba(201, 168, 76, 0.03) 0%, transparent 50%);
+    radial-gradient(ellipse at 15% 50%, rgba(212, 175, 55, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -121,7 +121,7 @@
 .input::placeholder { color: var(--clr-text-soft); }
 .input:focus {
   border-color: var(--clr-gold);
-  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
 }
 .select option { background: #fff; color: var(--clr-text); }
 .textarea { resize: vertical; min-height: 120px; }

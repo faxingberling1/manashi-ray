@@ -12,7 +12,7 @@
   --clr-navy:         #1a2540;
   --clr-navy-deep:    #111827;
   --clr-navy-mid:     #253252;
-  --clr-gold:         #c9a84c;
+  --clr-gold:         #d4af37;
   --clr-gold-light:   #e2c97e;
   --clr-gold-pale:    #f5edd8;
   --clr-blush:        #e8d5d0;
@@ -166,7 +166,7 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 .btnGold:hover {
   background: var(--clr-gold-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(201,168,76,.35);
+  box-shadow: 0 8px 24px rgba(212,175,55,.35);
 }
 
 .btnFull { width: 100%; justify-content: center; }

@@ -48,8 +48,8 @@
   margin-top: 0.5rem;
   padding: 0.2rem 0.65rem;
   border-radius: 100px;
-  background: rgba(201, 168, 76, 0.15);
-  border: 1px solid rgba(201, 168, 76, 0.4);
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.4);
   color: var(--clr-gold);
   font-size: 0.65rem;
   font-weight: 700;
@@ -80,7 +80,7 @@
 }
 .current .nodeDot {
   background: var(--clr-gold);
-  box-shadow: 0 0 0 4px rgba(201, 168, 76, 0.2);
+  box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.2);
 }
 
 .nodeLine {
@@ -115,7 +115,7 @@
 }
 .timelineItem:hover .timelineRight {
   box-shadow: var(--shadow-md);
-  border-color: rgba(201, 168, 76, 0.35);
+  border-color: rgba(212, 175, 55, 0.35);
   transform: translateX(4px);
 }
 
@@ -199,12 +199,12 @@
 }
 
 .tagGold {
-  background: rgba(201, 168, 76, 0.18);
+  background: rgba(212, 175, 55, 0.18);
   color: var(--clr-gold-light);
-  border-color: rgba(201, 168, 76, 0.3);
+  border-color: rgba(212, 175, 55, 0.3);
 }
 .tagGold:hover {
-  background: rgba(201, 168, 76, 0.28);
+  background: rgba(212, 175, 55, 0.28);
   color: #fff;
 }
 

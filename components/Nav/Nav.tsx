@@ -14,12 +14,10 @@ export default function Nav() {
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll, { passive: true });
-    // Initialize state
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close on outside click
   useEffect(() => {
     const handler = (e: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
@@ -33,10 +31,12 @@ export default function Nav() {
   const closeNav = () => setOpen(false);
 
   const links = [
-    { href: '/',             label: 'Home' },
-    { href: '/about',        label: 'About' },
-    { href: '/book',         label: 'Book' },
-    { href: '/speaking',     label: 'Speaking' },
+    { href: '/',              label: 'Home' },
+    { href: '/about',         label: 'About' },
+    { href: '/publications',  label: 'Research' },
+    { href: '/lectures',      label: 'Lectures' },
+    { href: '/book',          label: 'Book' },
+    { href: '/speaking',      label: 'Awards' },
   ];
 
   return (
@@ -60,9 +60,9 @@ export default function Nav() {
             const isActive = pathname === href;
             return (
               <li key={href}>
-                <Link 
-                  href={href} 
-                  className={`${styles.link} ${isActive ? styles.active : ''}`} 
+                <Link
+                  href={href}
+                  className={`${styles.link} ${isActive ? styles.active : ''}`}
                   onClick={closeNav}
                 >
                   {label}
@@ -71,7 +71,7 @@ export default function Nav() {
             );
           })}
           <li>
-            <Link href="/contact" className={`${styles.link} ${styles.cta}`} onClick={closeNav}>
+            <Link href="/contact" className={`${styles.link} ${styles.cta} ${pathname === '/contact' ? styles.active : ''}`} onClick={closeNav}>
               Contact
             </Link>
           </li>

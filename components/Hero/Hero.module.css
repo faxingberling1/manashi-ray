@@ -14,7 +14,7 @@
 .circle {
   position: absolute;
   border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.18);
+  border: 1px solid rgba(212, 175, 55, 0.18);
 }
 .circle1 {
   width: min(700px, 80vw);
@@ -28,12 +28,12 @@
   height: min(400px, 50vw);
   bottom: -10%;
   left: -8%;
-  border-color: rgba(201, 168, 76, 0.12);
+  border-color: rgba(212, 175, 55, 0.12);
   animation: slowRotate 22s linear infinite reverse;
 }
 .line {
   position: absolute;
-  background: linear-gradient(to bottom, transparent, rgba(201, 168, 76, 0.15), transparent);
+  background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.15), transparent);
   width: 1px;
 }
 .line1 { height: 60%; top: 20%; left: 33%; }

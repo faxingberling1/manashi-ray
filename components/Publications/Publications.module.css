@@ -1,0 +1,189 @@
+.wrapper { background: var(--clr-ivory); }
+
+/* ── Expertise ──────────────────────────────────────── */
+.expertiseSection { background: var(--clr-navy); }
+
+.expertiseBox {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  padding: clamp(2rem, 4vw, 3rem);
+}
+
+.expertiseTitle {
+  font-family: var(--ff-display);
+  font-size: 1.6rem;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 1.75rem;
+  font-weight: 400;
+}
+
+.expertiseTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.expertiseTag {
+  padding: 0.55rem 1.35rem;
+  border-radius: 100px;
+  border: 1px solid rgba(212,175,55,.45);
+  background: rgba(212,175,55,.1);
+  color: var(--clr-gold-light);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all var(--transition);
+  cursor: default;
+}
+.expertiseTag:hover {
+  background: rgba(212,175,55,.2);
+  color: #fff;
+  border-color: var(--clr-gold);
+}
+
+/* Override section title/label colors on dark bg */
+.expertiseSection .sectionLabel,
+.expertiseSection :global(.sectionLabel) { color: var(--clr-gold-light); }
+.expertiseSection :global(.sectionTitle) { color: #fff; }
+.expertiseSection :global(.sectionRule) { background: var(--clr-gold-light); }
+
+/* ── Manuscript ─────────────────────────────────────── */
+.manuscriptSection { background: var(--clr-cream); }
+
+.manuscript {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.manuscriptLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 1.25rem;
+}
+
+.manuscriptTitle {
+  font-family: var(--ff-display);
+  font-size: clamp(1.75rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: var(--clr-navy);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.manuscriptDesc {
+  font-size: 1.05rem;
+  color: var(--clr-text-mid);
+  line-height: 1.8;
+  max-width: 56ch;
+  margin-inline: auto;
+}
+
+/* ── Publication Sections ───────────────────────────── */
+.pubSection { background: var(--clr-ivory); }
+
+.pubList {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.pubItem {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 0 1.5rem;
+  padding-block: 2rem;
+  border-bottom: 1px solid var(--clr-cream);
+  transition: background var(--transition);
+  border-radius: 3px;
+  padding-inline: 0.5rem;
+}
+.pubItem:last-child { border-bottom: none; }
+.pubItem:hover { background: rgba(255,255,255,.8); }
+
+.pubIndex {
+  font-family: var(--ff-display);
+  font-size: 2.4rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.75;
+  line-height: 1;
+  padding-top: 0.5rem;
+  letter-spacing: -0.03em;
+  transition: opacity var(--transition);
+}
+.pubItem:hover .pubIndex { opacity: 1; }
+
+.pubBody { flex: 1; }
+
+.pubMeta {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.pubYear {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+}
+
+/* Type badges */
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 100px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.badgeJournal     { background: rgba(26,37,64,.1);  color: var(--clr-navy); }
+.badgeBook        { background: rgba(212,175,55,.15); color: #8a6d1e; }
+.badgeEncyclopedia{ background: rgba(130,80,180,.12); color: #6b40a0; }
+.badgeReview      { background: rgba(30,120,80,.1);  color: #1e7850; }
+.badgeMonograph   { background: rgba(200,80,50,.1);  color: #b34a28; }
+.badgeReport      { background: rgba(50,100,200,.1); color: #2a5cc8; }
+.badgeWorking     { background: rgba(80,140,60,.1);  color: #3d7a28; }
+.badgeNewspaper   { background: rgba(160,100,20,.1); color: #a06414; }
+
+.pubCitation {
+  font-size: 0.85rem;
+  color: var(--clr-text-soft);
+  margin-bottom: 0.35rem;
+  font-style: italic;
+}
+
+.pubTitle {
+  font-family: var(--ff-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
+}
+
+.pubVenue {
+  font-size: 0.9rem;
+  color: var(--clr-text-mid);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .pubItem { grid-template-columns: 44px 1fr; gap: 0 1rem; }
+  .pubIndex { font-size: 1.8rem; }
+  .manuscriptTitle { font-size: 1.6rem; }
+}

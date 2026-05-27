@@ -1,51 +1,59 @@
 # Manashi Ray — Personal Portfolio
 
-A professional, academic portfolio website designed and built for Dr. Manashi Ray. The site highlights her biography, forthcoming memoir (*Charting My Own Course*), speaking engagements, and timeline of achievements.
+A professional, academic portfolio website designed and built for Dr. Manashi Ray — Professor of Sociology at West Virginia State University, author, and public intellectual.
 
 ## Design & Architecture
 * **Framework:** Next.js 16 (App Router)
 * **Language:** TypeScript
-* **Styling:** Custom Vanilla CSS Modules (No Tailwind)
-* **Aesthetic:** Minimalist, Academic, Professional
-* **Color Palette:** Ivory, Deep Navy, Warm Gold
-* **Typography:** Cormorant Garamond (Headings) & Inter (Body)
+* **Styling:** Vanilla CSS Modules (no Tailwind)
+* **Aesthetic:** Minimalist Academic — Ivory, Deep Navy, Warm Gold palette
+* **Typography:** Cormorant Garamond (Display) & Inter (Body)
 
-## Project Structure
-The website uses a modern multi-page architecture to separate content logically:
-* `/` - Home Page (Hero & Featured overview)
-* `/about` - Full biography and statistics
-* `/book` - Detailed showcase of the debut memoir, including an interactive 3D book cover
-* `/speaking` - Speaking topics and an interactive timeline of milestones
-* `/contact` - Functional contact form and social links
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Home — hero, real biography intro, three CTAs |
+| `/about` | Full biography, career stats, teaching positions, CV download |
+| `/publications` | Research areas, peer-reviewed articles, book chapters, other writings |
+| `/lectures` | Invited talks (7) and conference presentations (17 papers across 9 years) |
+| `/book` | Interactive 3D book showcase — *Charting My Own Course* |
+| `/speaking` | Speaking topics + full Awards & Honors (14 entries, grouped by category) |
+| `/contact` | Contact form + social links |
+
+## Key Features
+- **Multi-page** Next.js App Router architecture (mirrors reference sites)
+- **Scroll reveal animations** via custom `useScrollAnimation` hook (IntersectionObserver)
+- **3D interactive book cover** with mouse-parallax tilt
+- **CV download** linked to `/public/CV-Manashi-Ray.pdf`
+- **Color-coded publication type badges** (Journal Article, Book Chapter, etc.)
+- **Career timeline** with visual nodes in Teaching section
+- **Grouped Awards** with dark navy headers and numbered gold cards
+- Fully **responsive** (mobile-first layouts)
+
+## Assets in `/public`
+| File | Description |
+|---|---|
+| `manashi_portrait.png` | Portrait photograph |
+| `book_cover.png` | Book cover — *Charting My Own Course* |
+| `CV-Manashi-Ray.pdf` | Downloadable curriculum vitae |
 
 ## Setup and Development
 
-### Prerequisites
-Make sure you have [Node.js](https://nodejs.org/) installed on your machine.
-
 ### Installation
-1. Clone the repository and navigate into the project directory:
-   ```bash
-   cd manashi-ray
-   ```
-2. Install the dependencies:
-   ```bash
-   npm install
-   ```
+```bash
+cd manashi-ray
+npm install
+```
 
-### Running the Development Server
-Start the Next.js development server:
+### Development Server
 ```bash
 npm run dev
 ```
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to preview.
 
-## Building for Production
-To create an optimized production build, run:
+### Production Build
 ```bash
 npm run build
-```
-Once the build is complete, you can start the production server with:
-```bash
 npm run start
 ```

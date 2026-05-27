@@ -1,0 +1,151 @@
+/* ── Invited Talks ─────────────────────────────────── */
+.invitedSection { background: var(--clr-ivory); }
+
+.talksList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.talkCard {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 0 2rem;
+  background: #fff;
+  border: 1px solid var(--clr-cream);
+  border-left: 4px solid var(--clr-gold);
+  border-radius: 4px;
+  padding: 1.75rem 2rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.talkCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.talkYear {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.95;
+  line-height: 1;
+  padding-top: 0.25rem;
+}
+
+.talkTitle {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+
+.talkEvent {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--clr-navy-mid);
+  margin-bottom: 0.75rem;
+}
+
+.talkMeta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.talkLocation,
+.talkDate {
+  font-size: 0.82rem;
+  color: var(--clr-text-soft);
+}
+
+/* ── Conference Presentations ──────────────────────── */
+.conferenceSection { background: var(--clr-navy); }
+
+/* Override section colors */
+.conferenceSection :global(.sectionLabel) { color: var(--clr-gold-light); }
+.conferenceSection :global(.sectionTitle) { color: #fff; }
+.conferenceSection :global(.sectionRule)  { background: var(--clr-gold-light); }
+
+.confGroups {
+  display: flex;
+  flex-direction: column;
+  max-width: 940px;
+  margin-inline: auto;
+}
+
+.confGroup {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 0 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.confYear {
+  font-family: var(--ff-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.85;
+  line-height: 1;
+  padding-top: 0.5rem;
+  text-align: right;
+  border-right: 1px solid rgba(212,175,55,.2);
+  padding-right: 2rem;
+}
+
+.confPapers {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.confPaper {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 4px;
+  padding: 1.5rem 2rem;
+  transition: background var(--transition), border-color var(--transition);
+}
+.confPaper:hover {
+  background: rgba(255,255,255,.07);
+  border-color: rgba(212,175,55,.3);
+}
+
+.confTitle {
+  font-family: var(--ff-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(255,255,255,.9);
+  line-height: 1.45;
+  margin-bottom: 0.6rem;
+}
+
+.confSession {
+  font-size: 0.82rem;
+  color: var(--clr-gold-light);
+  margin-bottom: 0.4rem;
+}
+
+.confEvent {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,.4);
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .talkCard {
+    grid-template-columns: 60px 1fr;
+    gap: 0 1rem;
+    padding: 1.25rem;
+  }
+  .talkYear { font-size: 1.4rem; }
+  .confGroup { grid-template-columns: 60px 1fr; gap: 0 1.25rem; }
+  .confYear { font-size: 2rem; padding-right: 1rem; }
+  .confPaper { padding: 1.25rem; }
+  .talkMeta { flex-direction: column; gap: 0.25rem; }
+}

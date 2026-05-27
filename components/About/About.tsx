@@ -66,7 +66,15 @@ export default function About() {
               </div>
             </div>
             <div className={styles.links}>
-              <Link href="/speaking" className={styles.linkPill}>Awards &amp; Honors</Link>
+              <a
+                href="/CV-Manashi-Ray.pdf"
+                className={styles.linkPill}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="CV-Manashi-Ray.pdf"
+              >
+                ↓ Download CV
+              </a>
               <Link href="/contact" className={`${styles.linkPill} ${styles.linkPillGhost}`}>
                 Get in Touch
               </Link>
