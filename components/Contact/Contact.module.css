@@ -1,5 +1,5 @@
 .contact {
-  background: var(--clr-navy);
+  background: #fff; /* Changed from navy to white */
   position: relative;
   overflow: hidden;
 }
@@ -7,8 +7,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 15% 50%, rgba(201, 168, 76, 0.07) 0%, transparent 60%),
-    radial-gradient(ellipse at 85% 20%, rgba(201, 168, 76, 0.05) 0%, transparent 50%);
+    radial-gradient(ellipse at 15% 50%, rgba(201, 168, 76, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 85% 20%, rgba(201, 168, 76, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -22,7 +22,7 @@
 .lead {
   font-family: var(--ff-display);
   font-size: 1.4rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--clr-navy); /* Changed from white */
   line-height: 1.55;
   margin-bottom: 2.5rem;
 }
@@ -39,7 +39,7 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(201, 168, 76, 0.3);
+  border: 1px solid var(--clr-cream);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,10 +59,10 @@
 .itemValue {
   font-family: var(--ff-display);
   font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--clr-navy); /* Changed from white */
   transition: color var(--transition);
 }
-.itemValue:hover { color: var(--clr-gold-light); }
+.itemValue:hover { color: var(--clr-gold); }
 
 .social {
   display: flex;
@@ -72,27 +72,26 @@
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid var(--clr-cream); /* Changed from white */
   display: flex;
   align-items: center;
   justify-content: center;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--clr-navy-mid); /* Changed from white */
   transition: all var(--transition);
 }
 .socialLink:hover {
   border-color: var(--clr-gold);
   color: var(--clr-gold);
   transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(201, 168, 76, 0.2);
+  box-shadow: var(--shadow-sm);
 }
 
 /* Form */
 .form {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
+  background: var(--clr-ivory); /* Changed from dark transparent */
+  border: 1px solid var(--clr-cream);
+  border-radius: 4px;
   padding: clamp(1.75rem, 4vw, 3rem);
-  backdrop-filter: blur(8px);
 }
 
 .formGroup { margin-bottom: 1.5rem; }
@@ -102,7 +101,7 @@
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.65);
+  color: var(--clr-text-mid); /* Changed from white */
   margin-bottom: 0.6rem;
 }
 .input {
@@ -110,27 +109,27 @@
   width: 100%;
   padding: 0.9rem 1.1rem;
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(255, 255, 255, 0.06);
-  color: #fff;
+  border: 1px solid var(--clr-cream); /* Changed from white */
+  background: #fff; /* Changed from dark */
+  color: var(--clr-text);
   font-family: var(--ff-body);
   font-size: 0.95rem;
   transition: border-color var(--transition), box-shadow var(--transition);
   outline: none;
   -webkit-appearance: none;
 }
-.input::placeholder { color: rgba(255, 255, 255, 0.3); }
+.input::placeholder { color: var(--clr-text-soft); }
 .input:focus {
   border-color: var(--clr-gold);
   box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
 }
-.select option { background: var(--clr-navy); color: #fff; }
+.select option { background: #fff; color: var(--clr-text); }
 .textarea { resize: vertical; min-height: 120px; }
 
 .note {
   margin-top: 1rem;
   font-size: 0.8rem;
-  color: rgba(255, 255, 255, 0.35);
+  color: var(--clr-text-soft);
   text-align: center;
   line-height: 1.6;
 }
@@ -144,13 +143,13 @@
   animation: fadeIn 0.3s ease;
 }
 .feedbackSuccess {
-  background: rgba(45, 106, 79, 0.25);
-  color: #6fcf97;
-  border: 1px solid rgba(111, 207, 151, 0.3);
+  background: rgba(45, 106, 79, 0.1);
+  color: #2d6a4f;
+  border: 1px solid rgba(45, 106, 79, 0.3);
 }
 .feedbackError {
-  background: rgba(220, 50, 50, 0.2);
-  color: #ff8a8a;
+  background: rgba(220, 50, 50, 0.1);
+  color: #c92a2a;
   border: 1px solid rgba(255, 138, 138, 0.3);
 }
 

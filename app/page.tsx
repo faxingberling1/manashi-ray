@@ -1,30 +1,23 @@
 'use client';
 
-import Nav from '@/components/Nav/Nav';
 import Hero from '@/components/Hero/Hero';
-import About from '@/components/About/About';
-import Book from '@/components/Book/Book';
-import Achievements from '@/components/Achievements/Achievements';
-import Speaking from '@/components/Speaking/Speaking';
-import Contact from '@/components/Contact/Contact';
-import Footer from '@/components/Footer/Footer';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
+import Link from 'next/link';
 
 export default function Home() {
   useScrollAnimation();
 
   return (
     <>
-      <Nav />
-      <main>
-        <Hero />
-        <About />
-        <Book />
-        <Achievements />
-        <Speaking />
-        <Contact />
-      </main>
-      <Footer />
+      <Hero />
+      <section className="section container" style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto' }}>
+        <p className="animateInit" style={{ fontSize: '1.2rem', color: 'var(--clr-text-mid)', lineHeight: 1.8, marginBottom: '2rem' }}>
+          Manashi Ray is a distinguished author, researcher, and public intellectual whose work bridges the worlds of academia and lived experience. Explore her forthcoming memoir, <em>Charting My Own Course</em>.
+        </p>
+        <div className="animateInit delay100">
+          <Link href="/book" className="btn btnPrimary">Discover the Book</Link>
+        </div>
+      </section>
     </>
   );
 }

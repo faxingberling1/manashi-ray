@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
+import Nav from '@/components/Nav/Nav';
+import Footer from '@/components/Footer/Footer';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -55,7 +57,11 @@ export default function RootLayout({
       lang="en"
       className={`${cormorant.variable} ${inter.variable} ${playfair.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

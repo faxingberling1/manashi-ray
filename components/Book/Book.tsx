@@ -31,9 +31,9 @@ export default function Book() {
       <div className={styles.bgTexture}></div>
       <div className="container">
         <div className="sectionHeader animateInit">
-          <span className="sectionLabel sectionLabelGold">Publications</span>
-          <h2 className="sectionTitle sectionTitleLight">The Book</h2>
-          <div className="sectionRule sectionRuleGold"></div>
+          <span className="sectionLabel">Publications</span>
+          <h2 className="sectionTitle">The Book</h2>
+          <div className="sectionRule"></div>
         </div>
 
         <div className={styles.showcase}>
@@ -87,7 +87,7 @@ export default function Book() {
 
             <div className={styles.actions}>
               <a href="#" className="btn btnGold">Buy on Amazon</a>
-              <a href="#" className="btn btnGhostLight">Barnes &amp; Noble</a>
+              <a href="#" className="btn btnGhost">Barnes &amp; Noble</a>
             </div>
 
             <div className={styles.endorsement}>

@@ -1,5 +1,5 @@
 .book {
-  background: var(--clr-navy);
+  background: var(--clr-ivory); /* Changed from navy to ivory */
   position: relative;
   overflow: hidden;
 }
@@ -8,8 +8,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 80% 20%, rgba(201, 168, 76, 0.08) 0%, transparent 60%),
-    radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.06) 0%, transparent 50%);
+    radial-gradient(ellipse at 80% 20%, rgba(201, 168, 76, 0.04) 0%, transparent 60%),
+    radial-gradient(ellipse at 10% 90%, rgba(201, 168, 76, 0.03) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -32,19 +32,18 @@
   height: auto;
   border-radius: 3px 12px 12px 3px;
   box-shadow:
-    -8px 8px 0 rgba(0, 0, 0, 0.25),
-    0 24px 80px rgba(0, 0, 0, 0.5),
-    inset -3px 0 6px rgba(0, 0, 0, 0.2);
+    -8px 8px 0 rgba(0, 0, 0, 0.1),
+    0 24px 80px rgba(0, 0, 0, 0.15),
+    inset -3px 0 6px rgba(0, 0, 0, 0.1);
   transform: rotateY(-8deg) rotateX(3deg);
   transition: transform 0.5s var(--ease-out-expo);
 }
 .coverWrap:hover .coverImg {
-  /* The inline style from JS overrides this, but kept as a fallback */
   transform: rotateY(-2deg) rotateX(1deg) scale(1.03);
   box-shadow:
-    -12px 12px 0 rgba(0, 0, 0, 0.3),
-    0 40px 100px rgba(0, 0, 0, 0.6),
-    inset -3px 0 6px rgba(0, 0, 0, 0.2);
+    -12px 12px 0 rgba(0, 0, 0, 0.15),
+    0 40px 100px rgba(0, 0, 0, 0.2),
+    inset -3px 0 6px rgba(0, 0, 0, 0.1);
 }
 .coverShadow {
   position: absolute;
@@ -52,7 +51,7 @@
   left: 10%;
   right: 5%;
   height: 40px;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.15); /* Lightened shadow */
   filter: blur(20px);
   border-radius: 50%;
 }
@@ -69,19 +68,19 @@
   font-family: var(--ff-display);
   font-size: clamp(2rem, 3.5vw, 3.25rem);
   font-weight: 400;
-  color: #fff;
+  color: var(--clr-navy); /* Changed from white */
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
 .subtitle {
   font-family: var(--ff-display);
   font-size: 1.2rem;
-  color: var(--clr-gold-light);
+  color: var(--clr-navy-mid); /* Changed from gold-light */
   margin-bottom: 2rem;
 }
 .description {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--clr-text-mid); /* Changed from white */
   line-height: 1.85;
   margin-bottom: 1.25rem;
 }
@@ -91,7 +90,7 @@
   gap: 2.5rem;
   margin-block: 2.5rem;
   padding-block: 2rem;
-  border-block: 1px solid rgba(255, 255, 255, 0.1);
+  border-block: 1px solid var(--clr-cream); /* Changed from white rgba */
   flex-wrap: wrap;
 }
 .metaLabel {
@@ -106,7 +105,7 @@
 .metaValue {
   font-family: var(--ff-display);
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--clr-navy); /* Changed from white */
 }
 
 .actions {
@@ -120,7 +119,7 @@
   font-family: var(--ff-display);
   font-style: italic;
   font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--clr-navy-mid); /* Changed from white */
   line-height: 1.6;
   border-left: 3px solid var(--clr-gold);
   padding-left: 1.25rem;

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import styles from './Nav.module.css';
 
@@ -8,10 +9,13 @@ export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener('scroll', handleScroll, { passive: true });
+    // Initialize state
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -29,16 +33,18 @@ export default function Nav() {
   const closeNav = () => setOpen(false);
 
   const links = [
-    { href: '#about',        label: 'About' },
-    { href: '#book',         label: 'Book' },
-    { href: '#achievements', label: 'Achievements' },
-    { href: '#speaking',     label: 'Speaking' },
+    { href: '/',             label: 'Home' },
+    { href: '/about',        label: 'About' },
+    { href: '/book',         label: 'Book' },
+    { href: '/speaking',     label: 'Speaking' },
   ];
 
   return (
     <nav ref={navRef} className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={styles.inner}>
-        <a href="#home" className={styles.logo}>Manashi Ray</a>
+        <Link href="/" className={styles.logo} onClick={closeNav}>
+          Manashi Ray
+        </Link>
 
         <button
           className={`${styles.toggle} ${open ? styles.toggleOpen : ''}`}
@@ -50,17 +56,24 @@ export default function Nav() {
         </button>
 
         <ul className={`${styles.links} ${open ? styles.linksOpen : ''}`}>
-          {links.map(({ href, label }) => (
-            <li key={href}>
-              <a href={href} className={styles.link} onClick={closeNav}>
-                {label}
-              </a>
-            </li>
-          ))}
+          {links.map(({ href, label }) => {
+            const isActive = pathname === href;
+            return (
+              <li key={href}>
+                <Link 
+                  href={href} 
+                  className={`${styles.link} ${isActive ? styles.active : ''}`} 
+                  onClick={closeNav}
+                >
+                  {label}
+                </Link>
+              </li>
+            );
+          })}
           <li>
-            <a href="#contact" className={`${styles.link} ${styles.cta}`} onClick={closeNav}>
+            <Link href="/contact" className={`${styles.link} ${styles.cta}`} onClick={closeNav}>
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

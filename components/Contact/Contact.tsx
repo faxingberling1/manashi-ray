@@ -48,9 +48,9 @@ export default function Contact() {
       <div className={styles.bg}></div>
       <div className="container">
         <div className="sectionHeader animateInit">
-          <span className="sectionLabel sectionLabelGold">Connect</span>
-          <h2 className="sectionTitle sectionTitleLight">Get in Touch</h2>
-          <div className="sectionRule sectionRuleGold"></div>
+          <span className="sectionLabel">Connect</span>
+          <h2 className="sectionTitle">Get in Touch</h2>
+          <div className="sectionRule"></div>
         </div>
 
         <div className={styles.grid}>

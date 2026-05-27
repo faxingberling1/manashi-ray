@@ -61,6 +61,13 @@
 .link:hover { color: var(--clr-navy); }
 .link:hover::after { width: 100%; }
 
+.active {
+  color: var(--clr-navy) !important;
+}
+.active::after {
+  width: 100% !important;
+}
+
 .cta {
   padding: 0.55rem 1.4rem;
   border: 1.5px solid var(--clr-navy);
