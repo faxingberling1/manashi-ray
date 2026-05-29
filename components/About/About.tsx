@@ -55,7 +55,7 @@ export default function About() {
           <div className={`${styles.imageCol} animateInit delay150`}>
             <div className={styles.portraitWrap}>
               <Image
-                src="/manashi_portrait.png"
+                src="/web image.png"
                 alt="Dr. Manashi Ray, Professor of Sociology"
                 width={500}
                 height={625}

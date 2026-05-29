@@ -36,7 +36,7 @@ export default function Hero() {
         <div className={`${styles.imageCol} animateInit delay200`}>
           <div className={styles.imageFrame}>
             <Image
-              src="/manashi_portrait.png"
+              src="/web image.png"
               alt="Dr. Manashi Ray, Professor of Sociology at West Virginia State University"
               width={420}
               height={560}
