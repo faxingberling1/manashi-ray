@@ -1,0 +1,257 @@
+/* ============================================================
+   BOOK QUOTES — Deep navy section with gold accents
+   ============================================================ */
+
+.section {
+  position: relative;
+  background: var(--clr-navy-deep);
+  padding-block: clamp(5rem, 10vw, 9rem);
+  overflow: hidden;
+}
+
+/* ---- Background decorations ---- */
+.bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.bgCircle1 {
+  position: absolute;
+  top: -180px;
+  right: -120px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.07) 0%, transparent 70%);
+}
+
+.bgCircle2 {
+  position: absolute;
+  bottom: -200px;
+  left: -100px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+}
+
+.bgLines {
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 79px,
+      rgba(255, 255, 255, 0.015) 80px
+    );
+}
+
+/* ---- Carousel wrapper ---- */
+.carousel {
+  position: relative;
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+  padding: clamp(2.5rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(6px);
+}
+
+/* ---- Decorative opening quote mark ---- */
+.openQuote {
+  font-family: var(--ff-display);
+  font-size: clamp(7rem, 14vw, 12rem);
+  line-height: 0.6;
+  color: var(--clr-gold);
+  opacity: 0.18;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ---- Quote body ---- */
+.quoteBody {
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding-block: 1rem;
+}
+
+/* Slide-in animation */
+.enter {
+  animation: slideIn 0.45s var(--ease-out-expo) both;
+}
+.exitLeft {
+  animation: slideOutLeft 0.35s var(--ease-in-out) both;
+}
+.exitRight {
+  animation: slideOutRight 0.35s var(--ease-in-out) both;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes slideOutLeft {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(-14px); }
+}
+@keyframes slideOutRight {
+  from { opacity: 1; transform: none; }
+  to   { opacity: 0; transform: translateY(14px); }
+}
+
+.quoteText {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: clamp(1.25rem, 2.5vw, 1.85rem);
+  font-weight: 400;
+  color: #f0ebe0;
+  line-height: 1.7;
+  letter-spacing: 0.01em;
+  max-width: 680px;
+}
+
+.quotePage {
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  opacity: 0.8;
+}
+
+/* ---- Navigation ---- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(212, 175, 55, 0.35);
+  color: var(--clr-gold-light);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.25s var(--ease-in-out);
+  flex-shrink: 0;
+}
+
+.navBtn:hover {
+  background: rgba(212, 175, 55, 0.12);
+  border-color: var(--clr-gold);
+  color: var(--clr-gold);
+  transform: scale(1.08);
+}
+
+/* ---- Dots ---- */
+.dots {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(212, 175, 55, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s var(--ease-out-expo);
+  padding: 0;
+}
+
+.dotActive {
+  background: var(--clr-gold);
+  width: 22px;
+  border-radius: 4px;
+  transform: none;
+}
+
+/* ---- Progress bar ---- */
+.progressTrack {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: rgba(212, 175, 55, 0.1);
+  border-radius: 0 0 4px 4px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--clr-gold), var(--clr-gold-light));
+  border-radius: 2px;
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+/* ---- Counter ---- */
+.counter {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.35rem;
+  margin-top: 2rem;
+}
+
+.counterCurrent {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--clr-gold);
+  line-height: 1;
+}
+
+.counterSep {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.counterTotal {
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .openQuote {
+    font-size: 5rem;
+    top: 1rem;
+    left: 1rem;
+  }
+
+  .carousel {
+    padding: 2rem 1.25rem 2.5rem;
+  }
+
+  .quoteBody {
+    min-height: 180px;
+  }
+}
+
+@media (max-width: 480px) {
+  .navBtn { width: 36px; height: 36px; }
+}
