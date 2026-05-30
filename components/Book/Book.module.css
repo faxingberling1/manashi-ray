@@ -1,7 +1,7 @@
 .book {
   background: var(--clr-ivory); /* Changed from navy to ivory */
   position: relative;
-  overflow: hidden;
+  overflow: clip;
 }
 
 .bgTexture {
@@ -17,13 +17,14 @@
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: clamp(3rem, 7vw, 7rem);
-  align-items: center;
+  align-items: flex-start;
 }
 
 .coverCol {
   display: flex;
   justify-content: center;
-  margin-top: -4rem;
+  position: sticky;
+  top: 100px;
 }
 
 .coverWrap {

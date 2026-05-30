@@ -47,7 +47,7 @@ body {
   background-color: var(--clr-ivory);
   color: var(--clr-text);
   line-height: 1.7;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-font-smoothing: antialiased;
 }
 
