@@ -91,22 +91,41 @@ export default function Book() {
               </div>
             </div>
 
-            <div className={styles.actions}>
-              <a
-                href="https://www.sup.org/books/sociology/becoming-boundless"
-                className="btn btnGold"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Buy at Stanford University Press
-              </a>
-              <p className={styles.discountCode}>
-                Receive <strong>20% off</strong> at <a href="https://www.sup.org/books/sociology/becoming-boundless" target="_blank" rel="noopener noreferrer">www.sup.org</a> with code <strong>RAY20</strong>
-              </p>
-              <p className={styles.bulkInfo}>
-                For discounts on event orders and bulk purchase of 50+ copies, please contact <a href="mailto:sales@sup.org">sales@sup.org</a>.
-              </p>
+            <div className={styles.purchaseGrid}>
+              {/* Stanford Option */}
+              <div className={styles.purchaseOption}>
+                <a
+                  href="https://www.sup.org/books/sociology/becoming-boundless"
+                  className="btn btnGold"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Stanford University Press
+                </a>
+                <p className={styles.discountCode}>
+                  Receive <strong>20% off</strong> with code <strong>RAY20</strong>
+                </p>
+              </div>
+
+              {/* MNG UK Option */}
+              <div className={styles.purchaseOption}>
+                <a
+                  href="https://mngbookshop.co.uk/9781503645387/becoming-boundless/"
+                  className="btn btnPrimary"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  MNG Bookshop (UK)
+                </a>
+                <p className={styles.discountCode}>
+                  Receive <strong>20% off</strong> with code <strong>MRAY20</strong>
+                </p>
+              </div>
             </div>
+
+            <p className={styles.bulkInfo}>
+              For discounts on event orders and bulk purchase of 50+ copies, please contact <a href="mailto:sales@sup.org">sales@sup.org</a>.
+            </p>
           </div>
         </div>
       </div>
