@@ -1,0 +1,74 @@
+.testimonials {
+  background: var(--clr-ivory);
+  position: relative;
+  border-top: 1px solid var(--clr-cream);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 6px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-cream);
+  position: relative;
+  transition: transform var(--transition), box-shadow var(--transition);
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--clr-gold-light);
+}
+
+.quoteMark {
+  font-family: var(--ff-display);
+  font-size: 5rem;
+  color: var(--clr-gold);
+  line-height: 0.5;
+  opacity: 0.2;
+  margin-bottom: 1rem;
+}
+
+.quoteText {
+  font-size: 1.05rem;
+  color: var(--clr-text-mid);
+  line-height: 1.8;
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.authorBox {
+  border-top: 2px solid var(--clr-ivory-mid);
+  padding-top: 1.25rem;
+}
+
+.authorName {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  margin-bottom: 0.2rem;
+}
+
+.authorTitle {
+  font-size: 0.8rem;
+  color: var(--clr-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 2rem;
+  }
+}

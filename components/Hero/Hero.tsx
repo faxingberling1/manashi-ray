@@ -14,8 +14,28 @@ export default function Hero() {
       </div>
 
       <div className={styles.inner}>
-        {/* Text */}
-        <div className={`${styles.textCol} animateInit`}>
+        {/* Book Cover Image — Left */}
+        <div className={`${styles.bookCol} animateInit`}>
+          <div className={styles.bookFrame}>
+            <div className={styles.bookGlow} aria-hidden="true" />
+            <Image
+              src="/Book-Cover-Manashi.jpg"
+              alt="Becoming Boundless — Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray"
+              width={300}
+              height={450}
+              className={styles.bookCover}
+              priority
+            />
+            <div className={styles.bookShadow} aria-hidden="true" />
+            <div className={styles.bookBadge}>
+              <span className={styles.bookBadgePress}>Stanford University Press</span>
+              <span className={styles.bookBadgeTitle}>Becoming Boundless</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Text Center */}
+        <div className={`${styles.textCol} animateInit delay100`}>
           <p className={styles.eyebrow}>Professor &middot; Author &middot; Scholar</p>
           <h1 className={styles.name}>
             Manashi
@@ -24,30 +44,31 @@ export default function Hero() {
           </h1>
           <p className={styles.tagline}>Professor of Sociology &nbsp;·&nbsp; West Virginia State University</p>
           <p className={styles.bio}>
-            Scholar of migration, identity, and social inequality. Award-winning researcher, educator, and forthcoming memoirist whose work bridges rigorous academia and deeply human storytelling.
+            Scholar of migration, identity, and social inequality. Award-winning researcher, educator, and memoirist whose work bridges rigorous academia and deeply human storytelling.
           </p>
           <div className={styles.actions}>
-            <Link href="/book" className="btn btnPrimary">Explore the Book</Link>
+            <Link href="/book" className="btn btnPrimary">Book Overview</Link>
+            <Link href="/book?tab=podcast" className="btn btnGold">Video Podcast</Link>
             <Link href="/about" className="btn btnGhost">Biography</Link>
           </div>
         </div>
 
-        {/* Image */}
-        <div className={`${styles.imageCol} animateInit delay200`}>
-          <div className={styles.imageFrame}>
+        {/* Portrait Image — Right */}
+        <div className={`${styles.portraitCol} animateInit delay200`}>
+          <div className={styles.portraitFrame}>
             <Image
               src="/web image.png"
               alt="Dr. Manashi Ray, Professor of Sociology at West Virginia State University"
-              width={420}
-              height={560}
+              width={380}
+              height={500}
               className={styles.portrait}
               priority
             />
-            <div className={styles.imageAccent} aria-hidden="true" />
-          </div>
-          <div className={styles.badge}>
-            <span className={styles.badgeIcon}>✦</span>
-            <span>Professor &amp; Author</span>
+            <div className={styles.portraitAccent} aria-hidden="true" />
+            <div className={styles.portraitLabel}>
+              <span className={styles.portraitLabelIcon}>✦</span>
+              <span>Professor &amp; Scholar</span>
+            </div>
           </div>
         </div>
       </div>

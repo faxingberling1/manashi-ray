@@ -12,7 +12,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 60);
+    const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
@@ -32,10 +32,10 @@ export default function Nav() {
 
   const links = [
     { href: '/',              label: 'Home' },
+    { href: '/book',          label: 'Book' },
     { href: '/about',         label: 'About' },
     { href: '/publications',  label: 'Research' },
     { href: '/lectures',      label: 'Lectures' },
-    { href: '/book',          label: 'Book' },
     { href: '/speaking',      label: 'Awards' },
   ];
 

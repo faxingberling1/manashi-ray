@@ -2,6 +2,86 @@
   background: #fff;
 }
 
+/* ===== Tab Bar ===== */
+.tabBar {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  flex-wrap: wrap;
+}
+
+.tabBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  border-radius: 2px;
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--clr-text-mid);
+  border: 1.5px solid var(--clr-cream);
+  cursor: pointer;
+  transition: all 0.3s var(--ease-in-out);
+  position: relative;
+  overflow: hidden;
+}
+.tabBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--clr-navy);
+  transform: translateY(100%);
+  transition: transform 0.3s var(--ease-out-expo);
+  z-index: 0;
+}
+.tabBtn:hover {
+  border-color: var(--clr-navy);
+  color: var(--clr-navy);
+}
+.tabBtn:hover::before {
+  transform: translateY(60%);
+}
+
+.tabActive {
+  background: var(--clr-navy);
+  color: #fff !important;
+  border-color: var(--clr-navy);
+  box-shadow: var(--shadow-md);
+}
+.tabActive::before {
+  transform: translateY(0) !important;
+}
+.tabActive .tabIcon {
+  color: var(--clr-gold);
+}
+
+.tabIcon {
+  font-size: 0.75rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.3s;
+}
+.tabBtn span:last-of-type {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== Tab Content ===== */
+.tabContent {
+  animation: tabFadeIn 0.4s var(--ease-out-expo);
+}
+
+@keyframes tabFadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ===== BIOGRAPHY TAB ===== */
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -11,7 +91,7 @@
 
 .lead {
   font-family: var(--ff-display);
-  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
   font-weight: 400;
   color: var(--clr-navy);
   line-height: 1.5;
@@ -27,7 +107,7 @@
 
 .stats {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   margin-top: 3rem;
   padding-top: 2.5rem;
   border-top: 1px solid var(--clr-cream);
@@ -38,14 +118,14 @@
 .statNumber {
   display: block;
   font-family: var(--ff-display);
-  font-size: 3.5rem;
+  font-size: 3.25rem;
   font-weight: 300;
   color: var(--clr-navy);
   line-height: 1;
   margin-bottom: 0.35rem;
 }
 .statLabel {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -113,12 +193,330 @@
   color: #fff;
 }
 
+/* ===== CAREER TRAJECTORY TAB ===== */
+.careerSection {}
+
+.careerIntro {
+  max-width: 650px;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+.careerIntro p {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  color: var(--clr-navy);
+  line-height: 1.65;
+}
+
+.timeline {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-bottom: 4rem;
+}
+
+.timelineItem {
+  display: grid;
+  grid-template-columns: 160px 40px 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 0;
+}
+
+.timelineLeft {
+  text-align: right;
+  padding-top: 0.25rem;
+}
+.timelinePeriod {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  margin-bottom: 0.4rem;
+}
+.currentBadge {
+  display: inline-block;
+  background: var(--clr-gold);
+  color: var(--clr-navy-deep);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border-radius: 100px;
+}
+
+.timelineNode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nodeDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--clr-gold);
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px var(--clr-gold);
+  flex-shrink: 0;
+  margin-top: 0.35rem;
+}
+.timelineCurrent .nodeDot {
+  background: var(--clr-navy);
+  box-shadow: 0 0 0 2px var(--clr-navy);
+}
+.nodeLine {
+  width: 2px;
+  flex: 1;
+  background: linear-gradient(to bottom, var(--clr-gold), rgba(212, 175, 55, 0.2));
+  min-height: 80px;
+}
+
+.timelineRight {
+  padding-bottom: 3rem;
+}
+.posRole {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  margin-bottom: 0.35rem;
+}
+.posDept {
+  font-size: 0.85rem;
+  color: var(--clr-text-mid);
+  margin-bottom: 0.2rem;
+}
+.posInstitution {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--clr-gold);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+.posDetail {
+  font-size: 0.9rem;
+  color: var(--clr-text-soft);
+  line-height: 1.7;
+}
+
+/* Fellowships */
+.fellowships {
+  background: var(--clr-ivory);
+  border-radius: 4px;
+  padding: clamp(2rem, 4vw, 3rem);
+  max-width: 900px;
+  margin-inline: auto;
+}
+.fellowshipsTitle {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.fellowshipGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+.fellowshipCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: #fff;
+  border-radius: 4px;
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--clr-cream);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.fellowshipCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.fellowshipIcon {
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+.fellowshipTitle {
+  font-family: var(--ff-display);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+}
+.fellowshipSub {
+  font-size: 0.78rem;
+  color: var(--clr-text-soft);
+  line-height: 1.5;
+}
+
+/* ===== TEACHING TAB ===== */
+.teachingSection {}
+
+.teachingIntro {
+  max-width: 650px;
+  margin-inline: auto;
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+.teachingIntro p {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  color: var(--clr-navy);
+  line-height: 1.65;
+}
+
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+}
+
+.courseCard {
+  background: var(--clr-ivory);
+  border: 1px solid var(--clr-cream);
+  border-radius: 4px;
+  padding: 2rem;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.courseCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+.courseCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.courseCardIcon { font-size: 1.5rem; }
+.courseCardTitle {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+}
+
+.courseTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.courseTag {
+  display: inline-block;
+  padding: 0.4rem 0.9rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  background: rgba(26, 37, 64, 0.07);
+  color: var(--clr-navy);
+  letter-spacing: 0.03em;
+}
+.courseTagGold {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--clr-navy);
+}
+
+.platformCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  background: var(--clr-navy);
+  border-radius: 4px;
+  padding: 2rem;
+  color: #fff;
+}
+.platformIcon { font-size: 1.75rem; }
+.platformTitle {
+  font-family: var(--ff-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+.platformTags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.platformTag {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: rgba(212, 175, 55, 0.25);
+  color: var(--clr-gold-light);
+  letter-spacing: 0.05em;
+}
+
+/* Teaching Philosophy */
+.teachingPhilosophy {
+  max-width: 800px;
+  margin-inline: auto;
+}
+.philosophyInner {
+  background: var(--clr-ivory);
+  border-left: 4px solid var(--clr-gold);
+  padding: 2.5rem 3rem;
+  border-radius: 0 4px 4px 0;
+  position: relative;
+}
+.philosophyQuoteIcon {
+  font-family: var(--ff-display);
+  font-size: 5rem;
+  line-height: 0.5;
+  color: var(--clr-gold);
+  opacity: 0.35;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+.philosophyText {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--clr-navy);
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+}
+.philosophyCite {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--clr-gold);
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .timelineItem {
+    grid-template-columns: 120px 36px 1fr;
+  }
+}
+
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr; }
   .imageCol { position: static; order: -1; }
   .portrait { aspect-ratio: 4/3; }
+  .tabBar { gap: 0.6rem; }
+  .tabBtn { padding: 0.7rem 1.2rem; font-size: 0.72rem; }
+  .timelineItem { grid-template-columns: 100px 32px 1fr; gap: 0 1rem; }
+  .philosophyInner { padding: 2rem 1.75rem; }
 }
 
 @media (max-width: 480px) {
   .stats { justify-content: center; }
+  .tabBtn { padding: 0.65rem 1rem; }
+  .timelineItem { grid-template-columns: 1fr; }
+  .timelineLeft { text-align: left; padding-bottom: 0.5rem; }
+  .timelineNode { display: none; }
+  .timelineRight { padding-bottom: 2rem; border-left: 2px solid var(--clr-cream); padding-left: 1rem; }
 }

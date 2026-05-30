@@ -30,12 +30,6 @@ export default function Book() {
     <section className={`${styles.book} section`} id="book">
       <div className={styles.bgTexture}></div>
       <div className="container">
-        <div className="sectionHeader animateInit">
-          <span className="sectionLabel">Publications</span>
-          <h2 className="sectionTitle">The Book</h2>
-          <div className="sectionRule"></div>
-        </div>
-
         <div className={styles.showcase}>
           {/* Cover */}
           <div className={`${styles.coverCol} animateInit`}>
@@ -46,10 +40,10 @@ export default function Book() {
               onMouseLeave={handleMouseLeave}
             >
               <Image
-                src="/book_cover.png"
-                alt="Book by Manashi Ray"
-                width={320}
-                height={480}
+                src="/Book-Cover-Manashi.jpg"
+                alt="Becoming Boundless — Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray, published by Stanford University Press"
+                width={420}
+                height={630}
                 className={styles.coverImg}
                 ref={imgRef}
               />
@@ -59,42 +53,59 @@ export default function Book() {
 
           {/* Info */}
           <div className={`${styles.info} animateInit delay150`}>
-            <p className={styles.genre}>Personal Biography &amp; Memoir</p>
-            <h3 className={styles.title}>Charting My Own Course</h3>
-            <p className={styles.subtitle}><em>A Life Lived in Full</em></p>
+            <p className={styles.genre}>Sociology &amp; Transnational Studies</p>
+            <h3 className={styles.title}>Becoming Boundless</h3>
+            <p className={styles.subtitle}><em>Indian Transnational Entrepreneurs in the Global Economy</em></p>
             
             <p className={styles.description}>
-              In this deeply personal and intellectually rich memoir, Manashi Ray takes readers on an extraordinary journey — from the formative years that shaped her worldview to the halls of academia and the wider world of ideas. Part biography, part manifesto, this book is an invitation to think deeply, live boldly, and never stop questioning.
+              How do Indian men and women migrant entrepreneurs play a part in repositioning India as a pivotal actor in the twentyfirst century&apos;s multipolar world order?
             </p>
             <p className={styles.description}>
-              Drawing on decades of experience, interviews, and a lifetime of notes, <em>Charting My Own Course</em> weaves together personal narrative with scholarly insight to create a work that is both profoundly intimate and universally resonant.
+              In <em>Becoming Boundless</em>, Manashi Ray draws on ethnographic and archival research to uncover how they create and participate in transnational networks, and how these networks in turn drive the growth of global capitalism. Ray pays particular attention to the expansive global networks of transnational Indian entrepreneurs between the United States and India and across several other nations.
+            </p>
+            <p className={styles.description}>
+              Covering a 10-year period in India&apos;s post-reform era, Ray deftly highlights complex connections between the social and spatial mobility of this diverse, bicultural population, and uniquely theorizes the intersection of class, caste, and gender. She questions whether migration reinforces dominant forms of social inequality or transforms it through the redistribution of valued goods and life chances, especially for women in male-dominated sectors. The book therefore recasts contemporary migration as a crucial part of the emergence of transnational economic spaces, and analyzes the ways that these spaces are fragmented and hierarchical.
             </p>
 
             <div className={styles.meta}>
               <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Publisher</span>
-                <span className={styles.metaValue}>Forthcoming</span>
+                <span className={styles.metaLabel}>Author</span>
+                <span className={styles.metaValue}><strong>Manashi Ray</strong></span>
+                <span className={styles.metaSub}>Professor of Sociology at West Virginia State University</span>
               </div>
               <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Genre</span>
-                <span className={styles.metaValue}>Memoir / Biography</span>
+                <span className={styles.metaLabel}>Publication</span>
+                <span className={styles.metaValue}><strong>Stanford University Press</strong></span>
+                <span className={styles.metaSub}>May 2026</span>
               </div>
               <div className={styles.metaItem}>
-                <span className={styles.metaLabel}>Available At</span>
-                <span className={styles.metaValue}>Amazon, Barnes &amp; Noble</span>
+                <span className={styles.metaLabel}>Details</span>
+                <span className={styles.metaValue}><strong>$32.00</strong> Paperback</span>
+                <span className={styles.metaSub}>314 Pages</span>
+              </div>
+              <div className={styles.metaItem}>
+                <span className={styles.metaLabel}>ISBN</span>
+                <span className={styles.metaSub}><strong>Hardcover:</strong> 9781503645387</span>
+                <span className={styles.metaSub}><strong>Paperback:</strong> 9781503646094</span>
+                <span className={styles.metaSub}><strong>Ebook:</strong> 9781503646100</span>
               </div>
             </div>
 
             <div className={styles.actions}>
-              <a href="#" className="btn btnGold">Buy on Amazon</a>
-              <a href="#" className="btn btnGhost">Barnes &amp; Noble</a>
-            </div>
-
-            <div className={styles.endorsement}>
-              <blockquote className={styles.quote}>
-                &quot;A stunning achievement — part memoir, part manifesto. Manashi Ray writes with the precision of a scholar and the heart of a poet.&quot;
-              </blockquote>
-              <cite className={styles.author}>— Praise from colleague</cite>
+              <a
+                href="https://www.sup.org/books/sociology/becoming-boundless"
+                className="btn btnGold"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Buy at Stanford University Press
+              </a>
+              <p className={styles.discountCode}>
+                Receive <strong>20% off</strong> at <a href="https://www.sup.org/books/sociology/becoming-boundless" target="_blank" rel="noopener noreferrer">www.sup.org</a> with code <strong>RAY20</strong>
+              </p>
+              <p className={styles.bulkInfo}>
+                For discounts on event orders and bulk purchase of 50+ copies, please contact <a href="mailto:sales@sup.org">sales@sup.org</a>.
+              </p>
             </div>
           </div>
         </div>

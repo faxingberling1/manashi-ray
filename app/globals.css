@@ -68,11 +68,11 @@ button { border: none; background: none; cursor: pointer; font-family: inherit; 
 }
 
 /* ===== SECTION COMMON ===== */
-.section { padding-block: clamp(5rem, 10vw, 9rem); }
+.section { padding-block: clamp(3.5rem, 6vw, 6rem); }
 
 .sectionHeader {
   text-align: center;
-  margin-bottom: clamp(3rem, 6vw, 5rem);
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
 }
 
 .sectionLabel {

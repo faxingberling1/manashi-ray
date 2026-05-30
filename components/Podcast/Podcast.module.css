@@ -1,0 +1,79 @@
+.podcast {
+  position: relative;
+  background: var(--clr-ivory);
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.bgTexture {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.intro {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: var(--clr-text-mid);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.videoContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 960px;
+  margin-inline: auto;
+  position: relative;
+  z-index: 2;
+}
+
+.videoWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: var(--shadow-lg);
+  background: #000;
+  margin-bottom: 3rem;
+}
+
+.videoGlow {
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.15), transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: var(--clr-text-mid);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .videoWrapper {
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  .iframe {
+    border-radius: 8px;
+  }
+}

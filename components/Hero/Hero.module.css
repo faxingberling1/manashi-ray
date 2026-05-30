@@ -39,21 +39,72 @@
 .line1 { height: 60%; top: 20%; left: 33%; }
 .line2 { height: 50%; top: 25%; right: 25%; }
 
-/* Inner layout */
+/* Inner layout — 3 columns: portrait | text | book */
 .inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(3rem, 6vw, 6rem);
+  grid-template-columns: 1fr 1.2fr 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
   align-items: center;
-  width: min(1180px, 100%);
+  width: min(1200px, 100%);
   padding-inline: clamp(1.25rem, 5vw, 4rem);
   position: relative;
   z-index: 1;
 }
 
-/* Text column */
+/* ===== Portrait Column ===== */
+.portraitCol {
+  display: flex;
+  justify-content: center;
+}
+.portraitFrame {
+  position: relative;
+  width: min(320px, 100%);
+}
+.portrait {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: 4px 56px 4px 56px;
+  box-shadow: var(--shadow-xl);
+  position: relative;
+  z-index: 2;
+}
+.portraitAccent {
+  position: absolute;
+  inset: 1.25rem -1.25rem -1.25rem 1.25rem;
+  border: 2px solid var(--clr-gold);
+  border-radius: 4px 60px 4px 60px;
+  z-index: 1;
+  opacity: 0.45;
+}
+.portraitLabel {
+  position: absolute;
+  bottom: 1.75rem;
+  right: -1.25rem;
+  background: var(--clr-navy);
+  color: #fff;
+  border-radius: 100px;
+  padding: 0.55rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: var(--shadow-md);
+  z-index: 3;
+}
+.portraitLabelIcon { color: var(--clr-gold); font-size: 0.9rem; }
+
+/* ===== Text Column ===== */
+.textCol {
+  text-align: center;
+}
 .eyebrow {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.25em;
   text-transform: uppercase;
@@ -61,19 +112,22 @@
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.75rem;
 }
-.eyebrow::before {
+.eyebrow::before,
+.eyebrow::after {
   content: '';
   display: block;
-  width: 32px;
+  width: 24px;
   height: 1px;
   background: var(--clr-gold);
+  flex-shrink: 0;
 }
 
 .name {
   font-family: var(--ff-display);
-  font-size: clamp(4rem, 8vw, 7.5rem);
+  font-size: clamp(3.5rem, 6vw, 6.5rem);
   font-weight: 300;
   line-height: 1;
   color: var(--clr-navy);
@@ -88,77 +142,110 @@
 
 .tagline {
   font-family: var(--ff-body);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--clr-text-mid);
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 .bio {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--clr-text-mid);
-  max-width: 42ch;
   margin-bottom: 2.5rem;
   line-height: 1.8;
+  max-width: 36ch;
+  margin-inline: auto;
 }
 
 .actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-/* Image column */
-.imageCol {
-  position: relative;
+/* ===== Book Column ===== */
+.bookCol {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
-.imageFrame {
+.bookFrame {
   position: relative;
-  width: min(420px, 100%);
+  width: min(300px, 100%);
+  perspective: 1200px;
 }
-.portrait {
+.bookGlow {
+  position: absolute;
+  inset: -15% -20%;
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.bookCover {
   width: 100%;
   height: auto;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  object-position: top center;
-  border-radius: 2px 48px 2px 48px;
-  box-shadow: var(--shadow-xl);
+  border-radius: 3px 10px 10px 3px;
+  box-shadow:
+    -6px 6px 0 rgba(0, 0, 0, 0.08),
+    0 24px 60px rgba(26, 37, 64, 0.22),
+    inset -3px 0 5px rgba(0, 0, 0, 0.08);
+  transform: rotateY(-6deg) rotateX(2deg);
+  transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo);
   position: relative;
   z-index: 2;
 }
-.imageAccent {
+.bookFrame:hover .bookCover {
+  transform: rotateY(-2deg) rotateX(0.5deg) scale(1.04);
+  box-shadow:
+    -10px 10px 0 rgba(0, 0, 0, 0.12),
+    0 40px 90px rgba(26, 37, 64, 0.28),
+    inset -3px 0 5px rgba(0, 0, 0, 0.08);
+}
+.bookShadow {
   position: absolute;
-  inset: 1.5rem -1.5rem -1.5rem 1.5rem;
-  border: 2px solid var(--clr-gold);
-  border-radius: 2px 52px 2px 52px;
+  bottom: -8%;
+  left: 8%;
+  right: 4%;
+  height: 30px;
+  background: rgba(26, 37, 64, 0.18);
+  filter: blur(18px);
+  border-radius: 50%;
   z-index: 1;
-  opacity: 0.5;
 }
-.badge {
+.bookBadge {
   position: absolute;
-  bottom: 2rem;
-  right: -1rem;
-  background: var(--clr-navy);
-  color: #fff;
+  bottom: -1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--clr-gold);
   border-radius: 100px;
-  padding: 0.65rem 1.25rem;
+  padding: 0.5rem 1.1rem;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  box-shadow: var(--shadow-md);
   z-index: 3;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+  min-width: 160px;
 }
-.badgeIcon { color: var(--clr-gold); font-size: 1rem; }
+.bookBadgePress {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--clr-navy-deep);
+  opacity: 0.75;
+  line-height: 1.2;
+}
+.bookBadgeTitle {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--clr-navy-deep);
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
 
 /* Scroll cue */
 .scrollCue {
@@ -188,17 +275,30 @@
   font-weight: 600;
 }
 
-@media (max-width: 768px) {
-  .inner { grid-template-columns: 1fr; text-align: center; }
-  .eyebrow { justify-content: center; }
-  .bio { margin-inline: auto; }
-  .actions { justify-content: center; }
-  .imageCol { order: -1; }
-  .imageFrame { width: min(260px, 100%); }
-  .badge { right: 0; }
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .inner {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .textCol {
+    grid-column: 1 / -1;
+    order: -1;
+  }
+  .portraitCol { order: 1; }
+  .bookCol { order: 2; }
 }
 
-@media (max-width: 480px) {
-  .name { font-size: clamp(3rem, 14vw, 4.5rem); }
-  .actions { flex-direction: column; align-items: center; }
+@media (max-width: 600px) {
+  .inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .textCol { order: -1; }
+  .portraitCol { order: 1; }
+  .bookCol { order: 2; }
+  .portraitFrame { width: min(220px, 80%); margin-inline: auto; }
+  .bookFrame { width: min(180px, 75%); margin-inline: auto; }
+  .bookBadge { bottom: -1rem; }
+  .actions { justify-content: center; flex-direction: column; align-items: center; }
 }
