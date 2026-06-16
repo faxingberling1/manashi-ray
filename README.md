@@ -1,23 +1,23 @@
-# Manashi Ray — Personal Portfolio
+# Manashi Ray , Personal Portfolio
 
-A professional, academic portfolio website designed and built for Dr. Manashi Ray — Professor of Sociology at West Virginia State University, author, and public intellectual.
+A professional, academic portfolio website designed and built for Dr. Manashi Ray , Professor of Sociology at West Virginia State University, author, and public intellectual.
 
 ## Design & Architecture
 * **Framework:** Next.js 16 (App Router)
 * **Language:** TypeScript
 * **Styling:** Vanilla CSS Modules (no Tailwind)
-* **Aesthetic:** Minimalist Academic — Ivory, Deep Navy, Warm Gold palette
+* **Aesthetic:** Minimalist Academic , Ivory, Deep Navy, Warm Gold palette
 * **Typography:** Cormorant Garamond (Display) & Inter (Body)
 
 ## Pages
 
 | Route | Description |
 |---|---|
-| `/` | Home — hero, real biography intro, three CTAs |
+| `/` | Home , hero, real biography intro, three CTAs |
 | `/about` | Full biography, career stats, teaching positions, CV download |
 | `/publications` | Research areas, peer-reviewed articles, book chapters, other writings |
 | `/lectures` | Invited talks (7) and conference presentations (17 papers across 9 years) |
-| `/book` | Interactive 3D book showcase — *Charting My Own Course* |
+| `/book` | Interactive 3D book showcase , *Charting My Own Course* |
 | `/speaking` | Speaking topics + full Awards & Honors (14 entries, grouped by category) |
 | `/contact` | Contact form + social links |
 
@@ -35,7 +35,7 @@ A professional, academic portfolio website designed and built for Dr. Manashi Ra
 | File | Description |
 |---|---|
 | `manashi_portrait.png` | Portrait photograph |
-| `book_cover.png` | Book cover — *Charting My Own Course* |
+| `book_cover.png` | Book cover , *Charting My Own Course* |
 | `CV-Manashi-Ray.pdf` | Downloadable curriculum vitae |
 
 ## Setup and Development

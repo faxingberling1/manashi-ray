@@ -3,7 +3,7 @@ import styles from './Lectures.module.css';
 const invitedTalks = [
   {
     year: '2020',
-    title: 'Discussant — Plenary Session on Migration and the Politics of Borders',
+    title: 'Discussant , Plenary Session on Migration and the Politics of Borders',
     event: 'Sociologists for Women in Society (Winter Meeting)',
     location: 'San Diego, CA',
     date: 'February 1',
@@ -13,14 +13,14 @@ const invitedTalks = [
     title: 'The Disruptors – Returnee Transnational Entrepreneurs in India',
     event: 'Jawaharlal Nehru Institute of Advanced Study',
     location: 'Jawaharlal Nehru University, New Delhi',
-    date: 'March 12 — organized by Diaspora, International Migration Program (CAS) and Organization for Diaspora Initiatives (ODI)',
+    date: 'March 12 , organized by Diaspora, International Migration Program (CAS) and Organization for Diaspora Initiatives (ODI)',
   },
   {
     year: '2019',
     title: 'The Disruptors – Returnee Transnational Entrepreneurs in India & Escaping Gender Roles or Seeking Compromise? Changing the Narrative of Womenpreneurs',
     event: 'University of Hyderabad',
     location: 'Hyderabad, India',
-    date: 'January 29–30 — organized by UGC Centre for the Study of Indian Diaspora and Centre for Women\'s Study',
+    date: 'January 29–30 , organized by UGC Centre for the Study of Indian Diaspora and Centre for Women\'s Study',
   },
   {
     year: '2017',
@@ -46,7 +46,7 @@ const invitedTalks = [
   {
     year: '2004',
     title: 'The Role of Women\'s Rights and Empowerment in Global Economic Development',
-    event: 'United Nations Day — 59th Year Anniversary Celebration',
+    event: 'United Nations Day , 59th Year Anniversary Celebration',
     location: 'Michigan State University International Center, East Lansing',
     date: 'October 24',
   },
@@ -59,12 +59,12 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'Social Mobility in Transnational Spaces: Subjective Perceptions of Indian Women Entrepreneurs',
         session: 'Social and Spatial Mobility: New Entanglements of Class and Migration',
-        event: 'XX ISA World Congress of Sociology, Melbourne, Australia — June 25–July 1',
+        event: 'XX ISA World Congress of Sociology, Melbourne, Australia , June 25–July 1',
       },
       {
         title: 'To Flee or Not to Flee? Im/Mobility Among Ukrainian Glass Artists and Entrepreneurs',
-        session: 'The Social Economy of Migrant Labor — Improving Social Protections to End Exploitation',
-        event: 'XX ISA World Congress of Sociology, Melbourne, Australia — June 25–July 1',
+        session: 'The Social Economy of Migrant Labor , Improving Social Protections to End Exploitation',
+        event: 'XX ISA World Congress of Sociology, Melbourne, Australia , June 25–July 1',
       },
     ],
   },
@@ -74,12 +74,12 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'Ambiguities and Complexities of Selective Adaptation Among Transnational Indian American Entrepreneurs',
         session: 'Diversification in Migrant (Non)adaptation',
-        event: 'IV ISA Forum of Sociology, Porto Alegre, Brazil — Feb 23–27',
+        event: 'IV ISA Forum of Sociology, Porto Alegre, Brazil , Feb 23–27',
       },
       {
         title: 'Not to be \'Outpaced\' Nor \'Underestimated\': Transnational Lives of Indian Women Entrepreneurs',
         session: 'Gendered Resistances in Postcolonial and Transnational Context',
-        event: 'IV ISA Forum of Sociology, Porto Alegre, Brazil — Feb 23–27',
+        event: 'IV ISA Forum of Sociology, Porto Alegre, Brazil , Feb 23–27',
       },
     ],
   },
@@ -89,7 +89,7 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'Reproducing Inequalities or Promoting Upward Mobility? A Case of Transnational Asian-Indian Entrepreneurs',
         session: 'International Mobility and Social Stratification',
-        event: 'ISA World Congress of Sociology, Toronto, Canada — July 15–21',
+        event: 'ISA World Congress of Sociology, Toronto, Canada , July 15–21',
       },
     ],
   },
@@ -99,7 +99,7 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'What we eat makes us who we are! The food practices and transnational identity of Burmese refugee families in Battle Creek, Michigan',
         session: 'Food in Social Life: Mini Conference on Sociology of Food',
-        event: 'Eastern Sociological Association Annual Meeting, Boston — March 17–20',
+        event: 'Eastern Sociological Association Annual Meeting, Boston , March 17–20',
       },
     ],
   },
@@ -109,7 +109,7 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'Navigating the Myanmar–Thailand–Malaysia border: The escape strategies of Burmese refugees from Chin State, Myanmar, to Battle Creek, Michigan',
         session: 'XVIII ISA World Congress of Sociology',
-        event: 'Yokohama, Japan — July 13–19',
+        event: 'Yokohama, Japan , July 13–19',
       },
     ],
   },
@@ -119,12 +119,12 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'The latent power of Networks: the routes of re-migration of returnee entrepreneurs from the United States to India in the 21st century',
         session: 'Invited Workshop: Diaspora and Development: South Asian Diaspora Engagement in South Asia',
-        event: 'Institute of South Asian Studies (ISAS), National University of Singapore — Sept 27–28',
+        event: 'Institute of South Asian Studies (ISAS), National University of Singapore , Sept 27–28',
       },
       {
         title: 'How did I get here? – The cultural and social moorings of business behavior among Asian Indian women entrepreneurs in the 21st century',
         session: 'Work/Life Balance',
-        event: 'Eastern Sociological Association Annual Meeting, New York — Feb 23–26',
+        event: 'Eastern Sociological Association Annual Meeting, New York , Feb 23–26',
       },
     ],
   },
@@ -134,12 +134,12 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'A Balancing Act! – The World of Transnational Indian Women Entrepreneurs',
         session: 'South Asian American Female Consumptions',
-        event: 'Asian American Studies Annual Conference, New Orleans — May 18–21',
+        event: 'Asian American Studies Annual Conference, New Orleans , May 18–21',
       },
       {
         title: 'Is Accessing Global Markets easier than ever in the 21st century? A comparative study of U.S. based returnee and non-migrant transnational Indian entrepreneurs in India',
         session: 'Highly Skilled Migration in the 21st Century',
-        event: 'Eastern Sociological Association Annual Meeting, Philadelphia — February 24–27',
+        event: 'Eastern Sociological Association Annual Meeting, Philadelphia , February 24–27',
       },
     ],
   },
@@ -149,12 +149,12 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: 'Transcending National Borders for Global Markets: A comparison of Immigrant and non-migrant transnational Indian entrepreneurs in high tech and consumer goods sectors',
         session: 'Transnational Entrepreneurs: Old and New',
-        event: '22nd Society for the Advancement of Socio-Economics Annual Meeting, Philadelphia — June 24–26',
+        event: '22nd Society for the Advancement of Socio-Economics Annual Meeting, Philadelphia , June 24–26',
       },
       {
         title: 'Negotiating Identity as \'Transnationals\': The contextual intersection of multi-state membership and identity among the immigrant and returnee entrepreneurs in the U.S. and India',
         session: 'Religion and Ethnicity in India',
-        event: '38th National Association for Ethnic Studies Annual Conference, Washington D.C. — April 8–10',
+        event: '38th National Association for Ethnic Studies Annual Conference, Washington D.C. , April 8–10',
       },
     ],
   },
@@ -164,7 +164,7 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
       {
         title: '"I can talk Baseball with an average American and Cricket with an Indian!" – The Construction of Symbolic Identity by Professional Asian Indian Immigrants in the United States',
         session: 'Individual Paper Presentation',
-        event: 'Asian American Studies Annual Conference, Chicago — April 16–20',
+        event: 'Asian American Studies Annual Conference, Chicago , April 16–20',
       },
     ],
   },

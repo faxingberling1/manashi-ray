@@ -21,7 +21,7 @@ export default function Podcast() {
             <iframe
               className={styles.iframe}
               src="https://www.youtube.com/embed/BHACKCNDMW8"
-              title="4K Scenic Relaxation Film — Beautiful Nature"
+              title="4K Scenic Relaxation Film , Beautiful Nature"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"

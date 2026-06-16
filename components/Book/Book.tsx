@@ -41,7 +41,7 @@ export default function Book() {
             >
               <Image
                 src="/Book-Cover-Manashi.jpg"
-                alt="Becoming Boundless — Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray, published by Stanford University Press"
+                alt="Becoming Boundless , Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray, published by Stanford University Press"
                 width={420}
                 height={630}
                 className={styles.coverImg}

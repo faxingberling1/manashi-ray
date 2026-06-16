@@ -50,7 +50,7 @@ function BookContent() {
         </div>
       </div>
 
-      {/* Always-mounted tab content — toggled via CSS display */}
+      {/* Always-mounted tab content , toggled via CSS display */}
       <div style={{ display: activeTab === 'book' ? 'block' : 'none' }}>
         <Book />
         <BookTestimonials />

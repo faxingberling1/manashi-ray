@@ -5,28 +5,28 @@ import styles from './BookQuotes.module.css';
 
 const QUOTES = [
   {
-    text: "Every map I was handed told someone else's story. I had to learn to draw my own — not with certainty, but with courage.",
-    page: 'Chapter 1 — Placeholder',
+    text: "Every map I was handed told someone else's story. I had to learn to draw my own , not with certainty, but with courage.",
+    page: 'Chapter 1 , Placeholder',
   },
   {
     text: "Home is not a place you return to. It is a question you spend a lifetime answering.",
-    page: 'Chapter 3 — Placeholder',
+    page: 'Chapter 3 , Placeholder',
   },
   {
     text: "The academy gave me language for things I had always felt. It also taught me that language, alone, is never enough.",
-    page: 'Chapter 5 — Placeholder',
+    page: 'Chapter 5 , Placeholder',
   },
   {
-    text: "I did not cross borders. The borders crossed me — rearranging everything I thought I knew about belonging.",
-    page: 'Chapter 7 — Placeholder',
+    text: "I did not cross borders. The borders crossed me , rearranging everything I thought I knew about belonging.",
+    page: 'Chapter 7 , Placeholder',
   },
   {
     text: "To study inequality is to hold a mirror up to the world. To write about it honestly is to hold one up to yourself.",
-    page: 'Chapter 9 — Placeholder',
+    page: 'Chapter 9 , Placeholder',
   },
   {
     text: "There is a particular kind of freedom that comes not from having all the answers, but from learning to live well inside the questions.",
-    page: 'Chapter 12 — Placeholder',
+    page: 'Chapter 12 , Placeholder',
   },
 ];
 

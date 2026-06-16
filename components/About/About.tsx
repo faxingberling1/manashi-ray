@@ -66,13 +66,13 @@ export default function About() {
                 </p>
                 <div className={styles.text}>
                   <p>
-                    Trained at Michigan State University, where she earned her doctorate with distinction, Dr. Ray&apos;s scholarship has taken her across continents — from fieldwork among Burmese refugees in Michigan to research on transnational Indian entrepreneurs — always following the human story at the heart of complex social phenomena.
+                    Trained at Michigan State University, where she earned her doctorate with distinction, Dr. Ray&apos;s scholarship has taken her across continents , from fieldwork among Burmese refugees in Michigan to research on transnational Indian entrepreneurs , always following the human story at the heart of complex social phenomena.
                   </p>
                   <p>
                     Her academic career is distinguished by a rare ability to move between rigorous scholarly inquiry and deeply human storytelling. She has taught graduate and undergraduate courses spanning Social Inequality, Sociology of Gender, Sociology of Family, and the special-topics course <em>Migrants and Refugees: The American Experience</em>, shaping the intellectual lives of hundreds of students.
                   </p>
                   <p>
-                    The recipient of numerous prestigious fellowships and grants — including a fellowship at the Jawaharlal Nehru Institute of Advanced Study and the UNFPA Global Training Program at the Institute of Social Studies, The Hague — Dr. Ray brings a truly global perspective to her work.
+                    The recipient of numerous prestigious fellowships and grants , including a fellowship at the Jawaharlal Nehru Institute of Advanced Study and the UNFPA Global Training Program at the Institute of Social Studies, The Hague , Dr. Ray brings a truly global perspective to her work.
                   </p>
                 </div>
 
@@ -249,9 +249,9 @@ export default function About() {
                 <div className={styles.philosophyInner}>
                   <span className={styles.philosophyQuoteIcon}>&ldquo;</span>
                   <p className={styles.philosophyText}>
-                    My teaching is rooted in the belief that sociology is not just an academic discipline — it is a lens through which students come to understand the world, their place within it, and the structures that shape their lives. I strive to create classrooms that are intellectually rigorous, culturally inclusive, and deeply human.
+                    My teaching is rooted in the belief that sociology is not just an academic discipline , it is a lens through which students come to understand the world, their place within it, and the structures that shape their lives. I strive to create classrooms that are intellectually rigorous, culturally inclusive, and deeply human.
                   </p>
-                  <cite className={styles.philosophyCite}>— Dr. Manashi Ray, Teaching Philosophy</cite>
+                  <cite className={styles.philosophyCite}>, Dr. Manashi Ray, Teaching Philosophy</cite>
                 </div>
               </div>
             </div>

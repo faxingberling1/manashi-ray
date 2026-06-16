@@ -28,13 +28,13 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'Manashi Ray — Author · Scholar · Speaker',
+  title: 'Manashi Ray , Author · Scholar · Speaker',
   description:
-    'Personal website of Manashi Ray — acclaimed author, scholar, and speaker. Explore her biography, debut memoir, achievements, and speaking engagements.',
+    'Personal website of Manashi Ray , acclaimed author, scholar, and speaker. Explore her biography, debut memoir, achievements, and speaking engagements.',
   keywords: ['Manashi Ray', 'author', 'scholar', 'speaker', 'memoir', 'biography', 'book'],
   authors: [{ name: 'Manashi Ray' }],
   openGraph: {
-    title: 'Manashi Ray — Author · Scholar · Speaker',
+    title: 'Manashi Ray , Author · Scholar · Speaker',
     description:
       'Illuminating the human experience through rigorous research, powerful storytelling, and a lifelong commitment to learning.',
     type: 'website',

@@ -31,7 +31,7 @@ const awards = [
       },
       {
         year: '2012 – 2013',
-        title: 'Travel Grant — RC 31 Research Committee',
+        title: 'Travel Grant , RC 31 Research Committee',
         detail: 'ISA World Congress of Sociology, Yokohama, Japan',
         org: 'International Sociological Association',
       },
@@ -114,7 +114,7 @@ export default function Achievements() {
           <h2 className="sectionTitle">Awards &amp; Honors</h2>
           <div className="sectionRule"></div>
           <p className={styles.intro}>
-            A career marked by distinction — from international fellowships at The Hague to
+            A career marked by distinction , from international fellowships at The Hague to
             national recognition at Michigan State and sustained research funding at West Virginia State University.
           </p>
         </div>

@@ -14,13 +14,13 @@ export default function Hero() {
       </div>
 
       <div className={styles.inner}>
-        {/* Book Cover Image — Left */}
+        {/* Book Cover Image , Left */}
         <div className={`${styles.bookCol} animateInit`}>
           <div className={styles.bookFrame}>
             <div className={styles.bookGlow} aria-hidden="true" />
             <Image
               src="/Book-Cover-Manashi.jpg"
-              alt="Becoming Boundless — Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray"
+              alt="Becoming Boundless , Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray"
               width={300}
               height={450}
               className={styles.bookCover}
@@ -53,7 +53,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Portrait Image — Right */}
+        {/* Portrait Image , Right */}
         <div className={`${styles.portraitCol} animateInit delay200`}>
           <div className={styles.portraitFrame}>
             <Image

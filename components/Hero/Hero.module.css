@@ -39,7 +39,7 @@
 .line1 { height: 60%; top: 20%; left: 33%; }
 .line2 { height: 50%; top: 25%; right: 25%; }
 
-/* Inner layout — 3 columns: portrait | text | book */
+/* Inner layout , 3 columns: portrait | text | book */
 .inner {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;

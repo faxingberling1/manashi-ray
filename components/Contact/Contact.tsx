@@ -57,7 +57,7 @@ export default function Contact() {
           {/* Info */}
           <div className={`${styles.info} animateInit`}>
             <p className={styles.lead}>
-              Whether you&apos;re a reader, fellow scholar, event organiser, or journalist — Manashi would love to hear from you.
+              Whether you&apos;re a reader, fellow scholar, event organiser, or journalist , Manashi would love to hear from you.
             </p>
             <div className={styles.details}>
               <div className={styles.item}>

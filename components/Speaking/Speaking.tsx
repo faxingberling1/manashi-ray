@@ -44,7 +44,7 @@ export default function Speaking() {
             <div className={styles.icon}>🎙️</div>
             <h3 className={styles.title}>Panels &amp; Interviews</h3>
             <p className={styles.desc}>
-              Featured panelist on media, podcasts, and academic forums — bringing nuance,
+              Featured panelist on media, podcasts, and academic forums , bringing nuance,
               expertise, and a gift for clear communication to complex conversations.
             </p>
           </div>
