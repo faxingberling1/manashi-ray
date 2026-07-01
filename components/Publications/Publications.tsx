@@ -7,6 +7,7 @@ import { economicsPopulationContent } from './economicsPopulationContent';
 import { experiencesContent } from './experiencesContent';
 import { globalCirculationContent } from './globalCirculationContent';
 import { stateAndCivilSocietyContent } from './stateAndCivilSocietyContent';
+import { rc32NewsletterContent } from './rc32NewsletterContent';
 
 const expertise = [
   'International Migration',
@@ -154,6 +155,20 @@ const other = [
   },
 ];
 
+const newsletters = [
+  {
+    year: '2021',
+    citation: 'Ray, Manashi',
+    title: 'FEATURE ARTICLE: Kolkata Under Covid: Reflections on a Visit Home, Winter 2020-21',
+    venue: 'RC32 NEWSLETTER, Summer/ Fall 2021',
+    detail: 'Volume #12',
+    type: 'Newsletter',
+    content: 'embed',
+    embedPdf: true,
+    pdf: '/Publications/Kolkata_Under_Covid.pdf',
+  },
+];
+
 type TypeBadgeProps = { type: string };
 function TypeBadge({ type }: TypeBadgeProps) {
   const colorMap: Record<string, string> = {
@@ -165,6 +180,7 @@ function TypeBadge({ type }: TypeBadgeProps) {
     'Report':          styles.badgeReport,
     'Working Paper':   styles.badgeWorking,
     'Newspaper':       styles.badgeNewspaper,
+    'Newsletter':      styles.badgeNewspaper,
   };
   return <span className={`${styles.badge} ${colorMap[type] ?? ''}`}>{type}</span>;
 }
@@ -267,20 +283,24 @@ function PubItem({ item, index }: PubItemProps) {
                    &times;
                  </button>
               </div>
-              <div className={styles.modalBody}>
-                {item.content.trim().split('\n\n').map((paragraph: string, idx: number) => {
-                  if (paragraph.startsWith('REFERENCES') || paragraph.startsWith('FURTHER READING')) {
-                    return (
-                      <div key={idx} className={styles.readingReferences}>
-                        <strong>{paragraph.split('\n')[0]}</strong>
-                        {paragraph.split('\n').slice(1).map((ref, i) => (
-                          <p key={i} className={styles.readingParagraph}>{ref}</p>
-                        ))}
-                      </div>
-                    );
-                  }
-                  return <p key={idx} className={styles.readingParagraph}>{paragraph}</p>;
-                })}
+              <div className={styles.modalBody} style={item.embedPdf ? { padding: 0, overflow: 'hidden' } : {}}>
+                {item.embedPdf ? (
+                  <iframe src={`${item.pdf}#view=FitH`} style={{ width: '100%', height: '85vh', border: 'none', display: 'block' }} title={item.title} />
+                ) : (
+                  item.content.trim().split('\n\n').map((paragraph: string, idx: number) => {
+                    if (paragraph.startsWith('REFERENCES') || paragraph.startsWith('FURTHER READING')) {
+                      return (
+                        <div key={idx} className={styles.readingReferences}>
+                          <strong>{paragraph.split('\n')[0]}</strong>
+                          {paragraph.split('\n').slice(1).map((ref: string, i: number) => (
+                            <p key={i} className={styles.readingParagraph}>{ref}</p>
+                          ))}
+                        </div>
+                      );
+                    }
+                    return <p key={idx} className={styles.readingParagraph}>{paragraph}</p>;
+                  })
+                )}
               </div>
             </div>
           </div>
@@ -364,7 +384,7 @@ export default function Publications() {
       </section>
 
       {/* Other */}
-      <section className={`${styles.pubSection} section`} style={{ paddingTop: 0, paddingBottom: '5rem' }}>
+      <section className={`${styles.pubSection} section`} style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="sectionHeader animateInit">
             <span className="sectionLabel">Other Writing</span>
@@ -373,7 +393,23 @@ export default function Publications() {
           </div>
           <div className={`${styles.pubList} animateInit`}>
             {other.map((item, i) => (
-              <PubItem key={i} item={item} index={i} />
+              <PubItem key={`other-${i}`} item={item} index={i} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletters */}
+      <section className={`${styles.pubSection} section`} style={{ paddingTop: 0, paddingBottom: '5rem' }}>
+        <div className="container">
+          <div className="sectionHeader animateInit">
+            <span className="sectionLabel">Featured Articles</span>
+            <h2 className="sectionTitle">Newsletters</h2>
+            <div className="sectionRule"></div>
+          </div>
+          <div className={`${styles.pubList} animateInit`}>
+            {newsletters.map((item, i) => (
+              <PubItem key={`news-${i}`} item={item} index={i} />
             ))}
           </div>
         </div>
