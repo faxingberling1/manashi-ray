@@ -10,7 +10,7 @@ export default function Podcast() {
           <h2 className="sectionTitle">Video Podcast</h2>
           <div className="sectionRule"></div>
           <p className={styles.intro}>
-            While a dedicated podcast video is coming soon, enjoy this calming nature film. Once the interview is live, just share the YouTube link and it will be updated instantly.
+            Join Dr. Manashi Ray in this video podcast as she discusses her latest work and insights.
           </p>
         </div>
 
@@ -20,8 +20,8 @@ export default function Podcast() {
             <div className={styles.videoGlow} aria-hidden="true"></div>
             <iframe
               className={styles.iframe}
-              src="https://www.youtube.com/embed/BHACKCNDMW8"
-              title="4K Scenic Relaxation Film , Beautiful Nature"
+              src="https://www.youtube.com/embed/Tch_NyhZ-0c"
+              title="Video Podcast with Manashi Ray"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
@@ -34,7 +34,7 @@ export default function Podcast() {
               Prefer to watch directly on YouTube?
             </p>
             <a
-              href="https://www.youtube.com/watch?v=BHACKCNDMW8"
+              href="https://www.youtube.com/watch?v=Tch_NyhZ-0c"
               className="btn btnGold"
               target="_blank"
               rel="noopener noreferrer"

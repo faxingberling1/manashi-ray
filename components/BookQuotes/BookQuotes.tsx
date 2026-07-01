@@ -5,28 +5,32 @@ import styles from './BookQuotes.module.css';
 
 const QUOTES = [
   {
-    text: "Every map I was handed told someone else's story. I had to learn to draw my own , not with certainty, but with courage.",
-    page: 'Chapter 1 , Placeholder',
+    text: "I have never been able to work in a typical salaried environment. I am just not cut out for that, not cut out for the strictures of it . . . not cut out for lack of free thought . . . [and] something about India always gets the best out of me.",
+    page: 'Introduction (page 4)',
   },
   {
-    text: "Home is not a place you return to. It is a question you spend a lifetime answering.",
-    page: 'Chapter 3 , Placeholder',
+    text: "I met a lot of resourceful and creative people through TiE. To use a sports analogy, within TiE, I felt a lust to win—we had to fight for success! To many of us TiE was bigger than an Indian networking organization . . . we were buying into this entrepreneurial energy collectively, it is difficult to quantify, it is intangible, but it definitely had a positive effect.",
+    page: 'Chapter 2 (page 70)',
   },
   {
-    text: "The academy gave me language for things I had always felt. It also taught me that language, alone, is never enough.",
-    page: 'Chapter 5 , Placeholder',
+    text: "I was moved from Hong Kong to New York to take care of North American operations, which was in serious financial difficulties … I had to recover the losses and turn it around… I was chosen to deal with the failure, which later became [an] increasingly central part of our business strategy.",
+    page: 'Chapter 2 (page 83)',
   },
   {
-    text: "I did not cross borders. The borders crossed me , rearranging everything I thought I knew about belonging.",
-    page: 'Chapter 7 , Placeholder',
+    text: "We both had decided to return to India after being in the US for six years on H-1B visa, it got hastened with other factors: 9/11, visa issues, growth opportunities and our desire to be close to our aging parents. There were so many opportunities for my kind of offshore business in India.",
+    page: 'Chapter 3 (page 119)',
   },
   {
-    text: "To study inequality is to hold a mirror up to the world. To write about it honestly is to hold one up to yourself.",
-    page: 'Chapter 9 , Placeholder',
+    text: "In my sector in India, women are constantly reminded that they are imperfect in a million ways ... unlike my non-Indian or European colleagues. No matter what I do [it] is not enough. It is not a zero-sum game. In the past if I asked for advice or counsel, I was repeatedly put on the wrong path… In my line of work, men don’t know how to handle strong capable professional women.",
+    page: 'Chapter 4 (page 174)',
   },
   {
-    text: "There is a particular kind of freedom that comes not from having all the answers, but from learning to live well inside the questions.",
-    page: 'Chapter 12 , Placeholder',
+    text: "One thing I have learnt is that we must defy fate, we will get advantages and challenges in our lives, and we must get both to work for us. Working for startups took up a lot of my time…luckily at that time my husband was still trying to get started so he had some free time to be with our kid. My husband never once made me feel guilty for being less of a parent, but it called for constant prioritization of my responsibilities as a mother, wife, and co-founder of our business.",
+    page: 'Chapter 4 (page 170)',
+  },
+  {
+    text: "I was eager to get out of the comfort zone… not be known as “Indian ethnic business” guy, which I respect, but I find it to be limiting. Doing business is in my blood. I am a “Gujrati Bania”, I can hustle anything!",
+    page: 'Additional Interview',
   },
 ];
 

@@ -17,12 +17,15 @@ export default function Home() {
         <div className="container">
           <div className={styles.introInner}>
             <p className={`animateInit ${styles.introText}`}>
-              Dr. Manashi Ray is Professor of Sociology at West Virginia State University. Her research lies at the intersection of <em>international migration, transnationalism,</em> and <em>network analysis</em>, using Bourdieu&apos;s theory of capital, transnational spaces, and life course perspectives to understand migratory processes brought on by globalization and technological innovation.
+              Manashi Ray is Professor of Sociology at West Virginia State University. As an ethnographer and sociologist, she studies migration-related developmental concerns, particularly the global reach of migrants&apos; practices and actions. Her work asks why people migrate, how gender impacts migratory patterns and settlement, and how migrants experience &apos;transience&apos; in transnational space.
             </p>
             <p className={`animateInit delay100 ${styles.introText}`}>
-              She is currently completing her book manuscript, <em>Becoming Boundless: The Story of Transnational Indian Entrepreneurs</em>, and serves as Treasurer for RC 32 (Women, Gender and Society) of the International Sociological Association.
+              Her wide-ranging research includes transnational entrepreneurship among Indian migrants, network formation and analysis, women&apos;s entrepreneurship, and refugee movements from East Asia to the US.
             </p>
-            <div className={`animateInit delay200 ${styles.introActions}`}>
+            <p className={`animateInit delay200 ${styles.introText}`}>
+              Her monograph <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em> was published by Stanford University Press in 2026. Her current research explores climate-related mobility and (im)mobility and how green architecture affects mobility decisions.
+            </p>
+            <div className={`animateInit delay300 ${styles.introActions}`}>
               <Link href="/about" className="btn btnGhost">Full Biography</Link>
               <Link href="/publications" className="btn btnPrimary">Research &amp; Writing</Link>
               <Link href="/book" className="btn btnGold">The Book</Link>
