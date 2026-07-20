@@ -62,17 +62,17 @@ export default function About() {
               {/* Text */}
               <div>
                 <p className={styles.lead}>
-                  Manashi Ray is a Professor of Sociology at West Virginia State University, where she has taught since 2011. Her work explores migration, identity, gender, and social inequality across national and transnational contexts.
+                  I have always been curious about how the mechanisms of social processes unfold over time: why people behave in particular ways, their daily patterns of interaction, how they engage in collective behaviors, how institutional practices shape culture, why individuals stand out, defying all odds. Attempting to answer these questions has defined my career&apos;s trajectory, from development work in India to postgraduate education in the Netherlands and United States.
                 </p>
                 <div className={styles.text}>
                   <p>
-                    Trained at Michigan State University, where she earned her doctorate with distinction, Dr. Ray&apos;s scholarship has taken her across continents , from fieldwork among Burmese refugees in Michigan to research on transnational Indian entrepreneurs , always following the human story at the heart of complex social phenomena.
+                    I am a graduate of Michigan State University and an active participant in international scholarly networks who has published in leading sociological journals and edited volumes. At the International Sociological Association, I&apos;ve served as Treasurer of RC 32 (Women, Gender and Society) and currently as Secretary and Treasurer of RC 31 (Sociology of Migration). My work has received numerous awards.
                   </p>
                   <p>
-                    Her academic career is distinguished by a rare ability to move between rigorous scholarly inquiry and deeply human storytelling. She has taught graduate and undergraduate courses spanning Social Inequality, Sociology of Gender, Sociology of Family, and the special-topics course <em>Migrants and Refugees: The American Experience</em>, shaping the intellectual lives of hundreds of students.
+                    My journey as a scholar has also been shaped by a life-changing automobile accident resulting in the loss of my left leg below the knee. Although becoming an amputee brought lifelong challenges, including lengthy recovery and rehabilitation, it never diminished my curiosity, passion, nor my determination to pursue my professional goals. Living with a partial disability has deepened my appreciation for perseverance and resilience &ndash; crucial skills for a researcher &ndash; and influenced my approach to field work, conferences, teaching, and mentoring. I believe that meaningful work often grows from overcoming adversity.
                   </p>
                   <p>
-                    The recipient of numerous prestigious fellowships and grants , including a fellowship at the Jawaharlal Nehru Institute of Advanced Study and the UNFPA Global Training Program at the Institute of Social Studies, The Hague , Dr. Ray brings a truly global perspective to her work.
+                    My work bridges rigorous scholarship and public engagement through organizing workshops, lectures, podcasts, contributing to debates on migration, entrepreneurship, and structures of inequality and social transformation between and within nations.
                   </p>
                 </div>
 

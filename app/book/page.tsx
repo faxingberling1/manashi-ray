@@ -5,6 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import Book from '@/components/Book/Book';
 import BookQuotes from '@/components/BookQuotes/BookQuotes';
 import BookTestimonials from '@/components/BookTestimonials/BookTestimonials';
+import FeaturedArticle from '@/components/FeaturedArticle/FeaturedArticle';
 import Podcast from '@/components/Podcast/Podcast';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import styles from './BookPage.module.css';
@@ -53,6 +54,7 @@ function BookContent() {
       {/* Always-mounted tab content , toggled via CSS display */}
       <div style={{ display: activeTab === 'book' ? 'block' : 'none' }}>
         <Book />
+        <FeaturedArticle />
         <BookTestimonials />
         <BookQuotes />
       </div>

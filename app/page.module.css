@@ -23,3 +23,36 @@
   justify-content: center;
   flex-wrap: wrap;
 }
+
+.readMoreBtn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 1.25rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--clr-navy);
+  background-color: var(--clr-gold);
+  border: 1.5px solid var(--clr-gold);
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: blink 2s infinite ease-in-out;
+}
+
+.readMoreBtn:hover {
+  background-color: var(--clr-navy);
+  border-color: var(--clr-navy);
+  color: #fff;
+  animation: none;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}

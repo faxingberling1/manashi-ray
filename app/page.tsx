@@ -17,16 +17,15 @@ export default function Home() {
         <div className="container">
           <div className={styles.introInner}>
             <p className={`animateInit ${styles.introText}`}>
-              Manashi Ray is Professor of Sociology at West Virginia State University. As an ethnographer and sociologist, she studies migration-related developmental concerns, particularly the global reach of migrants&apos; practices and actions. Her work asks why people migrate, how gender impacts migratory patterns and settlement, and how migrants experience &apos;transience&apos; in transnational space.
+              I have always been curious about how the mechanisms of social processes unfold over time: why people behave in particular ways, their daily patterns of interaction, how they engage in collective behaviors, how institutional practices shape culture, why individuals stand out, defying all odds. Attempting to answer these questions has defined my career&apos;s trajectory, from development work in India to postgraduate education in the Netherlands and United States.
             </p>
             <p className={`animateInit delay100 ${styles.introText}`}>
-              Her wide-ranging research includes transnational entrepreneurship among Indian migrants, network formation and analysis, women&apos;s entrepreneurship, and refugee movements from East Asia to the US.
+              I am a graduate of Michigan State University and an active participant in international scholarly networks who has published in leading sociological journals and edited volumes. At the International Sociological Association, I&apos;ve served as Treasurer of RC 32 (Women, Gender and Society) and currently as Secretary and Treasurer of RC 31 (Sociology of Migration). My work has received numerous awards.
+              <br/><br/>
+              <Link href="/about" className={styles.readMoreBtn}>Continue Reading &rarr;</Link>
             </p>
-            <p className={`animateInit delay200 ${styles.introText}`}>
-              Her monograph <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em> was published by Stanford University Press in 2026. Her current research explores climate-related mobility and (im)mobility and how green architecture affects mobility decisions.
-            </p>
-            <div className={`animateInit delay300 ${styles.introActions}`}>
-              <Link href="/about" className="btn btnGhost">Full Biography</Link>
+            <div className={`animateInit delay200 ${styles.introActions}`}>
+              <Link href="/about" className="btn btnGhost">About Me</Link>
               <Link href="/publications" className="btn btnPrimary">Research &amp; Writing</Link>
               <Link href="/book" className="btn btnGold">The Book</Link>
             </div>
