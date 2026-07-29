@@ -43,9 +43,11 @@ export default function Hero() {
             <em>Ray</em>
           </h1>
           <p className={styles.tagline}>Professor of Sociology &nbsp;·&nbsp; West Virginia State University</p>
-          <p className={styles.bio}>
-            Scholar of migration, identity, and social inequality. Award-winning researcher, educator, and memoirist whose work bridges rigorous academia and deeply human storytelling.
-          </p>
+          <div className={styles.bio}>
+            <p>Manashi Ray is Professor of Sociology at West Virginia State University. As an ethnographer and sociologist, she studies migration-related developmental concerns, particularly the global reach of migrants’ practices and actions. Her work asks why people migrate, how gender impacts migratory patterns and settlement, and how migrants experience ‘transience’ in transnational space.</p>
+            <p style={{ marginTop: '1rem' }}>Her wide-ranging research includes transnational entrepreneurship among Indian migrants, network formation and analysis, women’s entrepreneurship, and refugee movements from East Asia to the US.</p>
+            <p style={{ marginTop: '1rem' }}>Her monograph Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy was published by Stanford University Press in 2026. Her current research explores climate-related mobility and (im)mobility and how green architecture affects mobility decisions.</p>
+          </div>
           <div className={styles.actions}>
             <Link href="/book" className="btn btnPrimary">Book Overview</Link>
             <Link href="/book?tab=podcast" className="btn btnGold">Video Podcast</Link>

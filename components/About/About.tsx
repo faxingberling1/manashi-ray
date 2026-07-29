@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import styles from './About.module.css';
 
-type Tab = 'biography' | 'career' | 'teaching';
+type Tab = 'biography' | 'career' | 'teaching' | 'charting';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState<Tab>('biography');
@@ -50,6 +50,16 @@ export default function About() {
           >
             <span className={styles.tabIcon}>◆</span>
             <span className={styles.tabLabel}>Teaching</span>
+          </button>
+          <button
+            id="tab-charting"
+            className={`${styles.tabBtn} ${activeTab === 'charting' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('charting')}
+            aria-selected={activeTab === 'charting'}
+            role="tab"
+          >
+            <span className={styles.tabIcon}>✧</span>
+            <span className={styles.tabLabel}>Charting My Course</span>
           </button>
         </div>
 
@@ -258,6 +268,91 @@ export default function About() {
           )}
 
         </div>
+
+        {/* === CHARTING MY COURSE === */}
+        {activeTab === 'charting' && (
+          <div className={styles.chartingSection}>
+            <div className={styles.chartingGrid}>
+              <div className={styles.chartingText}>
+                <p>
+                  <span className={styles.chartingLead}>Before entering</span> academia as a sociologist, I worked in India’s development sector in the late 1980s and ’90s. Grassroots engagement and field work among rural, indigent, and resource-constrained communities was formative in my thinking as a social scientist. It taught me that poverty, inequality, and social transformation can only be understood by listening closely to people&apos;s lived experiences. I learned that &ldquo;power&rdquo; is not only imposed by institutions and state policies, but it is continually produced, negotiated, and contested in everyday practices and embedded in relationships that theory alone can never fully capture.
+                </p>
+              </div>
+              <div className={styles.chartingImagesCol}>
+                <div className={styles.chartingImages}>
+                  <div className={styles.chartingImageFigure}>
+                    <div className={styles.chartingImageWrap}>
+                      <Image src="/field-work-new-1.jpg" alt="Field work in India" width={400} height={300} className={styles.chartingImage} />
+                    </div>
+                  </div>
+                  <div className={styles.chartingImageFigure}>
+                    <div className={styles.chartingImageWrap}>
+                      <Image src="/field-work-new-2.jpg" alt="Field work in Gujarat, India" width={400} height={300} className={styles.chartingImage} />
+                    </div>
+                  </div>
+                </div>
+                <p className={styles.chartingCaption}>
+                  Doing field work in Gujarat, India.
+                </p>
+              </div>
+            </div>
+
+            <hr className={styles.sectionDivider} />
+
+            <div className={`${styles.chartingGrid} ${styles.chartingGridReverse}`}>
+              <div className={styles.chartingText}>
+                <p>
+                  <span className={styles.chartingLead}>A turning point</span> came in 1992–93 when I was studying at the International Institute of Social Studies (ISS), then located in the historic Hotel Wittebrug in The Hague. Studying population and sustainable development alongside scholars and practitioners from around the world broadened my perspective, enabling me to situate India&apos;s challenges within powerful global structures of inequality and social change. At ISS, my interest in linking local realities with global processes in transnational contexts took deeper shape, and I came to see migration as an important catalyst for economic and social development.
+                </p>
+              </div>
+              <div className={styles.chartingImagesCol}>
+                <div className={styles.chartingImages}>
+                  <div className={styles.chartingImageFigure}>
+                    <div className={styles.chartingImageWrap}>
+                      <Image src="/hotel-wittebrug.jpg" alt="Hotel Wittebrug, The Hague" width={400} height={300} className={styles.chartingImage} />
+                    </div>
+                    <p className={styles.chartingImageCaption}>Hotel Wittebrug, The Hague</p>
+                  </div>
+                  <div className={styles.chartingImageFigure}>
+                    <div className={styles.chartingImageWrap}>
+                      <Image src="/red-cedar-river.jpg" alt="Red Cedar River, MSU Campus" width={400} height={300} className={styles.chartingImage} />
+                    </div>
+                    <p className={styles.chartingImageCaption}>Red Cedar River, MSU Campus</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <hr className={styles.sectionDivider} />
+
+            <div className={styles.chartingGrid}>
+              <div className={styles.chartingText}>
+                <p>
+                  <span className={styles.chartingLead}>In the 2000s</span> as India&apos;s economy liberalized and globalization reshaped patterns of mobility, my academic research—as a doctoral student at Michigan State University—focused on migration, transnationalism, and entrepreneurship as mechanisms of social change. This long-standing interest culminated in <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em>, a longitudinal ethnographic study exploring the opportunities, contradictions, and human dimensions of transnational entrepreneurship.
+                </p>
+                <p style={{ marginTop: '1rem' }}>
+                  Though I think of myself as an interdisciplinary scholar, my work increasingly adopts a transdisciplinary orientation by engaging with practitioners and policy communities to address issues related to climate, (im)mobility, and sustainable architecture.
+                </p>
+              </div>
+              <div className={styles.chartingImagesCol}>
+                <div className={styles.chartingImages}>
+                  <div className={styles.chartingImageFigure}>
+                    <div className={styles.chartingImageWrap}>
+                      <Image src="/community-1.jpg" alt="Community Engagement in Semiliguda Tehsil, Odisha State" width={400} height={300} className={styles.chartingImage} />
+                    </div>
+                    <p className={styles.chartingImageCaption}>Community Engagement, Semiliguda Tehsil, in Odisha State.</p>
+                  </div>
+                  <div className={styles.chartingImageFigure}>
+                    <div className={styles.chartingImageWrap}>
+                      <Image src="/community-2.jpg" alt="Field Work Discussions in Semiliguda Tehsil, Odisha State" width={400} height={300} className={styles.chartingImage} />
+                    </div>
+                    <p className={styles.chartingImageCaption}>Field Work Discussions, Semiliguda Tehsil, in Odisha State.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

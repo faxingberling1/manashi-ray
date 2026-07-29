@@ -41,10 +41,13 @@
 }
 .tabBtn:hover {
   border-color: var(--clr-navy);
-  color: var(--clr-navy);
+  color: #fff;
 }
 .tabBtn:hover::before {
-  transform: translateY(60%);
+  transform: translateY(0);
+}
+.tabBtn:hover .tabIcon {
+  color: var(--clr-gold);
 }
 
 .tabActive {
@@ -495,6 +498,120 @@
   font-style: normal;
 }
 
+/* ===== CHARTING MY COURSE TAB ===== */
+.chartingSection {
+  animation: tabFadeIn 0.4s var(--ease-out-expo);
+}
+
+.sectionDivider {
+  height: 1px;
+  background: var(--clr-cream);
+  margin: 4rem 0;
+  border: none;
+}
+
+.chartingGrid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: clamp(3rem, 5vw, 5rem);
+  align-items: center;
+}
+.chartingGridReverse {
+  grid-template-columns: 1.35fr 1fr;
+}
+.chartingGridReverse .chartingImagesCol {
+  order: -1;
+}
+
+.chartingLead {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.35em;
+}
+.chartingLead::after {
+  content: '';
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--clr-gold);
+}
+
+.chartingText p {
+  color: var(--clr-text-mid);
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+.chartingImages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.chartingImageFigure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.chartingImageFigure:first-child {
+  transform: translateY(2rem);
+}
+
+.chartingImageWrap {
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  aspect-ratio: 4/3;
+}
+.chartingImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition);
+}
+.chartingImageWrap:hover .chartingImage {
+  transform: scale(1.05);
+}
+
+.chartingImagesCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.chartingImageCaption {
+  text-align: center;
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--clr-navy);
+  transition: all var(--transition, 0.3s ease);
+}
+.chartingImageCaption:hover {
+  color: var(--clr-gold);
+}
+
+.chartingCaption {
+  text-align: center;
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--clr-navy);
+  margin-top: 3.5rem; /* Space for the translateY image */
+  transition: all var(--transition, 0.3s ease);
+  cursor: default;
+}
+.chartingCaption:hover {
+  color: var(--clr-gold);
+  transform: translateY(-2px) scale(1.02);
+  text-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .timelineItem {
@@ -504,6 +621,9 @@
 
 @media (max-width: 768px) {
   .grid { grid-template-columns: 1fr; }
+  .chartingGrid { grid-template-columns: 1fr; gap: 2rem; }
+  .chartingImageFigure:first-child { transform: none; }
+  .chartingCaption { margin-top: 1.5rem; }
   .imageCol { position: static; order: -1; }
   .portrait { aspect-ratio: 4/3; }
   .tabBar { gap: 0.6rem; }
