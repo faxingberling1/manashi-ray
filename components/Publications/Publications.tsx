@@ -157,6 +157,17 @@ const other = [
 
 const newsletters = [
   {
+    year: '2026',
+    citation: 'Ray, Manashi',
+    title: 'Who Becomes Boundless? Migration, Privilege, and Entrepreneurship in a Multipolar World',
+    venue: 'RC-31 Newsletter',
+    detail: 'June 2026',
+    type: 'Newsletter',
+    content: 'embed',
+    embedPdf: true,
+    pdf: '/Publications/RC-31_Newsletter_June_2026.pdf',
+  },
+  {
     year: '2021',
     citation: 'Ray, Manashi',
     title: 'FEATURE ARTICLE: Kolkata Under Covid: Reflections on a Visit Home, Winter 2020-21',
@@ -313,43 +324,7 @@ function PubItem({ item, index }: PubItemProps) {
 export default function Publications() {
   return (
     <div className={styles.wrapper}>
-      {/* Expertise */}
-      <section className={`${styles.expertiseSection} section`}>
-        <div className="container">
-          <div className="sectionHeader animateInit">
-            <span className="sectionLabel">Scholarship</span>
-            <h1 className="sectionTitle">Research &amp; Writing</h1>
-            <div className="sectionRule"></div>
-          </div>
 
-          <div className={`${styles.expertiseBox} animateInit`}>
-            <h2 className={styles.expertiseTitle}>Areas of Expertise</h2>
-            <div className={styles.expertiseTags}>
-              {expertise.map((e) => (
-                <span key={e} className={styles.expertiseTag}>{e}</span>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Book in Progress */}
-      <section className={`${styles.manuscriptSection} section`}>
-        <div className="container">
-          <div className={`${styles.manuscript} animateInit`}>
-            <div className={styles.manuscriptLabel}>
-              <span>📖</span>
-              <span>Book Manuscript in Progress</span>
-            </div>
-            <h2 className={styles.manuscriptTitle}>
-              Becoming Boundless: The Story of Transnational Indian Entrepreneurs
-            </h2>
-            <p className={styles.manuscriptDesc}>
-              Drawing on years of research, interviews, and fieldwork, this book explores how Indian entrepreneurs navigate borders, capital, and identity in the 21st-century global economy.
-            </p>
-          </div>
-        </div>
-      </section>
 
       {/* Peer-Reviewed */}
       <section className={`${styles.pubSection} section`}>
@@ -400,7 +375,7 @@ export default function Publications() {
       </section>
 
       {/* Newsletters */}
-      <section className={`${styles.pubSection} section`} style={{ paddingTop: 0, paddingBottom: '5rem' }}>
+      <section className={`${styles.pubSection} section`} style={{ paddingTop: 0 }}>
         <div className="container">
           <div className="sectionHeader animateInit">
             <span className="sectionLabel">Featured Articles</span>
@@ -411,6 +386,20 @@ export default function Publications() {
             {newsletters.map((item, i) => (
               <PubItem key={`news-${i}`} item={item} index={i} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise */}
+      <section className={`${styles.expertiseSection} section`}>
+        <div className="container">
+          <div className={`${styles.expertiseBox} animateInit`}>
+            <h2 className={styles.expertiseTitle}>Areas of Expertise</h2>
+            <div className={styles.expertiseTags}>
+              {expertise.map((e) => (
+                <span key={e} className={styles.expertiseTag}>{e}</span>
+              ))}
+            </div>
           </div>
         </div>
       </section>

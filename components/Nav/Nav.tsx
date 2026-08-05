@@ -33,7 +33,7 @@ export default function Nav() {
   const links = [
     { href: '/',              label: 'Home' },
     { href: '/book',          label: 'Book' },
-    { href: '/about',         label: 'About' },
+    { href: '/about-me',      label: 'About Me' },
     { href: '/publications',  label: 'Research' },
     { href: '/lectures',      label: 'Lectures' },
     { href: '/speaking',      label: 'Awards' },

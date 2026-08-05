@@ -51,7 +51,7 @@ export default function Hero() {
           <div className={styles.actions}>
             <Link href="/book" className="btn btnPrimary">Book Overview</Link>
             <Link href="/book?tab=podcast" className="btn btnGold">Video Podcast</Link>
-            <Link href="/about" className="btn btnGhost">Biography</Link>
+            <Link href="/about-me" className="btn btnGhost">Biography</Link>
           </div>
         </div>
 
@@ -67,16 +67,13 @@ export default function Hero() {
               priority
             />
             <div className={styles.portraitAccent} aria-hidden="true" />
-            <div className={styles.portraitLabel}>
-              <span className={styles.portraitLabelIcon}>✦</span>
-              <span>Professor &amp; Scholar</span>
-            </div>
+
           </div>
         </div>
       </div>
 
       {/* Scroll cue */}
-      <Link href="/about" className={styles.scrollCue} aria-label="Learn more about Manashi Ray">
+      <Link href="/about-me" className={styles.scrollCue} aria-label="Learn more about Manashi Ray">
         <span className={styles.scrollLine} />
         <span className={styles.scrollLabel}>Explore</span>
       </Link>

@@ -9,6 +9,7 @@ type Tab = 'biography' | 'career' | 'teaching' | 'charting';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState<Tab>('biography');
+  const [lightboxImg, setLightboxImg] = useState<{src: string, title: string} | null>(null);
 
   return (
     <section className={`${styles.about} section`} id="about">
@@ -75,9 +76,7 @@ export default function About() {
                   I have always been curious about how the mechanisms of social processes unfold over time: why people behave in particular ways, their daily patterns of interaction, how they engage in collective behaviors, how institutional practices shape culture, why individuals stand out, defying all odds. Attempting to answer these questions has defined my career&apos;s trajectory, from development work in India to postgraduate education in the Netherlands and United States.
                 </p>
                 <div className={styles.text}>
-                  <p>
-                    I am a graduate of Michigan State University and an active participant in international scholarly networks who has published in leading sociological journals and edited volumes. At the International Sociological Association, I&apos;ve served as Treasurer of RC 32 (Women, Gender and Society) and currently as Secretary and Treasurer of RC 31 (Sociology of Migration). My work has received numerous awards.
-                  </p>
+
                   <p>
                     My journey as a scholar has also been shaped by a life-changing automobile accident resulting in the loss of my left leg below the knee. Although becoming an amputee brought lifelong challenges, including lengthy recovery and rehabilitation, it never diminished my curiosity, passion, nor my determination to pursue my professional goals. Living with a partial disability has deepened my appreciation for perseverance and resilience &ndash; crucial skills for a researcher &ndash; and influenced my approach to field work, conferences, teaching, and mentoring. I believe that meaningful work often grows from overcoming adversity.
                   </p>
@@ -86,7 +85,7 @@ export default function About() {
                   </p>
                 </div>
 
-                {/* Stats */}
+                {/* Stats 
                 <div className={styles.stats}>
                   <div className={styles.stat}>
                     <span className={styles.statNumber}>15+</span>
@@ -105,6 +104,7 @@ export default function About() {
                     <span className={styles.statLabel}>Landmark Book</span>
                   </div>
                 </div>
+                */}
               </div>
 
               {/* Image */}
@@ -143,7 +143,7 @@ export default function About() {
           {activeTab === 'career' && (
             <div className={styles.careerSection}>
               <div className={styles.careerIntro}>
-                <p>A distinguished academic career spanning over fifteen years across three institutions, shaped by an unwavering commitment to sociological inquiry and global perspectives.</p>
+                <p>A distinguished academic career spanning more than fifteen years across leading American universities, dedicated to advancing sociological research, teaching excellence, and global perspectives on migration, inequality, and transnationalism.</p>
               </div>
 
               <div className={styles.timeline}>
@@ -154,7 +154,7 @@ export default function About() {
                     dept: 'Department of Psychology and Sociology',
                     institution: 'West Virginia State University',
                     current: true,
-                    detail: 'Full-time faculty member teaching graduate and undergraduate courses in sociology, migration studies, and social inequality.',
+                    detail: 'Full-time faculty member teaching graduate and undergraduate courses in sociology, migration studies, social inequality, gender, family sociology, and refugee studies while conducting internationally recognized research on migration, transnationalism, and global social mobility.',
                   },
                   {
                     period: '2010 – 2011',
@@ -162,7 +162,7 @@ export default function About() {
                     dept: 'Department of Sociology, Anthropology and Social Work',
                     institution: 'Central Michigan University',
                     current: false,
-                    detail: 'Visiting appointment teaching undergraduate sociology courses while completing doctoral research.',
+                    detail: 'Visiting faculty appointment teaching undergraduate sociology courses while completing doctoral research at Michigan State University.',
                   },
                   {
                     period: '2009 – 2010',
@@ -170,9 +170,9 @@ export default function About() {
                     dept: 'Department of Sociology',
                     institution: 'Saginaw Valley State University',
                     current: false,
-                    detail: 'Introductory and advanced sociology coursework for undergraduate students.',
+                    detail: 'Taught introductory and advanced sociology courses for undergraduate students, laying the foundation for a distinguished academic career in higher education.',
                   },
-                ].map((pos, i) => (
+                ].map((pos, i, arr) => (
                   <div key={i} className={`${styles.timelineItem} ${pos.current ? styles.timelineCurrent : ''}`}>
                     <div className={styles.timelineLeft}>
                       <span className={styles.timelinePeriod}>{pos.period}</span>
@@ -180,7 +180,82 @@ export default function About() {
                     </div>
                     <div className={styles.timelineNode}>
                       <div className={styles.nodeDot} />
-                      {i < 2 && <div className={styles.nodeLine} />}
+                      {i < arr.length - 1 && <div className={styles.nodeLine} />}
+                    </div>
+                    <div className={styles.timelineRight}>
+                      <h3 className={styles.posRole}>{pos.role}</h3>
+                      <p className={styles.posDept}>{pos.dept}</p>
+                      <p className={styles.posInstitution}>{pos.institution}</p>
+                      <p className={styles.posDetail}>{pos.detail}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <hr className={styles.sectionDivider} />
+              
+              <div className={styles.careerIntro} style={{ marginTop: '3rem' }}>
+                <p>A strong foundation in research and social development built through leadership roles with renowned institutions across India, advancing policy, governance, gender equity, poverty alleviation, and sustainable development initiatives.</p>
+              </div>
+              <div className={styles.timeline}>
+                {[
+                  {
+                    period: '1999 – 2000',
+                    role: 'Research Consultant',
+                    dept: 'Humanistic Institute for Co-operation with Developing Countries (Hivos)',
+                    institution: 'Bangalore, India',
+                    current: false,
+                    detail: 'Conducted research on development, globalization, and sustainable social policies, contributing to projects addressing poverty and economic development.',
+                  },
+                  {
+                    period: '1998 – 1999',
+                    role: 'Research Consultant',
+                    dept: 'ActionAid Asia Regional Office',
+                    institution: 'Bangalore, India',
+                    current: false,
+                    detail: 'Led research on the Impact of Globalization and Liberal Policies on Poverty Issues in India, examining socio-economic challenges and development strategies.',
+                  },
+                  {
+                    period: '1996 – 1997',
+                    role: 'Research Coordinator',
+                    dept: 'ActionAid India Office',
+                    institution: 'Bangalore, India',
+                    current: false,
+                    detail: 'Coordinated research initiatives supporting poverty alleviation, community development, and social policy programs across India.',
+                  },
+                  {
+                    period: '1995 – 1996',
+                    role: 'Research Consultant',
+                    dept: 'M.S. Swaminathan Research Foundation',
+                    institution: 'Chennai, India',
+                    current: false,
+                    detail: 'Directed the project "Gender Issues in Local Governance," developing training modules to strengthen local governance and empower elected village panchayat members.',
+                  },
+                  {
+                    period: '1994 – 1995',
+                    role: 'Visiting Fellow',
+                    dept: 'Institute of Rural Management (IRMA)',
+                    institution: 'Anand, Gujarat, India',
+                    current: false,
+                    detail: 'Conducted research in rural management and development, contributing to policy-focused academic and community initiatives.',
+                  },
+                  {
+                    period: '1987 – 1991',
+                    role: 'Research Officer',
+                    dept: 'Lutheran World Service (India)',
+                    institution: 'Kolkata, India',
+                    current: false,
+                    detail: 'Managed planning, research, evaluation, and monitoring of social development projects, working closely with communities to advance sustainable development initiatives throughout India.',
+                  },
+                ].map((pos, i, arr) => (
+                  <div key={i} className={`${styles.timelineItem} ${pos.current ? styles.timelineCurrent : ''}`}>
+                    <div className={styles.timelineLeft}>
+                      <span className={styles.timelinePeriod}>{pos.period}</span>
+                      {pos.current && <span className={styles.currentBadge}>Current</span>}
+                    </div>
+                    <div className={styles.timelineNode}>
+                      <div className={styles.nodeDot} />
+                      {i < arr.length - 1 && <div className={styles.nodeLine} />}
                     </div>
                     <div className={styles.timelineRight}>
                       <h3 className={styles.posRole}>{pos.role}</h3>
@@ -351,9 +426,46 @@ export default function About() {
                 </div>
               </div>
             </div>
+
+            <hr className={styles.sectionDivider} />
+
+            <div className={styles.gallerySection}>
+              <h3 className={styles.galleryTitle}>Fieldwork Archives</h3>
+              <div className={styles.galleryGrid}>
+                {[
+                  { src: '/Women headloaders in IRMA campus.jpg', title: 'Women headloaders in IRMA campus' },
+                  { src: '/Field work - Meghalaya State, Northeastern India.jpg', title: 'Field work - Meghalaya State, Northeastern India' },
+                  { src: '/Field work - Odisha state, India.jpg', title: 'Field work - Odisha state, India' },
+                  { src: '/A very young headloader - Meghalaya State, Northeastern India.jpg', title: 'A very young headloader - Meghalaya State, Northeastern India' },
+                  { src: '/Field work - Odisha state, India 2.jpg', title: 'Field work - Odisha state, India' },
+                  { src: '/With IRMA colleagues in 1994-95.jpg', title: 'With IRMA colleagues in 1994-95' },
+                  { src: '/Matrix of Energy resource mapping at Koraput district, Odisha State.jpg', title: 'Matrix of Energy resource mapping at Koraput district, Odisha State' },
+                ].map((img, i) => (
+                  <div key={i} className={styles.galleryItem} onClick={() => setLightboxImg(img)}>
+                    <div className={styles.galleryImageWrap}>
+                      <Image src={img.src} alt={img.title} fill sizes="(max-width: 768px) 100vw, 33vw" className={styles.galleryImage} />
+                    </div>
+                    <div className={styles.galleryCaption}>
+                      <span>{img.title}</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         )}
       </div>
+
+      {/* Lightbox */}
+      {lightboxImg && (
+        <div className={styles.lightbox} onClick={() => setLightboxImg(null)}>
+          <div className={styles.lightboxClose} onClick={() => setLightboxImg(null)}>&times;</div>
+          <div className={styles.lightboxContentWrap} onClick={e => e.stopPropagation()}>
+            <img src={lightboxImg.src} alt={lightboxImg.title} className={styles.lightboxImage} />
+            <p className={styles.lightboxCaption}>{lightboxImg.title}</p>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

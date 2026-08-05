@@ -13,7 +13,7 @@ export default function Footer() {
         </div>
         <nav className={styles.nav} aria-label="Footer navigation">
           <Link href="/">Home</Link>
-          <Link href="/about">About</Link>
+          <Link href="/about-me">About Me</Link>
           <Link href="/publications">Research</Link>
           <Link href="/lectures">Lectures</Link>
           <Link href="/book">Book</Link>
