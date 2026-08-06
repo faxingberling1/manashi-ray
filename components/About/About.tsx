@@ -433,13 +433,13 @@ export default function About() {
               <h3 className={styles.galleryTitle}>Fieldwork Archives</h3>
               <div className={styles.galleryGrid}>
                 {[
-                  { src: '/Women headloaders in IRMA campus.jpg', title: 'Women headloaders in IRMA campus' },
-                  { src: '/Field work - Meghalaya State, Northeastern India.jpg', title: 'Field work - Meghalaya State, Northeastern India' },
-                  { src: '/Field work - Odisha state, India.jpg', title: 'Field work - Odisha state, India' },
-                  { src: '/A very young headloader - Meghalaya State, Northeastern India.jpg', title: 'A very young headloader - Meghalaya State, Northeastern India' },
-                  { src: '/Field work - Odisha state, India 2.jpg', title: 'Field work - Odisha state, India' },
-                  { src: '/With IRMA colleagues in 1994-95.jpg', title: 'With IRMA colleagues in 1994-95' },
-                  { src: '/Matrix of Energy resource mapping at Koraput district, Odisha State.jpg', title: 'Matrix of Energy resource mapping at Koraput district, Odisha State' },
+                  { src: '/women-headloaders-irma-campus.jpg', title: 'Women headloaders in IRMA campus' },
+                  { src: '/field-work-meghalaya-state.jpg', title: 'Field work - Meghalaya State, Northeastern India' },
+                  { src: '/field-work-odisha-state.jpg', title: 'Field work - Odisha state, India' },
+                  { src: '/very-young-headloader-meghalaya-state.jpg', title: 'A very young headloader - Meghalaya State, Northeastern India' },
+                  { src: '/field-work-odisha-state-2.jpg', title: 'Field work - Odisha state, India' },
+                  { src: '/with-irma-colleagues-1994-95.jpg', title: 'With IRMA colleagues in 1994-95' },
+                  { src: '/matrix-energy-resource-mapping-odisha.jpg', title: 'Matrix of Energy resource mapping at Koraput district, Odisha State' },
                 ].map((img, i) => (
                   <div key={i} className={styles.galleryItem} onClick={() => setLightboxImg(img)}>
                     <div className={styles.galleryImageWrap}>
