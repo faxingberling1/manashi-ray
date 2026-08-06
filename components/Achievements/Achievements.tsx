@@ -111,7 +111,7 @@ export default function Achievements() {
       <div className="container">
         <div className={`sectionHeader animateInit`}>
           <span className="sectionLabel">Recognition</span>
-          <h2 className="sectionTitle">Awards &amp; Honors</h2>
+          <h2 className="sectionTitle">My Other Self</h2>
           <div className="sectionRule"></div>
           <p className={styles.intro}>
             A career marked by distinction , from international fellowships at The Hague to

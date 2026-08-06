@@ -1,6 +1,6 @@
 'use client';
 
-import Speaking from '@/components/Speaking/Speaking';
+import MyOtherSelf from '@/components/MyOtherSelf/MyOtherSelf';
 import Achievements from '@/components/Achievements/Achievements';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
@@ -9,7 +9,7 @@ export default function SpeakingPage() {
 
   return (
     <div style={{ paddingTop: '80px' }}>
-      <Speaking />
+      <MyOtherSelf />
       <Achievements />
     </div>
   );

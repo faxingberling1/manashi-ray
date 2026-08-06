@@ -21,12 +21,12 @@ const QUOTES = [
     page: 'Chapter 3 (page 119)',
   },
   {
-    text: "In my sector in India, women are constantly reminded that they are imperfect in a million ways ... unlike my non-Indian or European colleagues. No matter what I do [it] is not enough. It is not a zero-sum game. In the past if I asked for advice or counsel, I was repeatedly put on the wrong path… In my line of work, men don’t know how to handle strong capable professional women.",
-    page: 'Chapter 4 (page 174)',
-  },
-  {
     text: "One thing I have learnt is that we must defy fate, we will get advantages and challenges in our lives, and we must get both to work for us. Working for startups took up a lot of my time…luckily at that time my husband was still trying to get started so he had some free time to be with our kid. My husband never once made me feel guilty for being less of a parent, but it called for constant prioritization of my responsibilities as a mother, wife, and co-founder of our business.",
     page: 'Chapter 4 (page 170)',
+  },
+  {
+    text: "In my sector in India, women are constantly reminded that they are imperfect in a million ways ... unlike my non-Indian or European colleagues. No matter what I do [it] is not enough. It is not a zero-sum game. In the past if I asked for advice or counsel, I was repeatedly put on the wrong path… In my line of work, men don’t know how to handle strong capable professional women.",
+    page: 'Chapter 4 (page 174)',
   },
   {
     text: "I was eager to get out of the comfort zone… not be known as “Indian ethnic business” guy, which I respect, but I find it to be limiting. Doing business is in my blood. I am a “Gujrati Bania”, I can hustle anything!",

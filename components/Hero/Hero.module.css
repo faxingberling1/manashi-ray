@@ -6,7 +6,7 @@
   position: relative;
   overflow: hidden;
   background: linear-gradient(145deg, var(--clr-ivory) 0%, var(--clr-ivory-mid) 40%, var(--clr-cream) 100%);
-  padding-block: 8rem 5rem;
+  padding-block: 8rem 10rem;
 }
 
 /* Background decoration */
@@ -164,6 +164,8 @@
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  position: relative;
+  z-index: 10;
 }
 
 /* ===== Book Column ===== */

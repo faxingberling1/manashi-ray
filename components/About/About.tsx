@@ -33,6 +33,16 @@ export default function About() {
             <span className={styles.tabLabel}>Biography</span>
           </button>
           <button
+            id="tab-charting"
+            className={`${styles.tabBtn} ${activeTab === 'charting' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('charting')}
+            aria-selected={activeTab === 'charting'}
+            role="tab"
+          >
+            <span className={styles.tabIcon}>✧</span>
+            <span className={styles.tabLabel}>Charting My Course</span>
+          </button>
+          <button
             id="tab-career"
             className={`${styles.tabBtn} ${activeTab === 'career' ? styles.tabActive : ''}`}
             onClick={() => setActiveTab('career')}
@@ -51,16 +61,6 @@ export default function About() {
           >
             <span className={styles.tabIcon}>◆</span>
             <span className={styles.tabLabel}>Teaching</span>
-          </button>
-          <button
-            id="tab-charting"
-            className={`${styles.tabBtn} ${activeTab === 'charting' ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab('charting')}
-            aria-selected={activeTab === 'charting'}
-            role="tab"
-          >
-            <span className={styles.tabIcon}>✧</span>
-            <span className={styles.tabLabel}>Charting My Course</span>
           </button>
         </div>
 
@@ -419,9 +419,9 @@ export default function About() {
                   </div>
                   <div className={styles.chartingImageFigure}>
                     <div className={styles.chartingImageWrap}>
-                      <Image src="/community-2.jpg" alt="Field Work Discussions in Semiliguda Tehsil, Odisha State" width={400} height={300} className={styles.chartingImage} />
+                      <Image src="/matrix-energy-resource-mapping-odisha.jpg" alt="Matrix of Energy resource mapping at Koraput district, Odisha State" width={400} height={300} className={styles.chartingImage} />
                     </div>
-                    <p className={styles.chartingImageCaption}>Field Work Discussions, Semiliguda Tehsil, in Odisha State.</p>
+                    <p className={styles.chartingImageCaption}>Matrix of Energy resource mapping at Koraput district, Odisha State</p>
                   </div>
                 </div>
               </div>

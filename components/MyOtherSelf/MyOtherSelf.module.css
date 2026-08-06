@@ -1,0 +1,165 @@
+.section {
+  padding-block: 6rem;
+  background-color: var(--clr-ivory);
+  position: relative;
+  overflow: hidden;
+}
+
+.intro {
+  max-width: 70ch;
+  margin-inline: auto;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: var(--clr-text-mid);
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.intro p {
+  margin-bottom: 1.5rem;
+}
+
+.intro strong {
+  color: var(--clr-navy);
+  font-weight: 600;
+}
+
+/* Hobby Section */
+.hobbySection {
+  padding-block: 6rem;
+  background-color: var(--clr-cream);
+  position: relative;
+}
+
+.hobbyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.hobbyImageWrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 4px 60px 4px 60px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.hobbyImage {
+  object-fit: cover;
+}
+
+.hobbyImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e5e5e5, #f0f0f0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--clr-text-soft);
+  font-style: italic;
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hobbyContent h3 {
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  color: var(--clr-navy);
+  margin-bottom: 1rem;
+}
+
+.hobbyContent p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--clr-text-mid);
+  margin-bottom: 1.5rem;
+}
+
+/* Future Canvas */
+.futureSection {
+  padding-block: 5rem;
+  background-color: var(--clr-ivory);
+  text-align: center;
+}
+
+.futureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.futureCard {
+  background: #fff;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.futureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.futureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.futureCard h4 {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: var(--clr-navy);
+  margin-bottom: 1rem;
+}
+
+.futureCard p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--clr-text-soft);
+}
+
+/* Decorative */
+.bgDecoration {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.12) 0%, transparent 70%);
+  width: 80vw;
+  height: 80vw;
+  max-width: 800px;
+  max-height: 800px;
+  top: -20%;
+  left: -20%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hobbyGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .hobbyImageWrap {
+    max-width: 500px;
+    margin-inline: auto;
+  }
+  .hobbyContent {
+    text-align: center;
+  }
+}

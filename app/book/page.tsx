@@ -56,7 +56,7 @@ function BookContent() {
         <Book />
         <FeaturedArticle />
         <BookTestimonials />
-        <BookQuotes />
+        {/* <BookQuotes /> */}
       </div>
 
       <div style={{ display: activeTab === 'podcast' ? 'block' : 'none' }}>

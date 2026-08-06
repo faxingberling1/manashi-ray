@@ -16,7 +16,7 @@ export default function Home() {
       <BookQuotes />
 
       {/* Action Buttons */}
-      <section className={`section ${styles.intro}`} style={{ paddingTop: '3rem', borderTop: 'none' }}>
+      {/* <section className={`section ${styles.intro}`} style={{ paddingTop: '3rem', borderTop: 'none' }}>
         <div className="container">
           <div className={styles.introInner}>
             <div className={`animateInit delay200 ${styles.introActions}`}>
@@ -26,7 +26,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

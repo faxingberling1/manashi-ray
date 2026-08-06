@@ -17,7 +17,7 @@ export default function Footer() {
           <Link href="/publications">Research</Link>
           <Link href="/lectures">Lectures</Link>
           <Link href="/book">Book</Link>
-          <Link href="/speaking">Awards</Link>
+          <Link href="/my-other-self">My Other Self</Link>
           <Link href="/contact">Contact</Link>
         </nav>
         <p className={styles.copy}>
