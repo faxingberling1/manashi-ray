@@ -9,7 +9,7 @@ type Tab = 'biography' | 'career' | 'teaching' | 'charting';
 
 export default function About() {
   const [activeTab, setActiveTab] = useState<Tab>('biography');
-  const [lightboxImg, setLightboxImg] = useState<{src: string, title: string} | null>(null);
+  const [lightboxImg, setLightboxImg] = useState<{ src: string, title: string } | null>(null);
 
   return (
     <section className={`${styles.about} section`} id="about">
@@ -123,11 +123,11 @@ export default function About() {
                 </div>
                 <div className={styles.links}>
                   <a
-                    href="/CV-Manashi-Ray.pdf"
+                    href="/Curriculum_Vitae_Manashi_Ray_August_2026.pdf"
                     className={styles.linkPill}
                     target="_blank"
                     rel="noopener noreferrer"
-                    download="CV-Manashi-Ray.pdf"
+                    download="Curriculum_Vitae_Manashi_Ray_August_2026.pdf"
                   >
                     ↓ Download CV
                   </a>
@@ -193,7 +193,7 @@ export default function About() {
               </div>
 
               <hr className={styles.sectionDivider} />
-              
+
               <div className={styles.careerIntro} style={{ marginTop: '3rem' }}>
                 <p>A strong foundation in research and social development built through leadership roles with renowned institutions across India, advancing policy, governance, gender equity, poverty alleviation, and sustainable development initiatives.</p>
               </div>
@@ -247,6 +247,14 @@ export default function About() {
                     current: false,
                     detail: 'Managed planning, research, evaluation, and monitoring of social development projects, working closely with communities to advance sustainable development initiatives throughout India.',
                   },
+                  {
+                    period: '1982 – 1986',
+                    role: 'Lecturer',
+                    dept: '',
+                    institution: 'Mahatma Gandhi Memorial College, Udupi, Karnataka, India',
+                    current: false,
+                    detail: 'Lecturer at Mahatma Gandhi Memorial College, Udupi, Karnataka, India',
+                  },
                 ].map((pos, i, arr) => (
                   <div key={i} className={`${styles.timelineItem} ${pos.current ? styles.timelineCurrent : ''}`}>
                     <div className={styles.timelineLeft}>
@@ -268,12 +276,12 @@ export default function About() {
               </div>
 
               <div className={styles.fellowships}>
-                <h3 className={styles.fellowshipsTitle}>International Fellowships &amp; Grants</h3>
+                <h3 className={styles.fellowshipsTitle}>Fellowship, Grants and Awards</h3>
                 <div className={styles.fellowshipGrid}>
                   {[
                     { icon: '🌐', title: 'UNFPA Global Training Program', sub: 'Institute of Social Studies, The Hague' },
                     { icon: '🎓', title: 'Jawaharlal Nehru Institute of Advanced Study', sub: 'International Fellowship' },
-                    { icon: '📚', title: '14 Awards & Honors', sub: 'Over the course of her academic career' },
+                    { icon: '🏆', title: 'Awards & Honors', sub: 'Including the 1992–1993 Rafael Salas Memorial Scholarship, United Nations Population Fund' },
                   ].map((f, i) => (
                     <div key={i} className={styles.fellowshipCard}>
                       <span className={styles.fellowshipIcon}>{f.icon}</span>
@@ -433,13 +441,18 @@ export default function About() {
               <h3 className={styles.galleryTitle}>Fieldwork Archives</h3>
               <div className={styles.galleryGrid}>
                 {[
-                  { src: '/women-headloaders-irma-campus.jpg', title: 'Women headloaders in IRMA campus' },
                   { src: '/field-work-meghalaya-state.jpg', title: 'Field work - Meghalaya State, Northeastern India' },
-                  { src: '/field-work-odisha-state.jpg', title: 'Field work - Odisha state, India' },
+                  { src: '/field-site-meghalaya.jpeg', title: 'Field site - Meghalaya, Northeast India' },
+                  { src: '/field-work-meghalaya-2.jpeg', title: 'Field work - Meghalaya state, India' },
                   { src: '/very-young-headloader-meghalaya-state.jpg', title: 'A very young headloader - Meghalaya State, Northeastern India' },
                   { src: '/field-work-odisha-state-2.jpg', title: 'Field work - Odisha state, India' },
+                  { src: '/field-work-odisha-3.jpeg', title: 'Field work in Odisha state, India' },
+                  { src: '/village-visit-odisha.jpeg', title: 'Village visit - Odisha India' },
+                  { src: '/urmul-trust-1.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },
+                  { src: '/urmul-trust-2.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },
+                  { src: '/urmul-trust-3.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },
                   { src: '/with-irma-colleagues-1994-95.jpg', title: 'With IRMA colleagues in 1994-95' },
-                  { src: '/matrix-energy-resource-mapping-odisha.jpg', title: 'Matrix of Energy resource mapping at Koraput district, Odisha State' },
+                  { src: '/women-headloaders-irma-campus.jpg', title: 'Women headloaders in IRMA campus' },
                 ].map((img, i) => (
                   <div key={i} className={styles.galleryItem} onClick={() => setLightboxImg(img)}>
                     <div className={styles.galleryImageWrap}>

@@ -53,7 +53,7 @@ export default function Book() {
 
           {/* Info */}
           <div className={`${styles.info} animateInit delay150`}>
-            <p className={styles.genre}>Sociology &amp; Transnational Studies</p>
+            <p className={styles.genre}>Migration, Transnational Studies &amp; Sociology</p>
             <h3 className={styles.title}>Becoming Boundless</h3>
             <p className={styles.subtitle}><em>Indian Transnational Entrepreneurs in the Global Economy</em></p>
             
