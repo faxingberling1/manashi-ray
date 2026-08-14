@@ -249,11 +249,11 @@ export default function About() {
                   },
                   {
                     period: '1982 – 1986',
-                    role: 'Lecturer',
+                    role: 'Part Time Lecturer',
                     dept: '',
-                    institution: 'Mahatma Gandhi Memorial College, Udupi, Karnataka, India',
+                    institution: "Mahatma Gandhi Memorial College, Udupi Law College, Udupi and St. Mary's Syrian College, Brahmavar, Karnataka",
                     current: false,
-                    detail: 'Lecturer at Mahatma Gandhi Memorial College, Udupi, Karnataka, India',
+                    detail: "Part Time Lecturer at Mahatma Gandhi Memorial College, Udupi Law College, Udupi and St. Mary's Syrian College, Brahmavar, Karnataka.",
                   },
                 ].map((pos, i, arr) => (
                   <div key={i} className={`${styles.timelineItem} ${pos.current ? styles.timelineCurrent : ''}`}>
@@ -421,15 +421,15 @@ export default function About() {
                 <div className={styles.chartingImages}>
                   <div className={styles.chartingImageFigure}>
                     <div className={styles.chartingImageWrap}>
-                      <Image src="/community-1.jpg" alt="Community Engagement in Semiliguda Tehsil, Odisha State" width={400} height={300} className={styles.chartingImage} />
+                      <Image src="/community-1.jpg" alt="Community Engagement in Semiliguda Tehsil, Odisha State, India" width={400} height={300} className={styles.chartingImage} />
                     </div>
-                    <p className={styles.chartingImageCaption}>Community Engagement, Semiliguda Tehsil, in Odisha State.</p>
+                    <p className={styles.chartingImageCaption}>Community Engagement, Semiliguda Tehsil, in Odisha State, India.</p>
                   </div>
                   <div className={styles.chartingImageFigure}>
                     <div className={styles.chartingImageWrap}>
-                      <Image src="/matrix-energy-resource-mapping-odisha.jpg" alt="Matrix of Energy resource mapping at Koraput district, Odisha State" width={400} height={300} className={styles.chartingImage} />
+                      <Image src="/matrix-energy-resource-mapping-odisha.jpg" alt="Matrix of Energy resource mapping at Koraput district, Odisha State, India" width={400} height={300} className={styles.chartingImage} />
                     </div>
-                    <p className={styles.chartingImageCaption}>Matrix of Energy resource mapping at Koraput district, Odisha State</p>
+                    <p className={styles.chartingImageCaption}>Matrix of Energy resource mapping at Koraput district, Odisha State, India</p>
                   </div>
                 </div>
               </div>
@@ -441,13 +441,13 @@ export default function About() {
               <h3 className={styles.galleryTitle}>Fieldwork Archives</h3>
               <div className={styles.galleryGrid}>
                 {[
-                  { src: '/field-work-meghalaya-state.jpg', title: 'Field work - Meghalaya State, Northeastern India' },
-                  { src: '/field-site-meghalaya.jpeg', title: 'Field site - Meghalaya, Northeast India' },
-                  { src: '/field-work-meghalaya-2.jpeg', title: 'Field work - Meghalaya state, India' },
-                  { src: '/very-young-headloader-meghalaya-state.jpg', title: 'A very young headloader - Meghalaya State, Northeastern India' },
-                  { src: '/field-work-odisha-state-2.jpg', title: 'Field work - Odisha state, India' },
-                  { src: '/field-work-odisha-3.jpeg', title: 'Field work in Odisha state, India' },
-                  { src: '/village-visit-odisha.jpeg', title: 'Village visit - Odisha India' },
+                  { src: '/field-work-meghalaya-state.jpg', title: 'Field Work: Meghalaya State, Northeast India' },
+                  { src: '/field-site-meghalaya.jpeg', title: 'Field Work: Meghalaya State, Northeast India' },
+                  { src: '/field-work-meghalaya-2.jpeg', title: 'Field Work: Meghalaya State, Northeast India' },
+                  { src: '/very-young-headloader-meghalaya-state.jpg', title: 'Field Work: Meghalaya State, Northeast India' },
+                  { src: '/field-work-odisha-state-2.jpg', title: 'Field Work: Odisha State, India' },
+                  { src: '/field-work-odisha-3.jpeg', title: 'Field Work: Odisha State, India' },
+                  { src: '/village-visit-odisha.jpeg', title: 'Field Work: Odisha State, India' },
                   { src: '/urmul-trust-1.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },
                   { src: '/urmul-trust-2.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },
                   { src: '/urmul-trust-3.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },
