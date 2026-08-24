@@ -35,7 +35,7 @@ export default function Nav() {
     { href: '/book',          label: 'Book' },
     { href: '/about-me',      label: 'About Me' },
     { href: '/publications',  label: 'Research' },
-    { href: '/lectures',      label: 'Lectures' },
+    { href: '/lectures',      label: 'Presentations & Lectures' },
     { href: '/my-other-self',      label: 'My Other Self' },
   ];
 

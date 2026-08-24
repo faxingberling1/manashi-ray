@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Cormorant_Garamond, Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav/Nav';
+import ActionBar from '@/components/ActionBar/ActionBar';
 import Footer from '@/components/Footer/Footer';
 
 const cormorant = Cormorant_Garamond({
@@ -59,6 +60,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${inter.variable} ${playfair.variable}`}
     >
       <body>
+        <ActionBar />
         <Nav />
         <main>{children}</main>
         <Footer />

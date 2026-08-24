@@ -54,6 +54,16 @@ const invitedTalks = [
 
 const conferenceGroups: { year: string; papers: { title: string; session: string; event: string }[] }[] = [
   {
+    year: '2024',
+    papers: [
+      {
+        title: "Defying the Odds: Indian Women's Entrepreneurship in Transnational Space",
+        session: 'Contemporary South Asia Mini Conference',
+        event: 'Eastern Sociological Society Conference, Washington, DC, Feb. 29-Mar 3',
+      },
+    ],
+  },
+  {
     year: '2023',
     papers: [
       {
@@ -173,33 +183,6 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
 export default function Lectures() {
   return (
     <div>
-      {/* Invited Talks */}
-      <section className={`${styles.invitedSection} section`}>
-        <div className="container">
-          <div className="sectionHeader animateInit">
-            <span className="sectionLabel">Public Engagement</span>
-            <h1 className="sectionTitle">Invited Talks</h1>
-            <div className="sectionRule"></div>
-          </div>
-
-          <div className={styles.talksList}>
-            {invitedTalks.map((talk, i) => (
-              <div key={i} className={`${styles.talkCard} animateInit`} style={{ transitionDelay: `${(i % 4) * 60}ms` }}>
-                <div className={styles.talkYear}>{talk.year}</div>
-                <div className={styles.talkBody}>
-                  <h3 className={styles.talkTitle}>{talk.title}</h3>
-                  <p className={styles.talkEvent}>{talk.event}</p>
-                  <div className={styles.talkMeta}>
-                    <span className={styles.talkLocation}>📍 {talk.location}</span>
-                    {talk.date && <span className={styles.talkDate}>🗓 {talk.date}</span>}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Conference Presentations */}
       <section className={`${styles.conferenceSection} section`}>
         <div className="container">
@@ -221,6 +204,33 @@ export default function Lectures() {
                       <p className={styles.confEvent}>{paper.event}</p>
                     </div>
                   ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Invited Talks */}
+      <section className={`${styles.invitedSection} section`}>
+        <div className="container">
+          <div className="sectionHeader animateInit">
+            <span className="sectionLabel">Public Engagement</span>
+            <h2 className="sectionTitle">Invited Talks</h2>
+            <div className="sectionRule"></div>
+          </div>
+
+          <div className={styles.talksList}>
+            {invitedTalks.map((talk, i) => (
+              <div key={i} className={`${styles.talkCard} animateInit`} style={{ transitionDelay: `${(i % 4) * 60}ms` }}>
+                <div className={styles.talkYear}>{talk.year}</div>
+                <div className={styles.talkBody}>
+                  <h3 className={styles.talkTitle}>{talk.title}</h3>
+                  <p className={styles.talkEvent}>{talk.event}</p>
+                  <div className={styles.talkMeta}>
+                    <span className={styles.talkLocation}>📍 {talk.location}</span>
+                    {talk.date && <span className={styles.talkDate}>🗓 {talk.date}</span>}
+                  </div>
                 </div>
               </div>
             ))}

@@ -1,6 +1,6 @@
 .nav {
-  position: fixed;
-  inset-block-start: 0;
+  position: sticky;
+  top: 0;
   inset-inline: 0;
   z-index: 1000;
   padding-block: 1.25rem;
@@ -35,7 +35,7 @@
 .links {
   display: flex;
   align-items: center;
-  gap: 2.5rem;
+  gap: 1.5rem;
   list-style: none;
 }
 
@@ -47,6 +47,7 @@
   color: var(--clr-text-mid);
   position: relative;
   transition: color var(--transition);
+  white-space: nowrap;
 }
 .link::after {
   content: '';

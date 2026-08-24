@@ -28,15 +28,12 @@ export default function MyOtherSelf() {
         <div className="container">
           <div className={styles.hobbyGrid}>
             <div className={`${styles.hobbyImageWrap} animateInit`}>
-              <div className={styles.hobbyImagePlaceholder}>
-                [Pottery Image Placeholder - Replace with your photo]
-              </div>
-              {/* <Image 
-                src="/pottery-image.jpg" 
-                alt="Manashi Ray doing pottery"
+              <Image 
+                src="/pottery-bowl.jpg" 
+                alt="Beautiful green pottery bowl handmade by Manashi Ray"
                 fill
                 className={styles.hobbyImage}
-              /> */}
+              />
             </div>
             
             <div className={`${styles.hobbyContent} animateInit delay100`}>

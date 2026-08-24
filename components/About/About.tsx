@@ -445,7 +445,6 @@ export default function About() {
                   { src: '/field-site-meghalaya.jpeg', title: 'Field Work: Meghalaya State, Northeast India' },
                   { src: '/field-work-meghalaya-2.jpeg', title: 'Field Work: Meghalaya State, Northeast India' },
                   { src: '/very-young-headloader-meghalaya-state.jpg', title: 'Field Work: Meghalaya State, Northeast India' },
-                  { src: '/field-work-odisha-state-2.jpg', title: 'Field Work: Odisha State, India' },
                   { src: '/field-work-odisha-3.jpeg', title: 'Field Work: Odisha State, India' },
                   { src: '/village-visit-odisha.jpeg', title: 'Field Work: Odisha State, India' },
                   { src: '/urmul-trust-1.jpeg', title: 'Workshop on participatory development, URMUL Trust, Western Rajasthan, India' },

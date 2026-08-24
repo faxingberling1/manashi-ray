@@ -7,14 +7,15 @@ import BookQuotes from '@/components/BookQuotes/BookQuotes';
 import BookTestimonials from '@/components/BookTestimonials/BookTestimonials';
 import FeaturedArticle from '@/components/FeaturedArticle/FeaturedArticle';
 import Podcast from '@/components/Podcast/Podcast';
+import BookTalks from '@/components/BookTalks/BookTalks';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import styles from './BookPage.module.css';
 
 function BookContent() {
   useScrollAnimation();
   const searchParams = useSearchParams();
-  const initialTab = searchParams.get('tab') === 'podcast' ? 'podcast' : 'book';
-  const [activeTab, setActiveTab] = useState<'book' | 'podcast'>(initialTab);
+  const initialTab = searchParams.get('tab') === 'podcast' ? 'podcast' : searchParams.get('tab') === 'talks' ? 'talks' : 'book';
+  const [activeTab, setActiveTab] = useState<'book' | 'podcast' | 'talks'>(initialTab);
 
   return (
     <div style={{ paddingTop: '80px', minHeight: '100vh', background: 'var(--clr-ivory)' }}>
@@ -48,6 +49,14 @@ function BookContent() {
             <span className={styles.tabIcon}>▶</span>
             <span className={styles.tabLabel}>Video Podcast</span>
           </button>
+          <button
+            className={`${styles.tabBtn} ${activeTab === 'talks' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('talks')}
+            role="tab"
+          >
+            <span className={styles.tabIcon}>🎤</span>
+            <span className={styles.tabLabel}>Book Talks</span>
+          </button>
         </div>
       </div>
 
@@ -61,6 +70,10 @@ function BookContent() {
 
       <div style={{ display: activeTab === 'podcast' ? 'block' : 'none' }}>
         <Podcast />
+      </div>
+
+      <div style={{ display: activeTab === 'talks' ? 'block' : 'none' }}>
+        <BookTalks />
       </div>
     </div>
   );

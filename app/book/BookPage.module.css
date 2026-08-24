@@ -45,11 +45,11 @@
 
 .tabBtn:hover {
   border-color: var(--clr-navy);
-  color: var(--clr-navy);
+  color: #fff;
 }
 
 .tabBtn:hover::before {
-  transform: translateY(60%);
+  transform: translateY(0);
 }
 
 .tabLabel {

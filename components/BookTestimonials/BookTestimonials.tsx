@@ -10,6 +10,11 @@ const TESTIMONIALS = [
     quote: "In Becoming Boundless, Manashi Ray breaks new ground by pushing us to take a closer look at the interstices of transnational entrepreneurship, social networks and economic development. Ray's superb and stimulating book is bound to become an indispensable source of inspiration for understanding cross-border economic activities and underlying power relations. We have waited a long time for such a truly pathbreaking account.",
     author: "Thomas Faist",
     title: "Bielefeld University"
+  },
+  {
+    quote: "Many scholars have published journal articles focusing on transnational entrepreneurship. But no scholar has published a significant book focusing on this topic. No doubt, Manashi Ray’s Becoming Boundless is the first significant book focusing on the important topic. The data sources she used are very relevant to the topic, and her analytic arguments given in four chapters are very strong. No doubt, she published an important book",
+    author: "Pyong Gap Min",
+    title: '"Social Forces"'
   }
 ];
 
