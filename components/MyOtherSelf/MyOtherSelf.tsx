@@ -40,6 +40,15 @@ export default function MyOtherSelf() {
                 </div>
                 <div className={styles.masonryImageWrap} style={{ aspectRatio: '1/1' }}>
                   <Image 
+                    src="/pottery-5.jpg" 
+                    alt="Clay bowl from top"
+                    fill
+                    className={styles.hobbyImage}
+                    sizes="(max-width: 900px) 100vw, 50vw"
+                  />
+                </div>
+                <div className={styles.masonryImageWrap} style={{ aspectRatio: '4/5' }}>
+                  <Image 
                     src="/pottery-2.jpg" 
                     alt="Handmade pottery details"
                     fill
