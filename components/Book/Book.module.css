@@ -180,6 +180,10 @@
     grid-template-columns: 1fr 1.6fr;
     gap: 3rem;
   }
+  .coverCol {
+    position: relative;
+    top: 0;
+  }
 }
 
 @media (max-width: 768px) {

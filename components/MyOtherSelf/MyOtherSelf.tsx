@@ -27,13 +27,47 @@ export default function MyOtherSelf() {
       <section className={`${styles.hobbySection} section`} id="pottery">
         <div className="container">
           <div className={styles.hobbyGrid}>
-            <div className={`${styles.hobbyImageWrap} animateInit`}>
-              <Image 
-                src="/pottery-bowl.jpg" 
-                alt="Beautiful green pottery bowl handmade by Manashi Ray"
-                fill
-                className={styles.hobbyImage}
-              />
+            <div className={`${styles.masonryLayout} animateInit`}>
+              <div className={styles.masonryCol}>
+                <div className={styles.masonryImageWrap} style={{ aspectRatio: '4/5' }}>
+                  <Image 
+                    src="/pottery-1.jpg" 
+                    alt="Handmade pottery"
+                    fill
+                    className={styles.hobbyImage}
+                    sizes="(max-width: 900px) 100vw, 50vw"
+                  />
+                </div>
+                <div className={styles.masonryImageWrap} style={{ aspectRatio: '1/1' }}>
+                  <Image 
+                    src="/pottery-2.jpg" 
+                    alt="Handmade pottery details"
+                    fill
+                    className={styles.hobbyImage}
+                    sizes="(max-width: 900px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+              <div className={styles.masonryCol}>
+                <div className={styles.masonryImageWrap} style={{ aspectRatio: '1/1' }}>
+                  <Image 
+                    src="/pottery-3.jpg" 
+                    alt="Pottery on the wheel"
+                    fill
+                    className={styles.hobbyImage}
+                    sizes="(max-width: 900px) 100vw, 50vw"
+                  />
+                </div>
+                <div className={styles.masonryImageWrap} style={{ aspectRatio: '4/5' }}>
+                  <Image 
+                    src="/pottery-4.jpg" 
+                    alt="Finished pottery"
+                    fill
+                    className={styles.hobbyImage}
+                    sizes="(max-width: 900px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
             </div>
             
             <div className={`${styles.hobbyContent} animateInit delay100`}>

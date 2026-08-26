@@ -42,17 +42,53 @@
   margin-inline: auto;
 }
 
-.hobbyImageWrap {
+.masonryLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.masonryCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.masonryCol:nth-child(2) {
+  margin-top: 4rem;
+}
+
+.masonryImageWrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 4/5;
-  border-radius: 4px 60px 4px 60px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+}
+
+.masonryImageWrap:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-xl);
+  z-index: 2;
+}
+
+/* Add a bit of organic asymmetry to the images */
+.masonryCol:nth-child(1) .masonryImageWrap:nth-child(1) {
+  border-radius: 4px 40px 4px 40px;
+}
+.masonryCol:nth-child(2) .masonryImageWrap:nth-child(2) {
+  border-radius: 40px 4px 40px 4px;
 }
 
 .hobbyImage {
   object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.masonryImageWrap:hover .hobbyImage {
+  transform: scale(1.08);
 }
 
 .hobbyImagePlaceholder {
@@ -155,9 +191,14 @@
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }
-  .hobbyImageWrap {
-    max-width: 500px;
-    margin-inline: auto;
+  .masonryLayout {
+    gap: 1rem;
+  }
+  .masonryCol {
+    gap: 1rem;
+  }
+  .masonryCol:nth-child(2) {
+    margin-top: 2rem;
   }
   .hobbyContent {
     text-align: center;

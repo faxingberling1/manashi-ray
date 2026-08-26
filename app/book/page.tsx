@@ -8,6 +8,7 @@ import BookTestimonials from '@/components/BookTestimonials/BookTestimonials';
 import FeaturedArticle from '@/components/FeaturedArticle/FeaturedArticle';
 import Podcast from '@/components/Podcast/Podcast';
 import BookTalks from '@/components/BookTalks/BookTalks';
+import SouthAsianDiasporaReview from '@/components/SouthAsianDiasporaReview/SouthAsianDiasporaReview';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import styles from './BookPage.module.css';
 
@@ -64,6 +65,7 @@ function BookContent() {
       <div style={{ display: activeTab === 'book' ? 'block' : 'none' }}>
         <Book />
         <FeaturedArticle />
+        <SouthAsianDiasporaReview />
         <BookTestimonials />
         {/* <BookQuotes /> */}
       </div>
