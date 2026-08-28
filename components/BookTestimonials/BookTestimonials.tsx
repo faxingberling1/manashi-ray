@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useEffect } from 'react';
 import styles from './BookTestimonials.module.css';
 
 const TESTIMONIALS = [
@@ -14,11 +17,25 @@ const TESTIMONIALS = [
   {
     quote: "Many scholars have published journal articles focusing on transnational entrepreneurship. But no scholar has published a significant book focusing on this topic. No doubt, Manashi Ray’s Becoming Boundless is the first significant book focusing on the important topic. The data sources she used are very relevant to the topic, and her analytic arguments given in four chapters are very strong. No doubt, she published an important book",
     author: "Pyong Gap Min",
-    title: '"Social Forces"'
+    title: '"Social Forces"',
+    pdf: '/Pyong_Gap_Min_Review.pdf'
   }
 ];
 
 export default function BookTestimonials() {
+  const [activePdf, setActivePdf] = useState<string | null>(null);
+
+  useEffect(() => {
+    if (activePdf) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [activePdf]);
+
   return (
     <section className={`${styles.testimonials} section`} id="testimonials">
       <div className="container">
@@ -34,13 +51,52 @@ export default function BookTestimonials() {
               <div className={styles.quoteMark} aria-hidden="true">&ldquo;</div>
               <p className={styles.quoteText}>{t.quote}</p>
               <div className={styles.authorBox}>
-                <p className={styles.authorName}>{t.author}</p>
-                <p className={styles.authorTitle}>{t.title}</p>
+                <div>
+                  <p className={styles.authorName}>{t.author}</p>
+                  <p className={styles.authorTitle}>{t.title}</p>
+                </div>
+                {t.pdf && (
+                  <button 
+                    className={styles.pdfBtn} 
+                    onClick={() => setActivePdf(t.pdf)} 
+                    aria-label="View Full Review PDF"
+                    title="Read Full Review"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                      <polyline points="14 2 14 8 20 8"></polyline>
+                      <path d="M16 13H8"></path>
+                      <path d="M16 17H8"></path>
+                      <path d="M10 9H8"></path>
+                    </svg>
+                  </button>
+                )}
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* PDF Modal */}
+      {activePdf && (
+        <div className={`${styles.modalOverlay} ${styles.open}`} onClick={() => setActivePdf(null)}>
+          <div className={styles.modalContainer} onClick={(e) => e.stopPropagation()}>
+            <div className={styles.modalHeader}>
+               <h4 className={styles.modalTitle}>Read Full Review</h4>
+               <button className={styles.modalCloseBtn} onClick={() => setActivePdf(null)} aria-label="Close modal">
+                 &times;
+               </button>
+            </div>
+            <div className={styles.modalBody} style={{ padding: 0, overflow: 'hidden' }}>
+               <iframe 
+                 src={`${activePdf}#view=FitH`} 
+                 style={{ width: '100%', height: '100%', border: 'none', display: 'block' }} 
+                 title="PDF Review" 
+               />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
