@@ -25,7 +25,7 @@ export default function BookTestimonials() {
         <div className="sectionHeader animateInit">
           <span className="sectionLabel">Praise &amp; Reviews</span>
           <h2 className="sectionTitle">Praise for Becoming Boundless</h2>
-          <div className="sectionRule"></div>
+          <hr className="sectionRule" style={{ backgroundColor: '#d4af37', border: 'none', height: '3px', width: '56px', margin: '1.5rem auto', display: 'block', clear: 'both' }} />
         </div>
 
         <div className={styles.grid}>
