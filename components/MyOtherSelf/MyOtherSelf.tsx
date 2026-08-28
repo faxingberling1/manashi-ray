@@ -1,128 +1,59 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './MyOtherSelf.module.css';
 
 export default function MyOtherSelf() {
   return (
-    <>
-      <section className={`${styles.section} section`} id="journey">
-        <div className={styles.bgDecoration}></div>
-        <div className="container">
-          <div className="sectionHeader animateInit">
-            <span className="sectionLabel">My Other Self</span>
-            <h2 className="sectionTitle">A Journey of Resilience</h2>
-            <div className="sectionRule"></div>
-          </div>
-
-          <div className={`${styles.intro} animateInit delay100`}>
-            <p>
-              My journey has been shaped not just by the books I have read or the research I have conducted, but by the deeply personal reality of living with a disability. It has been a profound teacher—one that demands patience, reframes perspectives, and reveals strengths I did not know I possessed.
-            </p>
-            <p>
-              Embracing my disability has meant learning to navigate the world on different terms. It is an ongoing progression, a testament to the fact that our physical limitations do not define our intellectual boundaries or our capacity for joy. <strong>This is the story of my other self.</strong>
-            </p>
-          </div>
+    <section className={`${styles.section} section`} id="journey">
+      <div className={styles.bgDecoration}></div>
+      <div className="container">
+        <div className="sectionHeader animateInit">
+          <span className="sectionLabel">My &ldquo;Other Self&rdquo;</span>
+          <h2 className="sectionTitle">A Life, Interrupted and Reimagined</h2>
+          <div className="sectionRule" style={{ marginInline: 'auto' }}></div>
         </div>
-      </section>
 
-      <section className={`${styles.hobbySection} section`} id="pottery">
-        <div className="container">
-          <div className={styles.hobbyGrid}>
-            <div className={`${styles.masonryLayout} animateInit`}>
-              <div className={styles.masonryCol}>
-                <div className={styles.masonryImageWrap} style={{ aspectRatio: '4/5' }}>
-                  <Image 
-                    src="/pottery-1.jpg" 
-                    alt="Handmade pottery"
-                    fill
-                    className={styles.hobbyImage}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                  />
-                </div>
-                <div className={styles.masonryImageWrap} style={{ aspectRatio: '1/1' }}>
-                  <Image 
-                    src="/pottery-5.jpg" 
-                    alt="Clay bowl from top"
-                    fill
-                    className={styles.hobbyImage}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                  />
-                </div>
-                <div className={styles.masonryImageWrap} style={{ aspectRatio: '4/5' }}>
-                  <Image 
-                    src="/pottery-2.jpg" 
-                    alt="Handmade pottery details"
-                    fill
-                    className={styles.hobbyImage}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-              <div className={styles.masonryCol}>
-                <div className={styles.masonryImageWrap} style={{ aspectRatio: '1/1' }}>
-                  <Image 
-                    src="/pottery-3.jpg" 
-                    alt="Pottery on the wheel"
-                    fill
-                    className={styles.hobbyImage}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                  />
-                </div>
-                <div className={styles.masonryImageWrap} style={{ aspectRatio: '4/5' }}>
-                  <Image 
-                    src="/pottery-4.jpg" 
-                    alt="Finished pottery"
-                    fill
-                    className={styles.hobbyImage}
-                    sizes="(max-width: 900px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-            </div>
+        <div className={`${styles.bannerContainer} animateInit`}>
+          <Image 
+            src="/my-other-self-banner.jpg" 
+            alt="Beautiful serene banner" 
+            fill
+            className={styles.bannerImage}
+            priority
+          />
+        </div>
+
+        <div className={`${styles.intro} animateInit delay100`}>
+          <p>
+            Whether one conducts research, works with clay on a potter's wheel, or learns to navigate life with a partial disability, striving toward a goal is always a leap of faith. For me, all three are an ongoing process of learning and discovery—different in scale and experience, but connected by the same encounter with uncertainty. Each day, my living meets this reality: where any tiny progress comes through patience, adaptation, and the willingness to begin again. This is story of my "other self."
+          </p>
+          <p>
+            Living independently and working as a full-time academic and researcher, my partial disability has been a constant truth and relentless teacher since 2001. It is a life status I did not ask for nor wanted, but in quiet and stubborn ways it has taught me to navigate a world that is not always designed for me. In the process it has prompted me to more keenly observe untold stories and be empathetic to the subjects and participants of my research. Above all, it has taught me to adapt graciously, find new ways of moving, and accept without complaint that some things cannot be done how I once imagined or desired.
+          </p>
+          <p>
+            Perhaps this was the reason why I found myself drawn to work with clay this summer. Like extensive field notes and primary data, a lump of clay does not arrive with a predetermined shape, but has potential, both possibilities and limitations. To be a potter, I have to be aware what the material will allow and work with it skillfully without resistance. In a broader sense, making ceramics and pottery appeals to me because it combines creativity, touch, patience, and chemistry – a soft piece of earth is transformed through the right amount of pressure of my fingers, the rhythmic spinning of the wheel, and fire into something durable. Working with clay on a potter's wheel is a meditative experience, like when an argument finds its shape in prose.
+          </p>
+          <p>
+            My two universes exist in parallel: both pottery and ethnographic research require time, attentiveness, patience, and a willingness to be changed by the material that I am working with. I find the comparison especially apt, because you begin with an idea or a research question – though the data and evidence frequently take me somewhere I did not anticipate. And yet, when the ceramic emerges slowly from my hands, or a paragraph or page of findings is written, it is deeply satisfying, almost magical, and imperfect, but uniquely mine.
+          </p>
+        </div>
+
+        <div className={`${styles.roadmapSection} animateInit delay200`}>
+          <div className={styles.roadmapGrid}>
+            <Link href="/my-other-self/skills" className={styles.roadmapCard}>
+              <div className={styles.roadmapIcon}>🎨</div>
+              <h4>Skills &amp; Life Achievements</h4>
+              <p>Explore a gallery of my creative pursuits, including pottery and future passions.</p>
+            </Link>
             
-            <div className={`${styles.hobbyContent} animateInit delay100`}>
-              <span className="sectionLabel">Current Passions</span>
-              <h3>The Art of Pottery</h3>
-              <p>
-                As part of my life progression and healing, I discovered the tactile, grounding art of pottery. There is something profoundly transformative about taking a raw piece of clay and shaping it with intention. 
-              </p>
-              <p>
-                Working at the wheel requires a centering of the mind and body. It has become a space where I find stillness outside of academia, allowing me to express creativity through my hands. Every piece I throw is a reminder that beauty often emerges from the messy, imperfect process of creation.
-              </p>
-            </div>
+            <Link href="/my-other-self/achievements" className={styles.roadmapCard}>
+              <div className={styles.roadmapIcon}>🏆</div>
+              <h4>Fellowships &amp; Grants</h4>
+              <p>View my academic achievements, university grants, and professional scholarships.</p>
+            </Link>
           </div>
         </div>
-      </section>
-
-      <section className={`${styles.futureSection} section`} id="future">
-        <div className="container">
-          <div className="sectionHeader animateInit">
-            <span className="sectionLabel">Expanding Horizons</span>
-            <h2 className="sectionTitle">Future Canvas</h2>
-            <div className="sectionRule" style={{ marginInline: 'auto' }}></div>
-            <p style={{ maxWidth: '600px', margin: '1.5rem auto 0', color: 'var(--clr-text-mid)' }}>
-              Life is a continuous process of learning. While pottery holds a special place in my routine, I am always looking forward to exploring new skills and hobbies.
-            </p>
-          </div>
-
-          <div className={styles.futureGrid}>
-            <div className={`${styles.futureCard} animateInit`}>
-              <div className={styles.futureIcon}>🌿</div>
-              <h4>Gardening</h4>
-              <p>Cultivating life and finding peace in the rhythms of nature and the changing seasons.</p>
-            </div>
-            <div className={`${styles.futureCard} animateInit delay100`}>
-              <div className={styles.futureIcon}>🎨</div>
-              <h4>Painting</h4>
-              <p>Exploring color and abstract expression as a new visual language and creative outlet.</p>
-            </div>
-            <div className={`${styles.futureCard} animateInit delay200`}>
-              <div className={styles.futureIcon}>📖</div>
-              <h4>Creative Writing</h4>
-              <p>Expanding beyond academic prose to capture personal reflections and untold stories.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

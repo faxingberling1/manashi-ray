@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Achievements.module.css';
 
 const awards = [
@@ -109,6 +110,9 @@ export default function Achievements() {
   return (
     <section className={`${styles.achievements} section`} id="achievements">
       <div className="container">
+        <Link href="/my-other-self" className={styles.backButton}>
+          ← Back to My &ldquo;Other Self&rdquo;
+        </Link>
         <div className={`sectionHeader animateInit`}>
           <span className="sectionLabel">Recognition</span>
           <h2 className="sectionTitle">My Other Self</h2>

@@ -3,174 +3,87 @@
   background-color: var(--clr-ivory);
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
 .intro {
-  max-width: 70ch;
+  max-width: 80ch;
   margin-inline: auto;
-  text-align: center;
   font-size: 1.15rem;
-  line-height: 1.8;
+  line-height: 1.9;
   color: var(--clr-text-mid);
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
   position: relative;
   z-index: 1;
+  text-align: justify;
 }
 
 .intro p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.intro strong {
-  color: var(--clr-navy);
-  font-weight: 600;
-}
-
-/* Hobby Section */
-.hobbySection {
-  padding-block: 6rem;
-  background-color: var(--clr-cream);
-  position: relative;
-}
-
-.hobbyGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
-  max-width: 1000px;
-  margin-inline: auto;
-}
-
-.masonryLayout {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
-  align-items: start;
-}
-
-.masonryCol {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.masonryCol:nth-child(2) {
-  margin-top: 4rem;
-}
-
-.masonryImageWrap {
-  position: relative;
-  width: 100%;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: var(--shadow-md);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-}
-
-.masonryImageWrap:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: var(--shadow-xl);
-  z-index: 2;
-}
-
-/* Add a bit of organic asymmetry to the images */
-.masonryCol:nth-child(1) .masonryImageWrap:nth-child(1) {
-  border-radius: 4px 40px 4px 40px;
-}
-.masonryCol:nth-child(2) .masonryImageWrap:nth-child(2) {
-  border-radius: 40px 4px 40px 4px;
-}
-
-.hobbyImage {
-  object-fit: cover;
-  transition: transform 0.8s ease;
-}
-
-.masonryImageWrap:hover .hobbyImage {
-  transform: scale(1.08);
-}
-
-.hobbyImagePlaceholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #e5e5e5, #f0f0f0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--clr-text-soft);
-  font-style: italic;
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 2rem;
-}
-
-.hobbyContent h3 {
+.intro p:first-of-type::first-letter {
   font-family: var(--ff-display);
-  font-size: 2.5rem;
-  color: var(--clr-navy);
-  margin-bottom: 1rem;
+  float: left;
+  font-size: 4.5rem;
+  line-height: 1;
+  padding-right: 0.5rem;
+  padding-top: 0.2rem;
+  color: var(--clr-gold);
 }
 
-.hobbyContent p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: var(--clr-text-mid);
-  margin-bottom: 1.5rem;
+.roadmapSection {
+  margin-top: 4rem;
+  border-top: 1px solid var(--clr-cream);
+  padding-top: 4rem;
 }
 
-/* Future Canvas */
-.futureSection {
-  padding-block: 5rem;
-  background-color: var(--clr-ivory);
-  text-align: center;
-}
-
-.futureGrid {
+.roadmapGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  max-width: 900px;
   margin-inline: auto;
 }
 
-.futureCard {
+.roadmapCard {
   background: #fff;
-  padding: 2.5rem 2rem;
+  padding: 3rem 2.5rem;
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
-  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  border: 1px solid var(--clr-cream);
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  text-decoration: none;
 }
 
-.futureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
+.roadmapCard:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--clr-gold-light);
 }
 
-.futureIcon {
-  font-size: 2.5rem;
+.roadmapIcon {
+  font-size: 3rem;
   margin-bottom: 1.5rem;
 }
 
-.futureCard h4 {
+.roadmapCard h4 {
   font-family: var(--ff-display);
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--clr-navy);
   margin-bottom: 1rem;
 }
 
-.futureCard p {
-  font-size: 0.95rem;
+.roadmapCard p {
+  font-size: 1rem;
   line-height: 1.6;
   color: var(--clr-text-soft);
 }
 
-/* Decorative */
 .bgDecoration {
   position: absolute;
   border-radius: 50%;
@@ -185,22 +98,18 @@
   z-index: 0;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .hobbyGrid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  .masonryLayout {
-    gap: 1rem;
-  }
-  .masonryCol {
-    gap: 1rem;
-  }
-  .masonryCol:nth-child(2) {
-    margin-top: 2rem;
-  }
-  .hobbyContent {
-    text-align: center;
-  }
+.bannerContainer {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 400px;
+  margin: 3rem auto 4rem;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.bannerImage {
+  object-fit: cover;
+  object-position: center;
 }
