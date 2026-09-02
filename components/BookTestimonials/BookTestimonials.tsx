@@ -17,7 +17,7 @@ const TESTIMONIALS = [
   {
     quote: "Many scholars have published journal articles focusing on transnational entrepreneurship. But no scholar has published a significant book focusing on this topic. No doubt, Manashi Ray’s Becoming Boundless is the first significant book focusing on the important topic. The data sources she used are very relevant to the topic, and her analytic arguments given in four chapters are very strong. No doubt, she published an important book",
     author: "Pyong Gap Min",
-    title: '"Social Forces"',
+    title: "Queens College, CUNY",
     pdf: '/Pyong_Gap_Min_Review.pdf'
   }
 ];

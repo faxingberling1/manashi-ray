@@ -64,18 +64,34 @@
 }
 
 /* ── Conference Presentations ──────────────────────── */
-.conferenceSection { background: var(--clr-navy); }
-
-/* Override section colors */
-.conferenceSection :global(.sectionLabel) { color: var(--clr-gold-light); }
-.conferenceSection :global(.sectionTitle) { color: #fff; }
-.conferenceSection :global(.sectionRule)  { background: var(--clr-gold-light); }
+.conferenceSection { background: var(--clr-ivory-mid); }
 
 .confGroups {
   display: flex;
   flex-direction: column;
   max-width: 940px;
   margin-inline: auto;
+  position: relative;
+}
+
+.progressTrack {
+  position: absolute;
+  top: 1.5rem;
+  bottom: 0;
+  left: 100px;
+  width: 2px;
+  background: var(--clr-cream);
+  z-index: 0;
+}
+
+.progressBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--clr-gold);
+  height: calc(var(--scroll-progress, 0) * 100%);
+  transition: height 0.1s ease-out;
 }
 
 .confGroup {
@@ -90,11 +106,10 @@
   font-size: 3rem;
   font-weight: 300;
   color: var(--clr-gold);
-  opacity: 0.85;
+  opacity: 0.95;
   line-height: 1;
   padding-top: 0.5rem;
   text-align: right;
-  border-right: 1px solid rgba(212,175,55,.2);
   padding-right: 2rem;
 }
 
@@ -105,35 +120,36 @@
 }
 
 .confPaper {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.08);
+  background: #fff;
+  border: 1px solid var(--clr-cream);
   border-radius: 4px;
   padding: 1.5rem 2rem;
-  transition: background var(--transition), border-color var(--transition);
+  transition: box-shadow var(--transition), transform var(--transition);
 }
 .confPaper:hover {
-  background: rgba(255,255,255,.07);
-  border-color: rgba(212,175,55,.3);
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
 }
 
 .confTitle {
   font-family: var(--ff-display);
   font-size: 1.15rem;
-  font-weight: 400;
-  color: rgba(255,255,255,.9);
+  font-weight: 500;
+  color: var(--clr-navy);
   line-height: 1.45;
   margin-bottom: 0.6rem;
 }
 
 .confSession {
-  font-size: 0.82rem;
-  color: var(--clr-gold-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--clr-navy-mid);
   margin-bottom: 0.4rem;
 }
 
 .confEvent {
-  font-size: 0.82rem;
-  color: rgba(255,255,255,.4);
+  font-size: 0.85rem;
+  color: var(--clr-text-soft);
   letter-spacing: 0.02em;
 }
 
@@ -146,6 +162,7 @@
   .talkYear { font-size: 1.4rem; }
   .confGroup { grid-template-columns: 60px 1fr; gap: 0 1.25rem; }
   .confYear { font-size: 2rem; padding-right: 1rem; }
+  .progressTrack { left: 60px; }
   .confPaper { padding: 1.25rem; }
   .talkMeta { flex-direction: column; gap: 0.25rem; }
 }

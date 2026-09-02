@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useRef } from 'react';
 import styles from './Lectures.module.css';
 
 const invitedTalks = [
@@ -181,6 +184,33 @@ const conferenceGroups: { year: string; papers: { title: string; session: string
 ];
 
 export default function Lectures() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      
+      // Start filling when the top of the container is somewhat visible
+      const start = windowHeight * 0.75;
+      const totalScroll = rect.height;
+      
+      let progress = (start - rect.top) / totalScroll;
+      progress = Math.max(0, Math.min(1, progress));
+      
+      containerRef.current.style.setProperty('--scroll-progress', progress.toString());
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleScroll);
+    handleScroll(); // initial call
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
   return (
     <div>
       {/* Conference Presentations */}
@@ -192,7 +222,10 @@ export default function Lectures() {
             <div className="sectionRule"></div>
           </div>
 
-          <div className={styles.confGroups}>
+          <div className={styles.confGroups} ref={containerRef}>
+            <div className={styles.progressTrack} aria-hidden="true">
+              <div className={styles.progressBar}></div>
+            </div>
             {conferenceGroups.map((group, gi) => (
               <div key={gi} className={`${styles.confGroup} animateInit`} style={{ transitionDelay: `${(gi % 4) * 60}ms` }}>
                 <div className={styles.confYear}>{group.year}</div>

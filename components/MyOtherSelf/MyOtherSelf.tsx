@@ -45,12 +45,6 @@ export default function MyOtherSelf() {
               <h4>Skills &amp; Life Achievements</h4>
               <p>Explore a gallery of my creative pursuits, including pottery and future passions.</p>
             </Link>
-            
-            <Link href="/my-other-self/achievements" className={styles.roadmapCard}>
-              <div className={styles.roadmapIcon}>🏆</div>
-              <h4>Fellowships &amp; Grants</h4>
-              <p>View my academic achievements, university grants, and professional scholarships.</p>
-            </Link>
           </div>
         </div>
       </div>

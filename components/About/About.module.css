@@ -315,58 +315,165 @@
   line-height: 1.7;
 }
 
-/* Fellowships */
-.fellowships {
-  background: var(--clr-ivory);
-  border-radius: 4px;
-  padding: clamp(2rem, 4vw, 3rem);
+/* Fellowships Tab */
+.fellowshipsSection {
+  animation: tabFadeIn 0.4s var(--ease-out-expo);
   max-width: 900px;
-  margin-inline: auto;
+  margin: 0 auto;
 }
-.fellowshipsTitle {
-  font-family: var(--ff-display);
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: var(--clr-navy);
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.fellowshipGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
-}
-.fellowshipCard {
+
+.groups {
   display: flex;
-  align-items: flex-start;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.group {
   background: #fff;
-  border-radius: 4px;
-  padding: 1.25rem;
-  box-shadow: var(--shadow-sm);
   border: 1px solid var(--clr-cream);
-  transition: box-shadow var(--transition), transform var(--transition);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
-.fellowshipCard:hover {
-  box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+
+.groupHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.75rem 2.5rem;
+  background: var(--clr-navy);
+  position: relative;
+  overflow: hidden;
 }
-.fellowshipIcon {
+.groupHeader::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.groupIcon {
   font-size: 1.75rem;
   flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,.3));
 }
-.fellowshipTitle {
+
+.groupTitle {
   font-family: var(--ff-display);
-  font-size: 0.95rem;
-  font-weight: 500;
-  color: var(--clr-navy);
-  margin-bottom: 0.2rem;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  flex-grow: 1;
+  letter-spacing: 0.01em;
+}
+
+.groupCount {
+  font-family: var(--ff-display);
+  font-size: 2.5rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.95;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.groupItems {
+  display: flex;
+  flex-direction: column;
+}
+
+.awardCard {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: start;
+  padding: 1.75rem 2.5rem;
+  border-bottom: 1px solid var(--clr-cream);
+  position: relative;
+  transition: background var(--transition);
+  overflow: hidden;
+}
+.awardCard:last-child {
+  border-bottom: none;
+}
+.awardCard:hover {
+  background: var(--clr-ivory);
+}
+
+.awardAccent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--clr-gold);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s var(--ease-out-expo);
+}
+.awardCard:hover .awardAccent {
+  transform: scaleY(1);
+}
+
+.awardIndex {
+  font-family: var(--ff-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--clr-gold);
+  opacity: 0.75;
+  line-height: 1;
+  padding-top: 0.35rem;
+  transition: opacity var(--transition);
+  letter-spacing: -0.03em;
+}
+.awardCard:hover .awardIndex {
+  opacity: 1;
+}
+
+.awardBody {
+  padding-left: 0.5rem;
+}
+
+.awardMeta {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.awardYear {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--clr-gold);
+  white-space: nowrap;
+}
+
+.awardOrg {
+  font-size: 0.8rem;
+  color: var(--clr-text-soft);
+  letter-spacing: 0.02em;
+  border-left: 1px solid var(--clr-cream);
+  padding-left: 1.25rem;
   line-height: 1.4;
 }
-.fellowshipSub {
-  font-size: 0.78rem;
-  color: var(--clr-text-soft);
-  line-height: 1.5;
+
+.awardTitle {
+  font-family: var(--ff-display);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--clr-navy);
+  line-height: 1.35;
+  margin-bottom: 0.4rem;
+}
+
+.awardDetail {
+  font-size: 0.9rem;
+  color: var(--clr-text-mid);
+  line-height: 1.6;
+  font-style: italic;
 }
 
 /* ===== TEACHING TAB ===== */
@@ -441,17 +548,22 @@
   display: flex;
   align-items: flex-start;
   gap: 1.25rem;
-  background: var(--clr-navy);
+  background: var(--clr-ivory);
+  border: 1px solid var(--clr-cream);
   border-radius: 4px;
   padding: 2rem;
-  color: #fff;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.platformCard:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
 }
 .platformIcon { font-size: 1.75rem; }
 .platformTitle {
   font-family: var(--ff-display);
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  color: #fff;
+  color: var(--clr-navy);
   margin-bottom: 0.75rem;
 }
 .platformTags {
@@ -465,8 +577,8 @@
   border-radius: 100px;
   font-size: 0.75rem;
   font-weight: 600;
-  background: rgba(212, 175, 55, 0.25);
-  color: var(--clr-gold-light);
+  background: rgba(26, 37, 64, 0.07);
+  color: var(--clr-navy);
   letter-spacing: 0.05em;
 }
 
@@ -752,6 +864,12 @@
 }
 
 @media (max-width: 768px) {
+  .groupHeader { padding: 1.5rem; }
+  .awardCard { grid-template-columns: 52px 1fr; padding: 1.5rem; }
+  .awardIndex { font-size: 2rem; }
+  .groupTitle { font-size: 1.25rem; }
+  .awardOrg { border-left: none; padding-left: 0; }
+  .awardMeta { flex-direction: column; align-items: flex-start; gap: 0.35rem; }
   .grid { grid-template-columns: 1fr; }
   .chartingGrid { grid-template-columns: 1fr; gap: 2rem; }
   .chartingImageFigure:first-child { transform: none; }
