@@ -7,7 +7,7 @@ export default function SkillsPage() {
   useScrollAnimation();
 
   return (
-    <div style={{ paddingTop: '80px', minHeight: '100vh', background: '#fff' }}>
+    <div style={{ paddingTop: '80px', minHeight: '100vh', background: 'var(--clr-ivory)' }}>
       <SkillsGallery />
     </div>
   );

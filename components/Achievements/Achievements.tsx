@@ -10,7 +10,7 @@ const awards = [
         year: '1992 – 1993',
         title: 'United Nations Population Fund (UNFPA) Fellowship',
         detail: 'Global Training Program in Population and Sustainable Development',
-        org: 'Institute of Social Studies, The Hague, The Netherlands',
+        org: 'International Institute of Social Studies, The Hague, The Netherlands',
       },
       {
         year: '1992 – 1993',
@@ -29,12 +29,6 @@ const awards = [
         title: 'Fellowship',
         detail: 'Jawaharlal Nehru Institute of Advanced Study',
         org: 'Jawaharlal Nehru University, New Delhi',
-      },
-      {
-        year: '2012 – 2013',
-        title: 'Travel Grant , RC 31 Research Committee',
-        detail: 'ISA World Congress of Sociology, Yokohama, Japan',
-        org: 'International Sociological Association',
       },
     ],
   },

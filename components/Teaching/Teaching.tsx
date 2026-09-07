@@ -30,7 +30,8 @@ const courses = {
     'Social Inequality',
     'Sociology of Family',
     'Sociology of Gender',
-    'Migrants and Refugees: The American Experience',
+    'Precarity and the Pandemic',
+    'Migrants & Refugees: The American Experience',
     'Introduction to Sociology',
   ],
 };
@@ -104,7 +105,6 @@ export default function Teaching() {
             <div>
               <h4 className={styles.platformTitle}>Proficient in Online Teaching</h4>
               <div className={styles.platformTags}>
-                <span className={styles.platformTag}>Sakai</span>
                 <span className={styles.platformTag}>Moodle</span>
               </div>
             </div>

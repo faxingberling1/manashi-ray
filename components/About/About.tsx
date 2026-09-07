@@ -16,7 +16,7 @@ const awards = [
         year: '1992 – 1993',
         title: 'United Nations Population Fund (UNFPA) Fellowship',
         detail: 'Global Training Program in Population and Sustainable Development',
-        org: 'Institute of Social Studies, The Hague, The Netherlands',
+        org: 'International Institute of Social Studies, The Hague, The Netherlands',
       },
       {
         year: '1992 – 1993',
@@ -35,12 +35,6 @@ const awards = [
         title: 'Fellowship',
         detail: 'Jawaharlal Nehru Institute of Advanced Study',
         org: 'Jawaharlal Nehru University, New Delhi',
-      },
-      {
-        year: '2012 – 2013',
-        title: 'Travel Grant , RC 31 Research Committee',
-        detail: 'ISA World Congress of Sociology, Yokohama, Japan',
-        org: 'International Sociological Association',
       },
     ],
   },
@@ -158,6 +152,16 @@ export default function About() {
             <span className={styles.tabLabel}>Career Trajectory</span>
           </button>
           <button
+            id="tab-fellowships"
+            className={`${styles.tabBtn} ${activeTab === 'fellowships' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('fellowships')}
+            aria-selected={activeTab === 'fellowships'}
+            role="tab"
+          >
+            <span className={styles.tabIcon}>🏆</span>
+            <span className={styles.tabLabel}>Fellowships, Grants & Awards</span>
+          </button>
+          <button
             id="tab-teaching"
             className={`${styles.tabBtn} ${activeTab === 'teaching' ? styles.tabActive : ''}`}
             onClick={() => setActiveTab('teaching')}
@@ -166,16 +170,6 @@ export default function About() {
           >
             <span className={styles.tabIcon}>◆</span>
             <span className={styles.tabLabel}>Teaching</span>
-          </button>
-          <button
-            id="tab-fellowships"
-            className={`${styles.tabBtn} ${activeTab === 'fellowships' ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab('fellowships')}
-            aria-selected={activeTab === 'fellowships'}
-            role="tab"
-          >
-            <span className={styles.tabIcon}>🏆</span>
-            <span className={styles.tabLabel}>Fellowships & Grants</span>
           </button>
         </div>
 
@@ -418,7 +412,14 @@ export default function About() {
                     <h4 className={styles.courseCardTitle}>Undergraduate Courses</h4>
                   </div>
                   <div className={styles.courseTags}>
-                    {['Social Inequality', 'Sociology of Family', 'Sociology of Gender', 'Migrants and Refugees: The American Experience', 'Introduction to Sociology'].map((c) => (
+                    {[
+                      'Social Inequality',
+                      'Sociology of Family',
+                      'Sociology of Gender',
+                      'Precarity and the Pandemic',
+                      'Migrants & Refugees: The American Experience',
+                      'Introduction to Sociology',
+                    ].map((c) => (
                       <span key={c} className={styles.courseTag}>{c}</span>
                     ))}
                   </div>
@@ -429,7 +430,6 @@ export default function About() {
                   <div>
                     <h4 className={styles.platformTitle}>Online Teaching Platforms</h4>
                     <div className={styles.platformTags}>
-                      <span className={styles.platformTag}>Sakai</span>
                       <span className={styles.platformTag}>Moodle</span>
                     </div>
                   </div>
@@ -565,7 +565,7 @@ export default function About() {
           </div>
         )}
 
-        {/* === FELLOWSHIPS & GRANTS === */}
+        {/* === FELLOWSHIPS, GRANTS & AWARDS === */}
         {activeTab === 'fellowships' && (
           <div className={styles.fellowshipsSection}>
             <div className={styles.groups}>

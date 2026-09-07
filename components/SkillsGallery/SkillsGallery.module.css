@@ -119,57 +119,6 @@
   margin-bottom: 1.5rem;
 }
 
-/* Future Canvas */
-.futureSection {
-  padding-block: 5rem;
-  background-color: var(--clr-ivory);
-  text-align: center;
-}
-
-.futureGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 3rem;
-  max-width: 1000px;
-  margin-inline: auto;
-}
-
-.futureCard {
-  background: #fff;
-  padding: 2.5rem 2rem;
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
-  transition: transform var(--transition), box-shadow var(--transition);
-  border: 1px solid rgba(212, 175, 55, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.futureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-md);
-}
-
-.futureIcon {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.futureCard h4 {
-  font-family: var(--ff-display);
-  font-size: 1.5rem;
-  color: var(--clr-navy);
-  margin-bottom: 1rem;
-}
-
-.futureCard p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: var(--clr-text-soft);
-}
-
 /* Decorative */
 .bgDecoration {
   position: absolute;
@@ -227,4 +176,66 @@
   color: #fff;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(212, 175, 55, 0.25);
+}
+
+/* Centered Quote Section */
+.quoteSection {
+  padding: 6rem 1.5rem 7rem;
+  background: var(--clr-ivory);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgba(26, 37, 64, 0.12);
+}
+
+.quoteBgDecoration {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.quoteCard {
+  max-width: 860px;
+  margin-inline: auto;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.quoteMark {
+  font-family: var(--ff-display);
+  color: var(--clr-gold);
+  font-size: 1.4em;
+  line-height: 0;
+  vertical-align: -0.08em;
+  margin: 0 0.12em;
+  font-style: normal;
+  display: inline-block;
+  opacity: 0.9;
+}
+
+.quoteText {
+  font-family: var(--ff-display);
+  font-size: clamp(1.45rem, 2.7vw, 2.05rem);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--clr-navy);
+  margin-bottom: 2rem;
+  letter-spacing: 0.01em;
+}
+
+.quoteAccentLine {
+  width: 56px;
+  height: 2px;
+  background: var(--clr-gold);
+  margin-inline: auto;
 }

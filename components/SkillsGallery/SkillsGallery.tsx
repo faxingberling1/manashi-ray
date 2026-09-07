@@ -75,33 +75,16 @@ export default function SkillsGallery() {
         </div>
       </section>
 
-      <section className={`${styles.futureSection} section`} id="future" style={{ backgroundColor: 'var(--clr-ivory)', marginTop: '4rem' }}>
+      <section className={styles.quoteSection}>
+        <div className={styles.quoteBgDecoration} aria-hidden="true" />
         <div className="container">
-          <div className="sectionHeader animateInit">
-            <span className="sectionLabel">Expanding Horizons</span>
-            <h2 className="sectionTitle">Future Canvas</h2>
-            <div className="sectionRule" style={{ marginInline: 'auto' }}></div>
-            <p style={{ maxWidth: '600px', margin: '1.5rem auto 0', color: 'var(--clr-text-mid)' }}>
+          <div className={`${styles.quoteCard} animateInit`}>
+            <blockquote className={styles.quoteText}>
+              <span className={styles.quoteMark} aria-hidden="true">&ldquo;</span>
               Life is a continuous process of learning. While pottery holds a special place in my routine, I am always looking forward to exploring new skills and hobbies.
-            </p>
-          </div>
-
-          <div className={styles.futureGrid}>
-            <div className={`${styles.futureCard} animateInit`}>
-              <div className={styles.futureIcon}>🌿</div>
-              <h4>Gardening</h4>
-              <p>Cultivating life and finding peace in the rhythms of nature and the changing seasons.</p>
-            </div>
-            <div className={`${styles.futureCard} animateInit delay100`}>
-              <div className={styles.futureIcon}>🎨</div>
-              <h4>Painting</h4>
-              <p>Exploring color and abstract expression as a new visual language and creative outlet.</p>
-            </div>
-            <div className={`${styles.futureCard} animateInit delay200`}>
-              <div className={styles.futureIcon}>📖</div>
-              <h4>Creative Writing</h4>
-              <p>Expanding beyond academic prose to capture personal reflections and untold stories.</p>
-            </div>
+              <span className={styles.quoteMark} aria-hidden="true">&rdquo;</span>
+            </blockquote>
+            <div className={styles.quoteAccentLine} />
           </div>
         </div>
       </section>
