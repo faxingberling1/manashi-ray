@@ -22,7 +22,7 @@
   margin-bottom: 2rem;
 }
 
-.intro p:first-of-type::first-letter {
+.intro > p:first-of-type::first-letter {
   font-family: var(--ff-display);
   float: left;
   font-size: 4.5rem;
@@ -82,6 +82,173 @@
   font-size: 1rem;
   line-height: 1.6;
   color: var(--clr-text-soft);
+}
+
+/* ===== Clickable "Recent Creations in Clay" banner ===== */
+.clayCta {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 2.5rem 3rem;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf6ea 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(26, 37, 64, 0.07);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.clayCta::after {
+  content: '';
+  position: absolute;
+  right: -120px;
+  bottom: -120px;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.clayCta:hover,
+.clayCta:focus-visible {
+  transform: translateY(-6px);
+  border-color: var(--clr-gold);
+  box-shadow: 0 22px 44px rgba(26, 37, 64, 0.13), 0 0 0 4px rgba(212, 175, 55, 0.12);
+  outline: none;
+}
+
+/* Fanned stack of pottery photos */
+.clayPreview {
+  position: relative;
+  height: 220px;
+}
+
+.clayThumb {
+  position: absolute;
+  width: 170px;
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 5px solid #ffffff;
+  box-shadow: 0 10px 24px rgba(26, 37, 64, 0.18);
+  background: #f4efe6;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.clayThumbImg {
+  object-fit: cover;
+}
+
+.clayThumbBack {
+  left: 0;
+  top: 14px;
+  transform: rotate(-10deg);
+}
+
+.clayThumbMid {
+  left: 55px;
+  top: 4px;
+  transform: rotate(4deg);
+}
+
+.clayThumbFront {
+  left: 100px;
+  top: 10px;
+  transform: rotate(-2deg);
+  z-index: 2;
+}
+
+.clayCta:hover .clayThumbBack { transform: rotate(-16deg) translateX(-14px); }
+.clayCta:hover .clayThumbMid { transform: rotate(6deg) translateY(-8px); }
+.clayCta:hover .clayThumbFront { transform: rotate(4deg) translateX(14px); }
+
+.clayBody {
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.clayEyebrow {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--clr-gold);
+  margin-bottom: 0.6rem;
+}
+
+.clayTitle {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  color: var(--clr-navy);
+  line-height: 1.2;
+  margin: 0 0 0.75rem;
+}
+
+.clayText {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--clr-text-soft);
+  margin: 0 0 1.75rem;
+}
+
+.clayButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--clr-navy);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.9rem;
+  border-radius: 9999px;
+  box-shadow: 0 6px 16px rgba(26, 37, 64, 0.22);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clayButtonArrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.clayCta:hover .clayButton {
+  background: var(--clr-gold);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+}
+
+.clayCta:hover .clayButtonArrow {
+  transform: translateX(5px);
+}
+
+@media (max-width: 760px) {
+  .clayCta {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .clayPreview {
+    width: 270px;
+    margin-inline: auto;
+  }
+
+  .clayBody {
+    text-align: center;
+  }
+
+  .clayTitle {
+    font-size: 1.6rem;
+  }
 }
 
 .bgDecoration {
@@ -188,9 +355,10 @@
 
 /* Visual Archival Strip */
 .visualArchivalStrip {
-  margin-top: 2rem;
-  padding-top: 1.75rem;
-  border-top: 1px dashed rgba(212, 175, 55, 0.35);
+  margin-block: 2.5rem 3rem;
+  padding-block: 1.5rem 0.5rem;
+  border-top: 1px dashed rgba(212, 175, 55, 0.4);
+  border-bottom: 1px dashed rgba(212, 175, 55, 0.4);
 }
 
 .stripHeader {
@@ -352,7 +520,15 @@
   font-weight: 600;
   color: var(--clr-navy);
   line-height: 1.3;
-  margin-bottom: 0.25rem !important;
+  margin: 0 0 0.25rem 0 !important;
+}
+
+.cardTitle::first-letter {
+  float: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  color: inherit !important;
+  padding: 0 !important;
 }
 
 .cardTag {

@@ -21,12 +21,12 @@ export default function ActionBar() {
   return (
     <div className={`${styles.actionBar} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.inner}>
-        <span className={styles.highlight}>Upcoming Event:</span>
+        <span className={styles.highlight}>Recently Held:</span>
         <span className={styles.text}>
           &ldquo;Who Becomes Boundless?&rdquo; Book Talk at Michigan State University &middot; Sept 17, 2026
         </span>
         <Link href="/book?tab=talks" className={styles.cta}>
-          View Details &rarr;
+          View Photos &rarr;
         </Link>
         <button 
           className={styles.closeBtn} 

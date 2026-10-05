@@ -42,20 +42,20 @@ function BookContent() {
             <span className={styles.tabLabel}>The Book</span>
           </button>
           <button
-            className={`${styles.tabBtn} ${activeTab === 'podcast' ? styles.tabActive : ''}`}
-            onClick={() => setActiveTab('podcast')}
-            role="tab"
-          >
-            <span className={styles.tabIcon}>▶</span>
-            <span className={styles.tabLabel}>Video Podcast</span>
-          </button>
-          <button
             className={`${styles.tabBtn} ${activeTab === 'talks' ? styles.tabActive : ''}`}
             onClick={() => setActiveTab('talks')}
             role="tab"
           >
             <span className={styles.tabIcon}>🎤</span>
             <span className={styles.tabLabel}>Book Talks</span>
+          </button>
+          <button
+            className={`${styles.tabBtn} ${activeTab === 'podcast' ? styles.tabActive : ''}`}
+            onClick={() => setActiveTab('podcast')}
+            role="tab"
+          >
+            <span className={styles.tabIcon}>▶</span>
+            <span className={styles.tabLabel}>Video Podcast</span>
           </button>
         </div>
       </div>

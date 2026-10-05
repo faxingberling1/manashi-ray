@@ -20,12 +20,13 @@ const TESTIMONIALS = [
     title: "Queens College, CUNY · Published in Social Forces (Notable Academic Journal)",
     pdf: '/Pyong_Gap_Min_Review.pdf'
   },
-  {
-    quote: "Becoming Boundless is a great read, well researched, and a welcome contribution to our understanding of transnational entrepreneurship, transnational social spaces, diaspora engagement and return migration.",
-    author: "Daniel Naujoks",
-    title: "The Developing Economies (Notable Academic Journal) · Columbia University",
-    pdf: '/The_Developing_Economies_Review.pdf'
-  }
+  // Hidden: duplicated in the BookReviews section on the Book page.
+  // {
+  //   quote: "Becoming Boundless is a great read, well researched, and a welcome contribution to our understanding of transnational entrepreneurship, transnational social spaces, diaspora engagement and return migration.",
+  //   author: "Daniel Naujoks",
+  //   title: "The Developing Economies (Notable Academic Journal) · Columbia University",
+  //   pdf: '/The_Developing_Economies_Review.pdf'
+  // }
 ];
 
 export default function BookTestimonials() {

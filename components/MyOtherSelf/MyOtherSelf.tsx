@@ -21,15 +21,15 @@ const DISABILITY_MEMOIRS: MemoirPhoto[] = [
     year: '2001 – 2002',
     title: 'Early Rehabilitation & Gait Training',
     tag: 'Gait Training',
-    caption: 'Learning to walk again using parallel bars and an early limb brace. A testament to patience, persistence, and starting anew.',
+    caption: 'Learning to walk again using parallel bars and an early leg prosthetic.',
   },
   {
     id: 2,
     src: '/disability-journey-2.jpg',
-    year: 'April 23, 2007',
-    title: 'Marking the Milestone',
-    tag: 'Milestone 2007',
-    caption: 'Standing with resilience during a clinical milestone evaluation on April 23, 2007. Quiet courage, dignity, and grace in adapting.',
+    year: '2003 – 2007',
+    title: 'Marking a milestone in progress',
+    tag: 'Milestone in Progress',
+    caption: 'Standing with resilience during a clinical milestone evaluation on April 23, 2007.',
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ const DISABILITY_MEMOIRS: MemoirPhoto[] = [
     year: 'Clinical Journey',
     title: 'Partners in Care & Mobility',
     tag: 'Care & Mobility',
-    caption: 'With my prosthetist in the rehabilitation clinic—celebrating mobility, science, and the compassionate team who helped rebuild possibilities.',
+    caption: "With my prosthetist, Fran Starzec—grateful for his skill, compassion, and the team's expertise who helped me rediscover mobility and rebuild possibilities.",
   },
 ];
 
@@ -126,102 +126,66 @@ export default function MyOtherSelf() {
             Whether one conducts research, works with clay on a potter's wheel, or learns to navigate life with a partial disability, striving toward a goal is always a leap of faith. For me, all three are an ongoing process of learning and discovery—different in scale and experience, but connected by the same encounter with uncertainty. Each day, my living meets this reality: where any tiny progress comes through patience, adaptation, and the willingness to begin again. This is story of my "other self."
           </p>
 
-          <div className={styles.disabilityFocusBlock}>
-            <p>
-              Living independently and working as a full-time academic and researcher, my{' '}
-              <button 
-                type="button"
-                className={styles.inlineTrigger}
-                onClick={() => openLightbox(0)}
-                onMouseEnter={() => setHoveredIndex(0)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                aria-label="View early rehabilitation photograph (2001)"
-              >
-                <span className={styles.triggerUnderline}>partial disability</span>
-                <span className={styles.triggerBadge}>📷 2001</span>
-              </button>{' '}
-              has been a constant truth and relentless teacher since 2001. It is a life status I did not ask for nor wanted, but in quiet and stubborn ways it has taught me to navigate a world that is not always designed for me. In the process it has prompted me to more keenly observe untold stories and be empathetic to the subjects and participants of my research. Above all, it has taught me to{' '}
-              <button 
-                type="button"
-                className={styles.inlineTrigger}
-                onClick={() => openLightbox(1)}
-                onMouseEnter={() => setHoveredIndex(1)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                aria-label="View milestone photograph (2007)"
-              >
-                <span className={styles.triggerUnderline}>adapt graciously</span>
-                <span className={styles.triggerBadge}>📷 2007</span>
-              </button>, find{' '}
-              <button 
-                type="button"
-                className={styles.inlineTrigger}
-                onClick={() => openLightbox(2)}
-                onMouseEnter={() => setHoveredIndex(2)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                aria-label="View rehabilitation clinic photograph"
-              >
-                <span className={styles.triggerUnderline}>new ways of moving</span>
-                <span className={styles.triggerBadge}>📷 Rehabilitation</span>
-              </button>, and accept without complaint that some things cannot be done how I once imagined or desired.
-            </p>
+          <p>
+            Living independently and working as a full-time academic and researcher, my partial disability has been a constant truth and relentless teacher since 2001. It is a life status I did not ask for nor wanted, but in quiet and stubborn ways it has taught me to navigate a world that is not always designed for me. In the process it has prompted me to more keenly observe untold stories and be empathetic to the subjects and participants of my research. Above all, it has taught me to adapt graciously, find new ways of moving, and accept without complaint that some things cannot be done how I once imagined or desired.
+          </p>
 
-            {/* Visual Archival Cards Strip */}
-            <div className={styles.visualArchivalStrip}>
-              <div className={styles.stripHeader}>
-                <span className={styles.stripLabel}>
-                  <span className={styles.stripSparkle}>✦</span> Archival Memoirs · Navigating Disability
-                </span>
-                <span className={styles.stripInstruction}>Tap or click any photo to view full journey</span>
-              </div>
+          {/* Visual Archival Cards Strip */}
+          <div className={styles.visualArchivalStrip}>
+            <div className={styles.stripHeader}>
+              <span className={styles.stripLabel}>
+                <span className={styles.stripSparkle}>✦</span> Archival Memoirs · Navigating Disability
+              </span>
+              <span className={styles.stripInstruction}>Tap or click any photo to view full journey</span>
+            </div>
 
-              <div className={styles.polaroidRow}>
-                {DISABILITY_MEMOIRS.map((photo, idx) => (
-                  <div
-                    key={photo.id}
-                    className={`${styles.polaroidCard} ${styles[`tilt${idx + 1}`]} ${hoveredIndex === idx ? styles.polaroidHovered : ''}`}
-                    onClick={() => openLightbox(idx)}
-                    onMouseEnter={() => setHoveredIndex(idx)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        e.preventDefault();
-                        openLightbox(idx);
-                      }
-                    }}
-                    aria-label={`Open photo: ${photo.title}`}
-                  >
-                    <div className={styles.polaroidInner}>
-                      <div className={styles.imageWrap}>
-                        <Image
-                          src={photo.src}
-                          alt={photo.title}
-                          fill
-                          sizes="(max-width: 640px) 260px, (max-width: 1024px) 30vw, 240px"
-                          className={styles.polaroidImg}
-                        />
-                        <div className={styles.yearTag}>{photo.year}</div>
-                        <div className={styles.photoActionOverlay}>
-                          <span className={styles.photoActionPill}>
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                              <circle cx="11" cy="11" r="8"></circle>
-                              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                              <line x1="11" y1="8" x2="11" y2="14"></line>
-                              <line x1="8" y1="11" x2="14" y2="11"></line>
-                            </svg>
-                            View
-                          </span>
-                        </div>
-                      </div>
-                      <div className={styles.polaroidCaption}>
-                        <p className={styles.cardTitle}>{photo.title}</p>
-                        <span className={styles.cardTag}>{photo.tag}</span>
+            <div className={styles.polaroidRow}>
+              {DISABILITY_MEMOIRS.map((photo, idx) => (
+                <div
+                  key={photo.id}
+                  className={`${styles.polaroidCard} ${styles[`tilt${idx + 1}`]} ${hoveredIndex === idx ? styles.polaroidHovered : ''}`}
+                  onClick={() => openLightbox(idx)}
+                  onMouseEnter={() => setHoveredIndex(idx)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                      e.preventDefault();
+                      openLightbox(idx);
+                    }
+                  }}
+                  aria-label={`Open photo: ${photo.title}`}
+                >
+                  <div className={styles.polaroidInner}>
+                    <div className={styles.imageWrap}>
+                      <Image
+                        src={photo.src}
+                        alt={photo.title}
+                        fill
+                        sizes="(max-width: 640px) 260px, (max-width: 1024px) 30vw, 240px"
+                        className={styles.polaroidImg}
+                      />
+                      <div className={styles.yearTag}>{photo.year}</div>
+                      <div className={styles.photoActionOverlay}>
+                        <span className={styles.photoActionPill}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                            <line x1="11" y1="8" x2="11" y2="14"></line>
+                            <line x1="8" y1="11" x2="14" y2="11"></line>
+                          </svg>
+                          View
+                        </span>
                       </div>
                     </div>
+                    <div className={styles.polaroidCaption}>
+                      <h4 className={styles.cardTitle}>{photo.title}</h4>
+                      <span className={styles.cardTag}>{photo.tag}</span>
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -235,10 +199,34 @@ export default function MyOtherSelf() {
 
         <div className={`${styles.roadmapSection} animateInit delay200`}>
           <div className={styles.roadmapGrid}>
-            <Link href="/my-other-self/skills" className={styles.roadmapCard}>
-              <div className={styles.roadmapIcon}>🎨</div>
-              <h4>Recent Expressions in Clay</h4>
-              <p>Explore a gallery of my creative pursuits, including pottery and future passions.</p>
+            <Link
+              href="/my-other-self/skills"
+              className={styles.clayCta}
+              aria-label="Open the Recent Creations in Clay gallery"
+            >
+              <div className={styles.clayPreview} aria-hidden="true">
+                <div className={`${styles.clayThumb} ${styles.clayThumbBack}`}>
+                  <Image src={encodeURI('/Pottery Pics/Pottery - 2 (2).jpeg')} alt="" fill sizes="180px" className={styles.clayThumbImg} />
+                </div>
+                <div className={`${styles.clayThumb} ${styles.clayThumbMid}`}>
+                  <Image src={encodeURI('/Pottery Pics/Pottery - 2 (3).jpeg')} alt="" fill sizes="180px" className={styles.clayThumbImg} />
+                </div>
+                <div className={`${styles.clayThumb} ${styles.clayThumbFront}`}>
+                  <Image src={encodeURI('/Pottery Pics/Pottery - 2.jpeg')} alt="" fill sizes="200px" className={styles.clayThumbImg} />
+                </div>
+              </div>
+
+              <div className={styles.clayBody}>
+                <span className={styles.clayEyebrow}>Gallery · Pottery</span>
+                <h4 className={styles.clayTitle}>Recent Creations in Clay</h4>
+                <p className={styles.clayText}>
+                  Explore a gallery of my creative pursuits, including pottery and future passions.
+                </p>
+                <span className={styles.clayButton}>
+                  Explore the Gallery
+                  <span className={styles.clayButtonArrow}>→</span>
+                </span>
+              </div>
             </Link>
           </div>
         </div>

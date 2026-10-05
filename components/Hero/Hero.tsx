@@ -50,7 +50,7 @@ export default function Hero() {
           </div>
           <div className={styles.actions}>
             <Link href="/book" className="btn btnPrimary">Book Overview</Link>
-            <Link href="/book?tab=podcast" className="btn btnGold">Video Podcast</Link>
+            <Link href="/my-other-self" className="btn btnGold">My Other Self</Link>
             <Link href="/about-me" className="btn btnGhost">Biography</Link>
           </div>
         </div>
