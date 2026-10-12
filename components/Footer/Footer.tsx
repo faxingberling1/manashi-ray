@@ -9,7 +9,7 @@ export default function Footer() {
       <div className={styles.inner}>
         <div className={styles.brand}>
           <span className={styles.name}>Manashi Ray</span>
-          <span className={styles.tagline}>Professor · Author · Scholar</span>
+          <span className={styles.tagline}>Professor · Author · Budding Potter</span>
         </div>
         <nav className={styles.nav} aria-label="Footer navigation">
           <Link href="/">Home</Link>

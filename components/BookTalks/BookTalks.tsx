@@ -20,9 +20,10 @@ interface GalleryPhoto {
   id: string;
   filename: string;
   title: string;
-  subtitle: string;
-  description: string;
+  subtitle?: string;
+  description?: string;
   aspect?: string;
+  objectPosition?: string;
 }
 
 // 1. Upcoming Events Data (add future bookings here)
@@ -46,76 +47,45 @@ const ARCHIVED_TALKS: TalkEvent[] = [
 // 3. Book Talk Gallery Photos from public/Book Talk/
 const GALLERY_PHOTOS: GalleryPhoto[] = [
   {
-    id: 'msu-talk-main',
-    filename: 'Website - MSU Book Talk.png',
-    title: 'Book Talk at Michigan State University',
-    subtitle: 'MSU Department of Sociology Colloquium',
-    description:
-      "Dr. Manashi Ray introducing 'Who Becomes Boundless? Migration, Privilege, and Entrepreneurship in a Multipolar World' to faculty and scholars at MSU.",
+    id: 'msu-talk-portrait',
+    filename: 'Book Talk - MSU 4.png',
+    title: 'Book Talk at Berkey Hall, Michigan State University, Sept 17th 2026',
   },
   {
     id: 'msu-talk-podium-1',
     filename: 'Website - MSU Book Talk - 1.png',
-    title: 'Addressing Faculty & Students',
-    subtitle: 'MSU Department of Sociology',
-    description:
-      'Delivering the colloquium address, discussing the ethnography of Indian transnational entrepreneurs and global mobility patterns.',
+    title: 'Book Talk at Berkey Hall, Michigan State University, Sept 17th 2026',
   },
   {
     id: 'msu-talk-podium-2',
     filename: 'Book Talk - MSU -2.png',
-    title: 'Transnational Entrepreneurs Lecture',
-    subtitle: 'Theoretical Frameworks & Ethnographic Findings',
-    description:
-      'Examining how class privilege, gender, and racial hierarchies intersect across global business corridors.',
+    title: 'Book Talk at Berkey Hall, Michigan State University, Sept 17th 2026',
   },
   {
     id: 'msu-talk-qa',
     filename: 'Book Talk - 5.png',
-    title: 'Engaged Q&A & Seminar Dialogue',
-    subtitle: 'Interactive Colloquium Exchange',
-    description:
-      'Engaging in thoughtful discussion with graduate students and faculty during the post-lecture Q&A session.',
+    title: 'Book Talk at Berkey Hall, Michigan State University, Sept 17th 2026',
   },
   {
     id: 'msu-talk-room',
     filename: 'Book Talk - MSU - 3.png',
-    title: 'Seminar Gathering at Berkey Hall',
-    subtitle: 'MSU Campus, East Lansing',
-    description:
-      'A full gathering of faculty members, sociology colleagues, and students participating in the seminar presentation.',
+    title: 'Seminar room, 457 Vanderpool Conference room, Berkey Hall, MSU',
   },
   {
     id: 'msu-steve-gold',
     filename: 'Website - Book Talk - MSU 6 - Dr. Steve Gold and myself.png',
-    title: 'With Dr. Steven J. Gold',
-    subtitle: 'Michigan State University',
-    description:
-      'A heartfelt moment with Dr. Steven J. Gold, distinguished sociologist of migration and longtime mentor.',
+    title: 'With Dr. Steve Gold at Hanna Plaza, Sept 15th 2026',
   },
   {
     id: 'msu-farewell-dinner',
     filename: "Dr. Gold's Farewell Dinner - Dr. Gold with his students.png",
-    title: "Dr. Gold's Farewell Gathering",
-    subtitle: 'Academic Community & Mentorship',
-    description:
-      'Gathering with Dr. Steven Gold, esteemed colleagues, and former students celebrating years of scholarship, mentorship, and kinship.',
+    title: 'Dr. Gold with his former students at his farewell party, Kellogg Center, East Lansing.',
   },
   {
     id: 'msu-xuefei-ren',
-    filename: 'Xuefei and myself on Grand River, East Lansing, MSU.png',
-    title: 'With Prof. Xuefei Ren',
-    subtitle: 'Grand River Avenue, East Lansing',
-    description:
-      'Reconnecting with friend and comparative urban sociologist Prof. Xuefei Ren along Grand River Avenue on the MSU campus.',
-  },
-  {
-    id: 'msu-talk-portrait',
-    filename: 'Book Talk - MSU 4.png',
-    title: 'Presentation Session at MSU',
-    subtitle: 'Scholarly Exchange & Discussion',
-    description:
-      'Dr. Manashi Ray during the interactive seminar dialogue at Michigan State University.',
+    filename: 'msu-xuefei-grand-river.jpg',
+    title: 'With Prof Xuefei on Grand River Avenue, East Lansing',
+    objectPosition: 'center 45%',
   },
 ];
 
@@ -351,6 +321,7 @@ export default function BookTalks() {
                       fill
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className={styles.galleryThumb}
+                      style={{ objectPosition: photo.objectPosition || 'center' }}
                     />
                     <div className={styles.galleryOverlay}>
                       <span className={styles.viewBadge}>
@@ -374,7 +345,6 @@ export default function BookTalks() {
                     </div>
                   </div>
                   <div className={styles.cardInfo}>
-                    <span className={styles.cardSubtitle}>{photo.subtitle}</span>
                     <h4 className={styles.cardTitle}>{photo.title}</h4>
                   </div>
                 </div>
@@ -538,16 +508,11 @@ export default function BookTalks() {
             <div className={styles.lightboxMeta}>
               <div>
                 <div className={styles.metaTopRow}>
-                  <span className={styles.metaCategoryBadge}>{activePhoto.subtitle}</span>
                   <span className={styles.metaCounter}>
-                    {lightboxIndex + 1} of {albumPhotos.length}
+                    Photograph {lightboxIndex + 1} of {albumPhotos.length}
                   </span>
                 </div>
-                <p className={styles.metaEvent}>
-                  {activeAlbum.institution} · {activeAlbum.date}
-                </p>
                 <h3 className={styles.metaTitle}>{activePhoto.title}</h3>
-                <p className={styles.metaCaption}>{activePhoto.description}</p>
               </div>
 
               <div className={styles.thumbnailStrip} aria-label="Photo thumbnails">

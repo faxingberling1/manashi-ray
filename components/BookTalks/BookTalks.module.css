@@ -825,12 +825,12 @@
 .lightboxModal {
   background: #ffffff;
   border-radius: 20px;
-  max-width: 1080px;
+  max-width: 1120px;
   width: 100%;
   max-height: 90vh;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1.35fr 1fr;
+  grid-template-columns: 1.65fr 1fr;
   box-shadow: 0 35px 100px rgba(0, 0, 0, 0.5);
   position: relative;
   animation: modalScaleUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -931,24 +931,20 @@
 }
 
 .metaCounter {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--clr-text-soft);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-gold);
 }
 
 .metaTitle {
   font-family: var(--font-heading, var(--ff-display));
-  font-size: 1.75rem;
+  font-size: 1.45rem;
+  font-weight: 500;
   color: var(--clr-navy);
-  margin: 0 0 1rem;
-  line-height: 1.28;
-}
-
-.metaCaption {
-  font-size: 1.02rem;
-  line-height: 1.75;
-  color: var(--clr-text-mid);
-  margin: 0 0 2rem;
+  margin: 0.5rem 0 0;
+  line-height: 1.35;
 }
 
 .thumbnailStrip {

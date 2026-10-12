@@ -36,7 +36,7 @@ export default function Hero() {
 
         {/* Text Center */}
         <div className={`${styles.textCol} animateInit delay100`}>
-          <p className={styles.eyebrow}>Professor &middot; Author &middot; Scholar</p>
+          <p className={styles.eyebrow}>Professor &middot; Author &middot; Budding Potter</p>
           <h1 className={styles.name}>
             Manashi
             <br />

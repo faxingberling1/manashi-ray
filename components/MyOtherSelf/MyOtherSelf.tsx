@@ -206,13 +206,13 @@ export default function MyOtherSelf() {
             >
               <div className={styles.clayPreview} aria-hidden="true">
                 <div className={`${styles.clayThumb} ${styles.clayThumbBack}`}>
-                  <Image src={encodeURI('/Pottery Pics/Pottery - 2 (2).jpeg')} alt="" fill sizes="180px" className={styles.clayThumbImg} />
-                </div>
-                <div className={`${styles.clayThumb} ${styles.clayThumbMid}`}>
                   <Image src={encodeURI('/Pottery Pics/Pottery - 2 (3).jpeg')} alt="" fill sizes="180px" className={styles.clayThumbImg} />
                 </div>
+                <div className={`${styles.clayThumb} ${styles.clayThumbMid}`}>
+                  <Image src={encodeURI('/Pottery Pics/teal-bowl-tortellini-soup.png')} alt="" fill sizes="180px" className={styles.clayThumbImg} />
+                </div>
                 <div className={`${styles.clayThumb} ${styles.clayThumbFront}`}>
-                  <Image src={encodeURI('/Pottery Pics/Pottery - 2.jpeg')} alt="" fill sizes="200px" className={styles.clayThumbImg} />
+                  <Image src={encodeURI('/Pottery Pics/image.png')} alt="" fill sizes="200px" className={styles.clayThumbImg} />
                 </div>
               </div>
 
@@ -220,7 +220,7 @@ export default function MyOtherSelf() {
                 <span className={styles.clayEyebrow}>Gallery · Pottery</span>
                 <h4 className={styles.clayTitle}>Recent Creations in Clay</h4>
                 <p className={styles.clayText}>
-                  Explore a gallery of my creative pursuits, including pottery and future passions.
+                  Explore a gallery of my creative pursuits, including pottery and future endeavors.
                 </p>
                 <span className={styles.clayButton}>
                   Explore the Gallery

@@ -13,16 +13,10 @@ const awards = [
     icon: '🌍',
     items: [
       {
-        year: '1992 – 1993',
-        title: 'United Nations Population Fund (UNFPA) Fellowship',
-        detail: 'Global Training Program in Population and Sustainable Development',
-        org: 'International Institute of Social Studies, The Hague, The Netherlands',
-      },
-      {
-        year: '1992 – 1993',
-        title: 'Rafael Salas Memorial Scholarship',
-        detail: 'In recognition of outstanding academic performance',
-        org: 'United Nations Population Fund (UNFPA)',
+        year: '2019',
+        title: 'Fellowship',
+        detail: 'Jawaharlal Nehru Institute of Advanced Study',
+        org: 'Jawaharlal Nehru University, New Delhi',
       },
       {
         year: '1994 – 1995',
@@ -31,10 +25,16 @@ const awards = [
         org: 'Institute of Rural Management, Anand, Gujarat, India',
       },
       {
-        year: '2019',
-        title: 'Fellowship',
-        detail: 'Jawaharlal Nehru Institute of Advanced Study',
-        org: 'Jawaharlal Nehru University, New Delhi',
+        year: '1992 – 1993',
+        title: 'Rafael Salas Memorial Scholarship',
+        detail: 'In recognition of outstanding academic performance',
+        org: 'United Nations Population Fund (UNFPA)',
+      },
+      {
+        year: '1992 – 1993',
+        title: 'United Nations Population Fund (UNFPA) Fellowship',
+        detail: 'Global Training Program in Population and Sustainable Development',
+        org: 'International Institute of Social Studies, The Hague, The Netherlands',
       },
     ],
   },
@@ -252,7 +252,7 @@ export default function About() {
           {activeTab === 'career' && (
             <div className={styles.careerSection}>
               <div className={styles.careerIntro}>
-                <p>A distinguished academic career spanning more than fifteen years across leading American universities, dedicated to advancing sociological research, teaching excellence, and global perspectives on migration, inequality, and transnationalism.</p>
+                <p>For more than fifteen years, I have been engaged in teaching and research, exploring questions of migration, inequality, transnationalism, with a broader interest in understanding social change in a global world.</p>
               </div>
 
               <div className={styles.timeline}>
@@ -304,7 +304,7 @@ export default function About() {
               <hr className={styles.sectionDivider} />
 
               <div className={styles.careerIntro} style={{ marginTop: '3rem' }}>
-                <p>A strong foundation in research and social development built through leadership roles with renowned institutions across India, advancing policy, governance, gender equity, poverty alleviation, and sustainable development initiatives.</p>
+                <p>Before coming to the United States as a graduate student in 2000, I held academic, research, and senior leadership positions at various Indian institutions, contributing to initiatives in governance, gender equity, and sustainable development.</p>
               </div>
               <div className={styles.timeline}>
                 {[
@@ -392,7 +392,7 @@ export default function About() {
           {activeTab === 'teaching' && (
             <div className={styles.teachingSection}>
               <div className={styles.teachingIntro}>
-                <p>Over 15 years of dedicated classroom experience spanning three distinguished institutions, shaping students across graduate and undergraduate levels.</p>
+                <p>Over the years, I have taught the following undergraduate and graduate courses.</p>
               </div>
 
               <div className={styles.courseGrid}>
@@ -413,6 +413,7 @@ export default function About() {
                   </div>
                   <div className={styles.courseTags}>
                     {[
+                      'Environment and Society',
                       'Social Inequality',
                       'Sociology of Family',
                       'Sociology of Gender',

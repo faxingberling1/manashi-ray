@@ -27,6 +27,7 @@ const positions = [
 const courses = {
   graduate: ['Sociology of Organization'],
   undergraduate: [
+    'Environment and Society',
     'Social Inequality',
     'Sociology of Family',
     'Sociology of Gender',
@@ -45,8 +46,7 @@ export default function Teaching() {
           <h2 className="sectionTitle">Teaching</h2>
           <div className="sectionRule"></div>
           <p className={styles.intro}>
-            Over 15 years of dedicated classroom experience spanning three distinguished institutions,
-            shaping students across graduate and undergraduate levels.
+            Over the years, I have taught the following undergraduate and graduate courses.
           </p>
         </div>
 

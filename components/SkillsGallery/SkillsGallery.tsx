@@ -9,60 +9,61 @@ interface PotteryPiece {
   id: number;
   src: string;
   title: string;
-  category: string;
-  description: string;
+  width: number;
+  height: number;
 }
 
 const POTTERY_GALLERY: PotteryPiece[] = [
   {
     id: 1,
     src: '/Pottery%20Pics/image.png',
-    title: 'Crystalline Glazed Vessel',
-    category: 'Glazed Ceramic',
-    description: 'A vibrant turquoise and earthy terracotta bowl featuring layered dripped glazes and fine crystalline craquelure.',
+    title: 'Crystalline Glazed Pot',
+    width: 1448,
+    height: 1086,
   },
   {
     id: 2,
     src: '/Pottery%20Pics/image%20(1).png',
-    title: 'Indigo Horizon Mug',
-    category: 'Functional Art',
-    description: 'Handcrafted stoneware mug catching the morning light, glazed in deep twilight blues, sea-spray white, and warm earthen tones.',
+    title: 'Deep indigo and Royal blue tea/coffee mug',
+    width: 1448,
+    height: 1086,
   },
   {
     id: 3,
     src: '/Pottery%20Pics/image%20(2).png',
-    title: 'Speckled Honey Basin',
-    category: 'Glazed Ceramic',
-    description: 'Flared wheel-thrown basin with rich golden ochre and amber iron-speckled glaze with rhythmic thrown ribs.',
+    title: 'Speckled warm amber and golden yellow shallow bowl',
+    width: 1690,
+    height: 931,
   },
   {
     id: 4,
-    src: '/Pottery%20Pics/Pottery%20-%202%20(3).jpeg',
-    title: 'Lidded Studio Jar',
-    category: 'Wheel-Thrown Clay',
-    description: 'Sculptural clay lidded vessel showcasing raw texture, throwing lines, and balanced studio proportions.',
+    src: '/Pottery%20Pics/teal-bowl-tortellini-soup.png',
+    title: 'Teal bowl of tortellini vegetable soup',
+    width: 1086,
+    height: 1448,
   },
   {
     id: 5,
-    src: '/Pottery%20Pics/Pottery%20-%202%20(1).jpeg',
-    title: 'Textured Cylinder Form',
-    category: 'Wheel-Thrown Clay',
-    description: 'Earthen cylinder vessel with expressive fingertip ridges and a defined foot rim, exploring tactile surface geometry.',
+    src: '/Pottery%20Pics/Pottery%20-%202%20(3).jpeg',
+    title: 'In the making',
+    width: 4032,
+    height: 2898,
   },
   {
     id: 6,
-    src: '/Pottery%20Pics/Pottery%20-%202.jpeg',
-    title: 'Turned Finial Lid',
-    category: 'Clay Study',
-    description: 'Close-up study of a wheel-turned conical finial lid, displaying concentric contouring and clean sculptural profile.',
-  },
-  {
-    id: 7,
     src: '/Pottery%20Pics/Pottery%20-%202%20(2).jpeg',
-    title: 'Spiral Clay Platter',
-    category: 'Wheel-Thrown Clay',
-    description: 'Shallow clay dish marked with the hypnotic spiral of the potter’s wheel and an organic, gently undulating rim.',
+    title: 'In the making',
+    width: 3024,
+    height: 4032,
   },
+];
+
+// Balanced 2-column masonry distribution:
+// Col 1: Classic Pot (4:3) -> Teal Soup Bowl (Portrait 3:4) -> Unglazed Jar (4:3)
+// Col 2: Indigo Mug (4:3) -> Amber Shallow Bowl (Wide 16:9) -> Unglazed Plate (Portrait 3:4)
+const MASONRY_COLUMNS: PotteryPiece[][] = [
+  [POTTERY_GALLERY[0], POTTERY_GALLERY[3], POTTERY_GALLERY[4]],
+  [POTTERY_GALLERY[1], POTTERY_GALLERY[2], POTTERY_GALLERY[5]],
 ];
 
 export default function SkillsGallery() {
@@ -135,74 +136,83 @@ export default function SkillsGallery() {
           </div>
           
           <div className="sectionHeader animateInit">
-            <span className="sectionLabel">Creative Pursuits</span>
+            <span className="sectionLabel">Creative Endeavors</span>
             <h2 className="sectionTitle">Recent Creations in Clay</h2>
             <div className="sectionRule" style={{ marginInline: 'auto' }}></div>
           </div>
 
-          {/* Narrative Overview */}
-          <div className={`${styles.editorialIntro} animateInit delay100`}>
-            <span className={styles.introBadge}>✦ The Art of Pottery</span>
-            <div className={styles.introText}>
-              <p>
-                There is something profoundly transformative about taking a raw piece of clay and shaping it with intention.
-              </p>
-              <p>
-                Working at the wheel requires a centering of the mind and body. It has become a space where I find stillness outside of academia, allowing me to express creativity through my hands. Every piece I throw is a reminder that beauty often emerges from the messy, imperfect process of creation.
-              </p>
-            </div>
-          </div>
-          
-          {/* Pottery Gallery Grid */}
-          <div className={`${styles.gallerySection} animateInit delay200`}>
-            <div className={styles.galleryHeader}>
-              <span className={styles.galleryCount}>7 Handcrafted Works</span>
-              <span className={styles.galleryHint}>Tap or click any image to view in high resolution</span>
+          {/* 2-Column Showcase: Photos on the Left, Narrative Lines on the Right */}
+          <div className={styles.showcaseLayout}>
+            {/* Left Column: Masonry Pottery Gallery */}
+            <div className={`${styles.picturesCol} animateInit delay100`}>
+              <div className={styles.masonryGrid}>
+                {MASONRY_COLUMNS.map((column, colIdx) => (
+                  <div key={colIdx} className={styles.masonryCol}>
+                    {column.map((piece) => {
+                      const originalIdx = POTTERY_GALLERY.findIndex((p) => p.id === piece.id);
+                      return (
+                        <div
+                          key={piece.id}
+                          className={styles.potteryCard}
+                          onClick={() => openLightbox(originalIdx)}
+                          role="button"
+                          tabIndex={0}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault();
+                              openLightbox(originalIdx);
+                            }
+                          }}
+                          aria-label={`View photo of ${piece.title}`}
+                        >
+                          <div
+                            className={styles.cardImageWrap}
+                            style={{ aspectRatio: `${piece.width} / ${piece.height}` }}
+                          >
+                            <Image
+                              src={piece.src}
+                              alt={piece.title}
+                              fill
+                              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 50vw, 30vw"
+                              className={styles.potteryImage}
+                            />
+                            <div className={styles.cardHoverOverlay}>
+                              <span className={styles.viewBadge}>
+                                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="11" cy="11" r="8"></circle>
+                                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                  <line x1="11" y1="8" x2="11" y2="14"></line>
+                                  <line x1="8" y1="11" x2="14" y2="11"></line>
+                                </svg>
+                                View
+                              </span>
+                            </div>
+                          </div>
+                          <div className={styles.cardContent}>
+                            <h4 className={styles.cardTitle}>{piece.title}</h4>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                ))}
+              </div>
             </div>
 
-            <div className={styles.galleryGrid}>
-              {POTTERY_GALLERY.map((piece, idx) => (
-                <div
-                  key={piece.id}
-                  className={`${styles.potteryCard} ${idx === 0 || idx === 2 ? styles.cardHero : ''}`}
-                  onClick={() => openLightbox(idx)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      openLightbox(idx);
-                    }
-                  }}
-                  aria-label={`View photo of ${piece.title}`}
-                >
-                  <div className={styles.cardImageWrap}>
-                    <Image
-                      src={piece.src}
-                      alt={piece.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className={styles.potteryImage}
-                    />
-                    <div className={styles.cardHoverOverlay}>
-                      <span className={styles.viewBadge}>
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="11" cy="11" r="8"></circle>
-                          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                          <line x1="11" y1="8" x2="11" y2="14"></line>
-                          <line x1="8" y1="11" x2="14" y2="11"></line>
-                        </svg>
-                        View Details
-                      </span>
-                    </div>
-                  </div>
-                  <div className={styles.cardContent}>
-                    <span className={styles.cardCategory}>{piece.category}</span>
-                    <h3 className={styles.cardTitle}>{piece.title}</h3>
-                    <p className={styles.cardDesc}>{piece.description}</p>
-                  </div>
+            {/* Right Column: Editorial Reflection */}
+            <div className={`${styles.editorialCol} animateInit delay200`}>
+              <div className={styles.editorialCard}>
+                <span className={styles.introBadge}>✦ Creative Endeavors</span>
+                <h3 className={styles.editorialHeading}>The Wheel &amp; The Clay</h3>
+                <p className={styles.editorialParagraph}>
+                  There is something profoundly transformative about throwing a lump of clay on the wheel and shaping it. Working at the wheel requires a centering of the mind and body. It has become a space where I find stillness outside of academia, allowing me to express creativity through my hands. Every piece I throw is a reminder that beauty often emerges from the messy, imperfect process of creation.
+                </p>
+                <div className={styles.editorialOrnament} aria-hidden="true">
+                  <span className={styles.ornamentLine}></span>
+                  <span className={styles.ornamentIcon}>🏺</span>
+                  <span className={styles.ornamentLine}></span>
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -279,21 +289,17 @@ export default function SkillsGallery() {
 
             {/* Lightbox Info Panel */}
             <div className={styles.lightboxMeta}>
-              <div className={styles.metaTopRow}>
-                <span className={styles.metaCategoryBadge}>
-                  {POTTERY_GALLERY[lightboxIndex].category}
-                </span>
-                <span className={styles.metaCounter}>
-                  {lightboxIndex + 1} / {POTTERY_GALLERY.length}
-                </span>
-              </div>
+              <div>
+                <div className={styles.metaTopRow}>
+                  <span className={styles.metaCounter}>
+                    Piece {lightboxIndex + 1} of {POTTERY_GALLERY.length}
+                  </span>
+                </div>
 
-              <h3 className={styles.metaTitle}>
-                {POTTERY_GALLERY[lightboxIndex].title}
-              </h3>
-              <p className={styles.metaCaption}>
-                {POTTERY_GALLERY[lightboxIndex].description}
-              </p>
+                <h3 className={styles.metaTitle}>
+                  {POTTERY_GALLERY[lightboxIndex].title}
+                </h3>
+              </div>
 
               {/* Thumbnail Strip */}
               <div className={styles.thumbnailStrip} role="tablist">

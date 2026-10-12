@@ -7,16 +7,10 @@ const awards = [
     icon: '🌍',
     items: [
       {
-        year: '1992 – 1993',
-        title: 'United Nations Population Fund (UNFPA) Fellowship',
-        detail: 'Global Training Program in Population and Sustainable Development',
-        org: 'International Institute of Social Studies, The Hague, The Netherlands',
-      },
-      {
-        year: '1992 – 1993',
-        title: 'Rafael Salas Memorial Scholarship',
-        detail: 'In recognition of outstanding academic performance',
-        org: 'United Nations Population Fund (UNFPA)',
+        year: '2019',
+        title: 'Fellowship',
+        detail: 'Jawaharlal Nehru Institute of Advanced Study',
+        org: 'Jawaharlal Nehru University, New Delhi',
       },
       {
         year: '1994 – 1995',
@@ -25,10 +19,16 @@ const awards = [
         org: 'Institute of Rural Management, Anand, Gujarat, India',
       },
       {
-        year: '2019',
-        title: 'Fellowship',
-        detail: 'Jawaharlal Nehru Institute of Advanced Study',
-        org: 'Jawaharlal Nehru University, New Delhi',
+        year: '1992 – 1993',
+        title: 'Rafael Salas Memorial Scholarship',
+        detail: 'In recognition of outstanding academic performance',
+        org: 'United Nations Population Fund (UNFPA)',
+      },
+      {
+        year: '1992 – 1993',
+        title: 'United Nations Population Fund (UNFPA) Fellowship',
+        detail: 'Global Training Program in Population and Sustainable Development',
+        org: 'International Institute of Social Studies, The Hague, The Netherlands',
       },
     ],
   },
