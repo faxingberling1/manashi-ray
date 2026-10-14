@@ -252,7 +252,7 @@ export default function About() {
           {activeTab === 'career' && (
             <div className={styles.careerSection}>
               <div className={styles.careerIntro}>
-                <p>For more than fifteen years, I have been engaged in teaching and research, exploring questions of migration, inequality, transnationalism, with a broader interest in understanding social change in a global world.</p>
+                <p>For more than fifteen years, I have been engaged in teaching and research, studying questions of migration, inequality, transnationalism, with a broader interest in understanding social change in a global world.</p>
               </div>
 
               <div className={styles.timeline}>
@@ -513,7 +513,7 @@ export default function About() {
                   <span className={styles.chartingLead}>In the 2000s</span> as India&apos;s economy liberalized and globalization reshaped patterns of mobility, my academic research—as a doctoral student at Michigan State University—focused on migration, transnationalism, and entrepreneurship as mechanisms of social change. This long-standing interest culminated in <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em>, a longitudinal ethnographic study exploring the opportunities, contradictions, and human dimensions of transnational entrepreneurship.
                 </p>
                 <p style={{ marginTop: '1rem' }}>
-                  Though I think of myself as an interdisciplinary scholar, my work increasingly adopts a transdisciplinary orientation by engaging with practitioners and policy communities to address issues related to climate, (im)mobility, and sustainable architecture.
+                  Though I think of myself as an interdisciplinary scholar, my work increasingly adopts a transdisciplinary orientation by engaging with practitioners and policy communities to address issues related to climate, (im)mobility, and clay entrepreneurs.
                 </p>
               </div>
               <div className={styles.chartingImagesCol}>

@@ -46,7 +46,7 @@ export default function Hero() {
           <div className={styles.bio}>
             <p>Manashi Ray is Professor of Sociology at West Virginia State University. As an ethnographer and sociologist, she studies migration-related developmental concerns, particularly the global reach of migrants’ practices and actions. Her work asks why people migrate, how gender impacts migratory patterns and settlement, and how migrants experience ‘transience’ in transnational space.</p>
             <p style={{ marginTop: '1rem' }}>Her wide-ranging research includes transnational entrepreneurship among Indian migrants, network formation and analysis, women’s entrepreneurship, and refugee movements from East Asia to the US.</p>
-            <p style={{ marginTop: '1rem' }}>Her monograph Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy was published by Stanford University Press in 2026. Her current research explores climate-related mobility and (im)mobility and how green architecture affects mobility decisions.</p>
+            <p style={{ marginTop: '1rem' }}>Her monograph <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em> was published by Stanford University Press in 2026. Her current research compares how ecological knowledge circulates through potters’ networks in India and the United States, studying how potters balance environmental sustainability, craft practices, and the economic imperative of making a living from clay.</p>
           </div>
           <div className={styles.actions}>
             <Link href="/book" className="btn btnPrimary">Book Overview</Link>

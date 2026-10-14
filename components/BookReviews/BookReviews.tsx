@@ -5,7 +5,6 @@ const REVIEWS = [
   {
     id: 'wire',
     journal: 'The Wire',
-    badge: 'Featured Review',
     reviewerName: 'Tapti Roy',
     reviewerTitle: 'Historian and Writer',
     quote:
@@ -17,7 +16,6 @@ const REVIEWS = [
   {
     id: 'south-asian-diaspora',
     journal: 'South Asian Diaspora',
-    badge: 'Academic Journal',
     reviewerName: 'Amba Pande',
     reviewerTitle: 'Jawaharlal Nehru University, New Delhi',
     quote:
@@ -29,13 +27,23 @@ const REVIEWS = [
   {
     id: 'developing-economies',
     journal: 'The Developing Economies',
-    badge: 'Notable Academic Journal',
     reviewerName: 'Daniel Naujoks',
     reviewerTitle: 'Columbia University',
     quote:
       'Becoming Boundless is a great read, well researched, and a welcome contribution to our understanding of transnational entrepreneurship, transnational social spaces, diaspora engagement and return migration.',
     readUrl: 'https://doi.org/10.1111/deve.70050',
     pdfUrl: '/The_Developing_Economies_Review.pdf',
+    readLabel: 'Read Online',
+  },
+  {
+    id: 'social-forces',
+    journal: 'Social Forces',
+    reviewerName: 'Pyong Gap Min',
+    reviewerTitle: 'Queens College, CUNY',
+    quote:
+      "No doubt, Manashi Ray's Becoming Boundless is the first significant book focusing on the important topic [of transnational entrepreneurship].",
+    readUrl: 'https://doi.org/10.1093/sf/soag110',
+    pdfUrl: '/Pyong_Gap_Min_Review.pdf',
     readLabel: 'Read Online',
   },
 ];
@@ -81,7 +89,6 @@ export default function BookReviews() {
                 </a>
               </div>
 
-              <span className={styles.journalBadge}>{review.badge}</span>
               <h3 className={styles.reviewTitle}>{review.journal}</h3>
 
               <div className={styles.reviewerLine}>

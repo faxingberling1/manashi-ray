@@ -3,7 +3,14 @@
 import { useState, useEffect } from 'react';
 import styles from './BookTestimonials.module.css';
 
-const TESTIMONIALS = [
+interface Testimonial {
+  quote: string;
+  author: string;
+  title: string;
+  pdf?: string;
+}
+
+const TESTIMONIALS: Testimonial[] = [
   {
     quote: "Becoming Boundless is a deeply engaging book which fills a gap in migration scholarship on highly educated migrants. Ray offers a fresh perspective on the men and women who build transnational businesses, across the US and India, in their quest to balance economic success with meaningful family lives.",
     author: "Bandana Purkayastha",
@@ -14,17 +21,17 @@ const TESTIMONIALS = [
     author: "Thomas Faist",
     title: "Bielefeld University"
   },
-  {
-    quote: "Many scholars have published journal articles focusing on transnational entrepreneurship. But no scholar has published a significant book focusing on this topic. No doubt, Manashi Ray’s Becoming Boundless is the first significant book focusing on the important topic. The data sources she used are very relevant to the topic, and her analytic arguments given in four chapters are very strong. No doubt, she published an important book.",
-    author: "Pyong Gap Min",
-    title: "Queens College, CUNY · Published in Social Forces (Notable Academic Journal)",
-    pdf: '/Pyong_Gap_Min_Review.pdf'
-  },
-  // Hidden: duplicated in the BookReviews section on the Book page.
+  // Hidden: featured in the BookReviews section on the Book page.
+  // {
+  //   quote: "Many scholars have published journal articles focusing on transnational entrepreneurship. But no scholar has published a significant book focusing on this topic. No doubt, Manashi Ray’s Becoming Boundless is the first significant book focusing on the important topic. The data sources she used are very relevant to the topic, and her analytic arguments given in four chapters are very strong. No doubt, she published an important book.",
+  //   author: "Pyong Gap Min",
+  //   title: "Queens College, CUNY · Published in Social Forces",
+  //   pdf: '/Pyong_Gap_Min_Review.pdf'
+  // },
   // {
   //   quote: "Becoming Boundless is a great read, well researched, and a welcome contribution to our understanding of transnational entrepreneurship, transnational social spaces, diaspora engagement and return migration.",
   //   author: "Daniel Naujoks",
-  //   title: "The Developing Economies (Notable Academic Journal) · Columbia University",
+  //   title: "The Developing Economies · Columbia University",
   //   pdf: '/The_Developing_Economies_Review.pdf'
   // }
 ];
@@ -65,7 +72,7 @@ export default function BookTestimonials() {
                 {t.pdf && (
                   <button 
                     className={styles.pdfBtn} 
-                    onClick={() => setActivePdf(t.pdf)} 
+                    onClick={() => setActivePdf(t.pdf ?? null)} 
                     aria-label="View Full Review PDF"
                     title="Read Full Review"
                   >
