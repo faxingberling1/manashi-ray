@@ -120,6 +120,15 @@ const photoSrc = (folder: string, filename: string) => encodeURI(`/${folder}/${f
 export default function BookTalks() {
   const [activeAlbumIdx, setActiveAlbumIdx] = useState(0);
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  const [isUpcomingCollapsed, setIsUpcomingCollapsed] = useState(false);
+  const [collapsedAlbums, setCollapsedAlbums] = useState<Record<string, boolean>>({});
+
+  const toggleAlbum = (albumId: string) => {
+    setCollapsedAlbums((prev) => ({
+      ...prev,
+      [albumId]: !prev[albumId],
+    }));
+  };
 
   const activeAlbum = GALLERY_ALBUMS[activeAlbumIdx];
   const albumPhotos = activeAlbum.photos;
@@ -176,9 +185,157 @@ export default function BookTalks() {
   return (
     <div className={styles.bookTalksWrapper} id="book-talks">
       {/* ============================================================ */}
-      {/* SECTION 1: UPCOMING EVENTS                                  */}
+      {/* SECTION 1: GALLERY                                          */}
       {/* ============================================================ */}
-      <section className={`${styles.subSection} section`} id="upcoming-events">
+      <section
+        className={`${styles.subSection} ${styles.gallerySectionBg} ${
+          GALLERY_ALBUMS.every((a) => collapsedAlbums[a.id]) ? styles.subSectionGalleryCollapsed : ''
+        } section`}
+        id="book-talk-gallery"
+      >
+        <div className="container">
+          <div className="sectionHeader animateInit">
+            <span className="sectionLabel">Visual Retrospective</span>
+            <h2 className="sectionTitle">Book Talk Gallery</h2>
+            <div className="sectionRule"></div>
+            <p className={styles.sectionLead}>
+              Moments from book presentations, colloquia, and academic exchanges — organised by event
+              and venue.
+            </p>
+          </div>
+
+          {GALLERY_ALBUMS.map((album, albumIdx) => {
+            const isAlbumCollapsed = collapsedAlbums[album.id] ?? false;
+            return (
+              <div key={album.id} id={album.id} className={styles.album}>
+                <header className={styles.albumHeader}>
+                  <div className={styles.albumHeaderMain}>
+                    <span className={styles.albumVenue}>
+                      <span className={styles.albumVenueIcon}>🏛</span>
+                      {album.institution} · {album.department}
+                    </span>
+                    <h3 className={styles.albumTitle}>{album.title}</h3>
+                    <div className={styles.albumMetaRow}>
+                      <span className={styles.albumMetaChip}>📅 {album.date}</span>
+                      <span className={styles.albumMetaChip}>📍 {album.location}</span>
+                    </div>
+                  </div>
+                  <div className={styles.albumHeaderRight}>
+                    <div className={styles.albumCount}>
+                      <strong>{album.photos.length}</strong>
+                      <span>Photographs</span>
+                    </div>
+                    <button
+                      type="button"
+                      className={styles.albumToggleBtn}
+                      onClick={() => toggleAlbum(album.id)}
+                      aria-expanded={!isAlbumCollapsed}
+                      aria-label={
+                        isAlbumCollapsed
+                          ? `Expand ${album.title} photo gallery`
+                          : `Collapse ${album.title} photo gallery`
+                      }
+                    >
+                      <span>{isAlbumCollapsed ? 'Expand Gallery' : 'Collapse Gallery'}</span>
+                      <svg
+                        className={`${styles.toggleChevron} ${!isAlbumCollapsed ? styles.chevronExpanded : ''}`}
+                        width="13"
+                        height="13"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="6 9 12 15 18 9" />
+                      </svg>
+                    </button>
+                  </div>
+                </header>
+
+                <div
+                  className={`${styles.collapsibleWrapper} ${isAlbumCollapsed ? styles.isCollapsed : ''}`}
+                >
+                  <div className={styles.collapsibleInner}>
+                    <div className={styles.galleryMetaBar}>
+                      <span className={styles.galleryCounter}>Event Album</span>
+                      <span className={styles.galleryHint}>
+                        Click any photograph to view in full resolution
+                      </span>
+                    </div>
+
+                    <div className={styles.galleryGrid}>
+                      {album.photos.map((photo, index) => {
+                        const imageSrc = photoSrc(album.folder, photo.filename);
+                        return (
+                          <div
+                            key={photo.id}
+                            className={`${styles.galleryCard} animateInit`}
+                            onClick={() => openLightbox(albumIdx, index)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault();
+                                openLightbox(albumIdx, index);
+                              }
+                            }}
+                            tabIndex={0}
+                            role="button"
+                            aria-label={`View photo: ${photo.title}`}
+                          >
+                            <div className={styles.galleryImageContainer}>
+                              <Image
+                                src={imageSrc}
+                                alt={photo.title}
+                                fill
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className={styles.galleryThumb}
+                                style={{ objectPosition: photo.objectPosition || 'center' }}
+                              />
+                              <div className={styles.galleryOverlay}>
+                                <span className={styles.viewBadge}>
+                                  <svg
+                                    width="16"
+                                    height="16"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    strokeWidth="2.2"
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                  >
+                                    <circle cx="11" cy="11" r="8" />
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                                    <line x1="11" y1="8" x2="11" y2="14" />
+                                    <line x1="8" y1="11" x2="14" y2="11" />
+                                  </svg>
+                                  View Photo
+                                </span>
+                              </div>
+                            </div>
+                            <div className={styles.cardInfo}>
+                              <h4 className={styles.cardTitle}>{photo.title}</h4>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </section>
+
+      {/* ============================================================ */}
+      {/* SECTION 2: UPCOMING EVENTS                                  */}
+      {/* ============================================================ */}
+      <section
+        className={`${styles.subSection} ${isUpcomingCollapsed ? styles.subSectionUpcomingCollapsed : ''} section`}
+        id="upcoming-events"
+      >
         <div className="container">
           <div className="sectionHeader animateInit">
             <span className="sectionLabel">Presentations &amp; Dialogues</span>
@@ -223,8 +380,83 @@ export default function BookTalks() {
                 </article>
               ))}
             </div>
+          ) : isUpcomingCollapsed ? (
+            <div
+              className={styles.planningCardCollapsed}
+              onClick={() => setIsUpcomingCollapsed(false)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault();
+                  setIsUpcomingCollapsed(false);
+                }
+              }}
+              aria-label="Expand upcoming events section"
+            >
+              <div className={styles.planningCollapsedLeft}>
+                <span className={styles.planningCollapsedIcon}>✦</span>
+                <span className={styles.planningCollapsedBadge}>Dates In Planning</span>
+                <span className={styles.planningCollapsedTitle}>
+                  Scheduling Future Book Talks &amp; Lectures
+                </span>
+              </div>
+              <button
+                type="button"
+                className={styles.cardToggleBtnInline}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsUpcomingCollapsed(false);
+                }}
+                aria-expanded="false"
+                aria-label="Expand upcoming events section"
+              >
+                <span>Expand</span>
+                <svg
+                  className={styles.toggleChevron}
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+            </div>
           ) : (
-            <div className={`${styles.planningCard} animateInit delay100`}>
+            <div className={styles.planningCard}>
+              <button
+                type="button"
+                className={styles.cardToggleBtn}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsUpcomingCollapsed(true);
+                }}
+                aria-expanded="true"
+                aria-label="Collapse upcoming events section"
+              >
+                <span>Collapse</span>
+                <svg
+                  className={`${styles.toggleChevron} ${styles.chevronExpanded}`}
+                  width="13"
+                  height="13"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+
               <div className={styles.planningIconWrap}>
                 <span className={styles.planningIcon}>✦</span>
               </div>
@@ -253,106 +485,6 @@ export default function BookTalks() {
               </div>
             </div>
           )}
-        </div>
-      </section>
-
-      {/* ============================================================ */}
-      {/* SECTION 2: GALLERY                                          */}
-      {/* ============================================================ */}
-      <section className={`${styles.subSection} ${styles.gallerySectionBg} section`} id="book-talk-gallery">
-        <div className="container">
-          <div className="sectionHeader animateInit">
-            <span className="sectionLabel">Visual Retrospective</span>
-            <h2 className="sectionTitle">Book Talk Gallery</h2>
-            <div className="sectionRule"></div>
-            <p className={styles.sectionLead}>
-              Moments from book presentations, colloquia, and academic exchanges — organised by event
-              and venue.
-            </p>
-          </div>
-
-          {GALLERY_ALBUMS.map((album, albumIdx) => (
-          <div key={album.id} id={album.id} className={styles.album}>
-          <header className={`${styles.albumHeader} animateInit`}>
-            <div className={styles.albumHeaderMain}>
-              <span className={styles.albumVenue}>
-                <span className={styles.albumVenueIcon}>🏛</span>
-                {album.institution} · {album.department}
-              </span>
-              <h3 className={styles.albumTitle}>{album.title}</h3>
-              <div className={styles.albumMetaRow}>
-                <span className={styles.albumMetaChip}>📅 {album.date}</span>
-                <span className={styles.albumMetaChip}>📍 {album.location}</span>
-              </div>
-            </div>
-            <div className={styles.albumCount}>
-              <strong>{album.photos.length}</strong>
-              <span>Photographs</span>
-            </div>
-          </header>
-
-          <div className={styles.galleryMetaBar}>
-            <span className={styles.galleryCounter}>Event Album</span>
-            <span className={styles.galleryHint}>Click any photograph to view in full resolution</span>
-          </div>
-
-          <div className={styles.galleryGrid}>
-            {album.photos.map((photo, index) => {
-              const imageSrc = photoSrc(album.folder, photo.filename);
-              return (
-                <div
-                  key={photo.id}
-                  className={`${styles.galleryCard} animateInit`}
-                  onClick={() => openLightbox(albumIdx, index)}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') {
-                      e.preventDefault();
-                      openLightbox(albumIdx, index);
-                    }
-                  }}
-                  tabIndex={0}
-                  role="button"
-                  aria-label={`View photo: ${photo.title}`}
-                >
-                  <div className={styles.galleryImageContainer}>
-                    <Image
-                      src={imageSrc}
-                      alt={photo.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      className={styles.galleryThumb}
-                      style={{ objectPosition: photo.objectPosition || 'center' }}
-                    />
-                    <div className={styles.galleryOverlay}>
-                      <span className={styles.viewBadge}>
-                        <svg
-                          width="16"
-                          height="16"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.2"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <circle cx="11" cy="11" r="8" />
-                          <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                          <line x1="11" y1="8" x2="11" y2="14" />
-                          <line x1="8" y1="11" x2="14" y2="11" />
-                        </svg>
-                        View Photo
-                      </span>
-                    </div>
-                  </div>
-                  <div className={styles.cardInfo}>
-                    <h4 className={styles.cardTitle}>{photo.title}</h4>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-          </div>
-          ))}
         </div>
       </section>
 

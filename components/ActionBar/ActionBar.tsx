@@ -21,12 +21,12 @@ export default function ActionBar() {
   return (
     <div className={`${styles.actionBar} ${isVisible ? styles.visible : ''}`}>
       <div className={styles.inner}>
-        <span className={styles.highlight}>Recently Held:</span>
+        <span className={styles.highlight}>Announcement:</span>
         <span className={styles.text}>
-          &ldquo;Who Becomes Boundless?&rdquo; Book Talk at Michigan State University &middot; Sept 17, 2026
+          Future book talks at Presidency University, Kolkata and Flame University, Lavale (close to Pune), India in Jan-Feb, 2027.
         </span>
         <Link href="/book?tab=talks" className={styles.cta}>
-          View Photos &rarr;
+          View Details &rarr;
         </Link>
         <button 
           className={styles.closeBtn} 

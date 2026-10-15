@@ -17,7 +17,7 @@
 }
 
 .visible {
-  max-height: 100px; /* enough to fit the text */
+  max-height: 140px; /* enough to fit wrapped text on all viewports */
   opacity: 1;
 }
 

@@ -358,11 +358,11 @@ export default function About() {
                   },
                   {
                     period: '1982 – 1986',
-                    role: 'Part Time Lecturer',
+                    role: 'Part Time Lecturer in Sociology',
                     dept: '',
                     institution: "Mahatma Gandhi Memorial College, Udupi Law College, Udupi and St. Mary's Syrian College, Brahmavar, Karnataka",
                     current: false,
-                    detail: "Part Time Lecturer at Mahatma Gandhi Memorial College, Udupi Law College, Udupi and St. Mary's Syrian College, Brahmavar, Karnataka.",
+                    detail: "Part Time Lecturer in Sociology at Mahatma Gandhi Memorial College, Udupi Law College, Udupi and St. Mary's Syrian College, Brahmavar, Karnataka.",
                   },
                 ].map((pos, i, arr) => (
                   <div key={i} className={`${styles.timelineItem} ${pos.current ? styles.timelineCurrent : ''}`}>
@@ -376,7 +376,7 @@ export default function About() {
                     </div>
                     <div className={styles.timelineRight}>
                       <h3 className={styles.posRole}>{pos.role}</h3>
-                      <p className={styles.posDept}>{pos.dept}</p>
+                      {pos.dept && <p className={styles.posDept}>{pos.dept}</p>}
                       <p className={styles.posInstitution}>{pos.institution}</p>
                       <p className={styles.posDetail}>{pos.detail}</p>
                     </div>
@@ -513,7 +513,7 @@ export default function About() {
                   <span className={styles.chartingLead}>In the 2000s</span> as India&apos;s economy liberalized and globalization reshaped patterns of mobility, my academic research—as a doctoral student at Michigan State University—focused on migration, transnationalism, and entrepreneurship as mechanisms of social change. This long-standing interest culminated in <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em>, a longitudinal ethnographic study exploring the opportunities, contradictions, and human dimensions of transnational entrepreneurship.
                 </p>
                 <p style={{ marginTop: '1rem' }}>
-                  Though I think of myself as an interdisciplinary scholar, my work increasingly adopts a transdisciplinary orientation by engaging with practitioners and policy communities to address issues related to climate, (im)mobility, and clay entrepreneurs.
+                  Though I think of myself as an interdisciplinary scholar, my work increasingly adopts a transdisciplinary orientation by engaging with practitioners and policy communities to address issues related to climate change, migration issues and clay entrepreneurs.
                 </p>
               </div>
               <div className={styles.chartingImagesCol}>
