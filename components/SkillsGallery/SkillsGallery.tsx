@@ -44,13 +44,27 @@ const POTTERY_GALLERY: PotteryPiece[] = [
   },
   {
     id: 5,
+    src: '/Pottery%20Pics/pottery-lidded-jar.jpg',
+    title: 'Speckled celestial blue and black lidded jar',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 6,
+    src: '/Pottery%20Pics/pottery-spiral-dish.jpg',
+    title: 'Spiral amber and turquoise ceramic dish',
+    width: 768,
+    height: 1024,
+  },
+  {
+    id: 7,
     src: '/Pottery%20Pics/Pottery%20-%202%20(3).jpeg',
     title: 'In the making',
     width: 4032,
     height: 2898,
   },
   {
-    id: 6,
+    id: 8,
     src: '/Pottery%20Pics/Pottery%20-%202%20(2).jpeg',
     title: 'In the making',
     width: 3024,
@@ -59,11 +73,11 @@ const POTTERY_GALLERY: PotteryPiece[] = [
 ];
 
 // Balanced 2-column masonry distribution:
-// Col 1: Classic Pot (4:3) -> Teal Soup Bowl (Portrait 3:4) -> Unglazed Jar (4:3)
-// Col 2: Indigo Mug (4:3) -> Amber Shallow Bowl (Wide 16:9) -> Unglazed Plate (Portrait 3:4)
+// Col 1: Classic Pot (4:3) -> Teal Soup Bowl (Portrait 3:4) -> Speckled Lidded Jar (4:3) -> Unglazed Jar (4:3)
+// Col 2: Indigo Mug (4:3) -> Spiral Ceramic Dish (Portrait 3:4) -> Amber Shallow Bowl (Wide 16:9) -> Unglazed Plate (Portrait 3:4)
 const MASONRY_COLUMNS: PotteryPiece[][] = [
-  [POTTERY_GALLERY[0], POTTERY_GALLERY[3], POTTERY_GALLERY[4]],
-  [POTTERY_GALLERY[1], POTTERY_GALLERY[2], POTTERY_GALLERY[5]],
+  [POTTERY_GALLERY[0], POTTERY_GALLERY[3], POTTERY_GALLERY[4], POTTERY_GALLERY[6]],
+  [POTTERY_GALLERY[1], POTTERY_GALLERY[5], POTTERY_GALLERY[2], POTTERY_GALLERY[7]],
 ];
 
 export default function SkillsGallery() {
