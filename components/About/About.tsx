@@ -606,6 +606,7 @@ export default function About() {
         <div className={styles.lightbox} onClick={() => setLightboxImg(null)}>
           <div className={styles.lightboxClose} onClick={() => setLightboxImg(null)}>&times;</div>
           <div className={styles.lightboxContentWrap} onClick={e => e.stopPropagation()}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={lightboxImg.src} alt={lightboxImg.title} className={styles.lightboxImage} />
             <p className={styles.lightboxCaption}>{lightboxImg.title}</p>
           </div>
