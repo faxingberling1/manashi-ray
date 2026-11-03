@@ -3,8 +3,6 @@
 import Hero from '@/components/Hero/Hero';
 import BookQuotes from '@/components/BookQuotes/BookQuotes';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
-import Link from 'next/link';
-import styles from './page.module.css';
 
 export default function Home() {
   useScrollAnimation();

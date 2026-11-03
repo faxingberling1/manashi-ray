@@ -3,7 +3,6 @@
 import { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Book from '@/components/Book/Book';
-import BookQuotes from '@/components/BookQuotes/BookQuotes';
 import BookTestimonials from '@/components/BookTestimonials/BookTestimonials';
 import BookReviews from '@/components/BookReviews/BookReviews';
 import Podcast from '@/components/Podcast/Podcast';

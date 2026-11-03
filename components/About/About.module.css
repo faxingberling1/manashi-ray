@@ -661,6 +661,20 @@
   background: var(--clr-gold);
 }
 
+.bookTitleLink {
+  color: var(--clr-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: var(--clr-gold);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+.bookTitleLink:hover {
+  color: var(--clr-gold);
+  text-decoration-color: var(--clr-navy);
+}
+
 .chartingText p {
   color: var(--clr-text-mid);
   margin-bottom: 1.25rem;

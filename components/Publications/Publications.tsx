@@ -7,7 +7,6 @@ import { economicsPopulationContent } from './economicsPopulationContent';
 import { experiencesContent } from './experiencesContent';
 import { globalCirculationContent } from './globalCirculationContent';
 import { stateAndCivilSocietyContent } from './stateAndCivilSocietyContent';
-import { rc32NewsletterContent } from './rc32NewsletterContent';
 
 const expertise = [
   'International Migration',
@@ -196,7 +195,19 @@ function TypeBadge({ type }: TypeBadgeProps) {
   return <span className={`${styles.badge} ${colorMap[type] ?? ''}`}>{type}</span>;
 }
 
-type PubItemProps = { item: any; index: number };
+interface PublicationItem {
+  year: string;
+  citation: string;
+  title: string;
+  venue: string;
+  detail: string;
+  type: string;
+  content?: string;
+  pdf?: string;
+  embedPdf?: boolean;
+}
+
+type PubItemProps = { item: PublicationItem; index: number };
 function PubItem({ item, index }: PubItemProps) {
   const [isReading, setIsReading] = useState(false);
   const baseViews = 1240 + (item.title.length * 13) + (index * 87);

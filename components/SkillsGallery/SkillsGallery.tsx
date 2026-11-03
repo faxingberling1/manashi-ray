@@ -58,26 +58,91 @@ const POTTERY_GALLERY: PotteryPiece[] = [
   },
   {
     id: 7,
-    src: '/Pottery%20Pics/Pottery%20-%202%20(3).jpeg',
-    title: 'In the making',
-    width: 4032,
-    height: 2898,
+    src: '/Pottery%20Pics/pottery-sage-green-tumbler.jpg',
+    title: 'Speckled sage green and ivory ceramic tumbler',
+    width: 768,
+    height: 1024,
   },
   {
     id: 8,
-    src: '/Pottery%20Pics/Pottery%20-%202%20(2).jpeg',
-    title: 'In the making',
-    width: 3024,
-    height: 4032,
+    src: '/Pottery%20Pics/pottery-cobalt-drip-lidded-jar.jpg',
+    title: 'Cobalt blue and crystalline dripped glaze lidded jar',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 9,
+    src: '/Pottery%20Pics/pottery-blue-dish-interior-open.jpg',
+    title: 'Ceramic serving dish showing speckled sky blue interior',
+    width: 768,
+    height: 1024,
+  },
+  {
+    id: 10,
+    src: '/Pottery%20Pics/pottery-blue-terracotta-casserole-side.jpg',
+    title: 'Speckled sky blue ceramic dish with terracotta lid',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 11,
+    src: '/Pottery%20Pics/pottery-blue-terracotta-casserole-front.jpg',
+    title: 'Speckled turquoise blue and terracotta lidded casserole',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 12,
+    src: '/Pottery%20Pics/pottery-raw-clay-mug-bisque.jpg',
+    title: 'Handmade clay mug in bisque stage',
+    width: 768,
+    height: 1024,
+  },
+  {
+    id: 13,
+    src: '/Pottery%20Pics/pottery-turquoise-amber-spiral-dish.jpg',
+    title: 'Concentric spiral dish in turquoise and earthy amber',
+    width: 768,
+    height: 1024,
+  },
+  {
+    id: 14,
+    src: '/Pottery%20Pics/pottery-studio-mentor-session.jpg',
+    title: 'Learning and shaping clay at the wheel with my instructor',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 15,
+    src: '/Pottery%20Pics/pottery-studio-wheel-preparation.jpg',
+    title: 'Studio wheels and clay preparation',
+    width: 1024,
+    height: 768,
   },
 ];
 
 // Balanced 2-column masonry distribution:
-// Col 1: Classic Pot (4:3) -> Teal Soup Bowl (Portrait 3:4) -> Speckled Lidded Jar (4:3) -> Unglazed Jar (4:3)
-// Col 2: Indigo Mug (4:3) -> Spiral Ceramic Dish (Portrait 3:4) -> Amber Shallow Bowl (Wide 16:9) -> Unglazed Plate (Portrait 3:4)
+// Alternating heights and harmonious pairing across both columns
 const MASONRY_COLUMNS: PotteryPiece[][] = [
-  [POTTERY_GALLERY[0], POTTERY_GALLERY[3], POTTERY_GALLERY[4], POTTERY_GALLERY[6]],
-  [POTTERY_GALLERY[1], POTTERY_GALLERY[5], POTTERY_GALLERY[2], POTTERY_GALLERY[7]],
+  [
+    POTTERY_GALLERY[0],  // Crystalline Glazed Pot (Landscape)
+    POTTERY_GALLERY[6],  // Sage green tumbler (Portrait)
+    POTTERY_GALLERY[7],  // Cobalt drip lidded jar (Landscape)
+    POTTERY_GALLERY[12], // Concentric spiral dish in turquoise & amber (Portrait)
+    POTTERY_GALLERY[10], // Turquoise blue & terracotta lidded casserole (Landscape)
+    POTTERY_GALLERY[3],  // Teal soup bowl (Portrait)
+    POTTERY_GALLERY[14], // Studio wheels & clay preparation (Landscape)
+  ],
+  [
+    POTTERY_GALLERY[1],  // Indigo mug (Landscape)
+    POTTERY_GALLERY[8],  // Open ceramic dish with blue interior (Portrait)
+    POTTERY_GALLERY[9],  // Sky blue dish with terracotta lid (Landscape)
+    POTTERY_GALLERY[5],  // Spiral amber & turquoise dish (Portrait)
+    POTTERY_GALLERY[4],  // Celestial blue & black lidded jar (Landscape)
+    POTTERY_GALLERY[11], // Handmade mug in bisque stage (Portrait)
+    POTTERY_GALLERY[2],  // Speckled warm amber shallow bowl (Wide)
+    POTTERY_GALLERY[13], // Studio session with instructor (Landscape)
+  ],
 ];
 
 export default function SkillsGallery() {

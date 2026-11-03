@@ -173,6 +173,18 @@
   display: flex;
   justify-content: center;
 }
+.bookLink {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  max-width: 100%;
+  border-radius: 8px;
+}
+.bookLink:focus-visible {
+  outline: 2px solid var(--clr-gold);
+  outline-offset: 6px;
+}
 .bookFrame {
   position: relative;
   width: min(300px, 100%);
@@ -198,7 +210,8 @@
   position: relative;
   z-index: 2;
 }
-.bookFrame:hover .bookCover {
+.bookFrame:hover .bookCover,
+.bookLink:hover .bookCover {
   transform: rotateY(-2deg) rotateX(0.5deg) scale(1.04);
   box-shadow:
     -10px 10px 0 #f2a646,
@@ -231,6 +244,13 @@
   white-space: nowrap;
   box-shadow: var(--shadow-md);
   min-width: 160px;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+.bookLink:hover .bookBadge,
+.bookFrame:hover .bookBadge {
+  transform: translateX(-50%) translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background: var(--clr-gold-light);
 }
 .bookBadgePress {
   font-size: 0.6rem;

@@ -123,7 +123,7 @@ export default function MyOtherSelf() {
 
         <div className={`${styles.intro} animateInit delay100`}>
           <p>
-            Whether one conducts research, works with clay on a potter's wheel, or learns to navigate life with a partial disability, striving toward a goal is always a leap of faith. For me, all three are an ongoing process of learning and discovery—different in scale and experience, but connected by the same encounter with uncertainty. Each day, my living meets this reality: where any tiny progress comes through patience, adaptation, and the willingness to begin again. This is story of my "other self."
+            Whether one conducts research, works with clay on a potter&apos;s wheel, or learns to navigate life with a partial disability, striving toward a goal is always a leap of faith. For me, all three are an ongoing process of learning and discovery—different in scale and experience, but connected by the same encounter with uncertainty. Each day, my living meets this reality: where any tiny progress comes through patience, adaptation, and the willingness to begin again. This is story of my &ldquo;other self.&rdquo;
           </p>
 
           <p>
@@ -190,7 +190,7 @@ export default function MyOtherSelf() {
           </div>
 
           <p>
-            Perhaps this was the reason why I found myself drawn to work with clay this summer. Like extensive field notes and primary data, a lump of clay does not arrive with a predetermined shape, but has potential, both possibilities and limitations. To be a potter, I have to be aware what the material will allow and work with it skillfully without resistance. In a broader sense, making ceramics and pottery appeals to me because it combines creativity, touch, patience, and chemistry – a soft piece of earth is transformed through the right amount of pressure of my fingers, the rhythmic spinning of the wheel, and fire into something durable. Working with clay on a potter's wheel is a meditative experience, like when an argument finds its shape in prose.
+            Perhaps this was the reason why I found myself drawn to work with clay this summer. Like extensive field notes and primary data, a lump of clay does not arrive with a predetermined shape, but has potential, both possibilities and limitations. To be a potter, I have to be aware what the material will allow and work with it skillfully without resistance. In a broader sense, making ceramics and pottery appeals to me because it combines creativity, touch, patience, and chemistry – a soft piece of earth is transformed through the right amount of pressure of my fingers, the rhythmic spinning of the wheel, and fire into something durable. Working with clay on a potter&apos;s wheel is a meditative experience, like when an argument finds its shape in prose.
           </p>
           <p>
             My two universes exist in parallel: both pottery and ethnographic research require time, attentiveness, patience, and a willingness to be changed by the material that I am working with. I find the comparison especially apt, because you begin with an idea or a research question – though the data and evidence frequently take me somewhere I did not anticipate. And yet, when the ceramic emerges slowly from my hands, or a paragraph or page of findings is written, it is deeply satisfying, almost magical, and imperfect, but uniquely mine.
@@ -206,7 +206,7 @@ export default function MyOtherSelf() {
             >
               <div className={styles.clayPreview} aria-hidden="true">
                 <div className={`${styles.clayThumb} ${styles.clayThumbBack}`}>
-                  <Image src={encodeURI('/Pottery Pics/Pottery - 2 (3).jpeg')} alt="" fill sizes="180px" className={styles.clayThumbImg} />
+                  <Image src="/Pottery%20Pics/pottery-cobalt-drip-lidded-jar.jpg" alt="" fill sizes="180px" className={styles.clayThumbImg} />
                 </div>
                 <div className={`${styles.clayThumb} ${styles.clayThumbMid}`}>
                   <Image src={encodeURI('/Pottery Pics/teal-bowl-tortellini-soup.png')} alt="" fill sizes="180px" className={styles.clayThumbImg} />

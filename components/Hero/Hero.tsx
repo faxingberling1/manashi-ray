@@ -16,22 +16,31 @@ export default function Hero() {
       <div className={styles.inner}>
         {/* Book Cover Image , Left */}
         <div className={`${styles.bookCol} animateInit`}>
-          <div className={styles.bookFrame}>
-            <div className={styles.bookGlow} aria-hidden="true" />
-            <Image
-              src="/Book-Cover-Manashi.jpg"
-              alt="Becoming Boundless , Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray"
-              width={300}
-              height={450}
-              className={styles.bookCover}
-              priority
-            />
-            <div className={styles.bookShadow} aria-hidden="true" />
-            <div className={styles.bookBadge}>
-              <span className={styles.bookBadgePress}>Stanford University Press</span>
-              <span className={styles.bookBadgeTitle}>Becoming Boundless</span>
+          <a
+            href="https://www.sup.org/books/sociology/becoming-boundless"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.bookLink}
+            aria-label="Order Becoming Boundless on Stanford University Press (opens in a new tab)"
+            title="Order Becoming Boundless on Stanford University Press"
+          >
+            <div className={styles.bookFrame}>
+              <div className={styles.bookGlow} aria-hidden="true" />
+              <Image
+                src="/Book-Cover-Manashi.jpg"
+                alt="Becoming Boundless , Indian Transnational Entrepreneurs in the Global Economy by Manashi Ray"
+                width={300}
+                height={450}
+                className={styles.bookCover}
+                priority
+              />
+              <div className={styles.bookShadow} aria-hidden="true" />
+              <div className={styles.bookBadge}>
+                <span className={styles.bookBadgePress}>Stanford University Press</span>
+                <span className={styles.bookBadgeTitle}>Becoming Boundless</span>
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         {/* Text Center */}

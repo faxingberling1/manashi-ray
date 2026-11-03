@@ -252,7 +252,7 @@ export default function About() {
           {activeTab === 'career' && (
             <div className={styles.careerSection}>
               <div className={styles.careerIntro}>
-                <p>For more than fifteen years, I have been engaged in teaching and research, studying questions of migration, inequality, transnationalism, with a broader interest in understanding social change in a global world.</p>
+                <p>For more than fifteen years, I have been engaged in teaching and research, studying questions of migration, inequality, transnationalism, with a broader interest in understanding social transformations in a global world.</p>
               </div>
 
               <div className={styles.timeline}>
@@ -263,7 +263,7 @@ export default function About() {
                     dept: 'Department of Psychology and Sociology',
                     institution: 'West Virginia State University',
                     current: true,
-                    detail: 'Full-time faculty member teaching graduate and undergraduate courses in sociology, migration studies, social inequality, gender, family sociology, and refugee studies while conducting internationally recognized research on migration, transnationalism, and global social mobility.',
+                    detail: 'Full-time faculty member teaching graduate and undergraduate courses in sociology, Environment & Society, migration studies, social inequality, gender, family, and refugee studies while conducting research on migration, transnationalism, and global social mobility.',
                   },
                   {
                     period: '2010 – 2011',
@@ -271,7 +271,7 @@ export default function About() {
                     dept: 'Department of Sociology, Anthropology and Social Work',
                     institution: 'Central Michigan University',
                     current: false,
-                    detail: 'Visiting faculty appointment teaching undergraduate sociology courses while completing doctoral research at Michigan State University.',
+                    detail: 'Visiting faculty appointment teaching undergraduate sociology courses.',
                   },
                   {
                     period: '2009 – 2010',
@@ -279,7 +279,7 @@ export default function About() {
                     dept: 'Department of Sociology',
                     institution: 'Saginaw Valley State University',
                     current: false,
-                    detail: 'Taught introductory and advanced sociology courses for undergraduate students, laying the foundation for a distinguished academic career in higher education.',
+                    detail: 'Taught introductory and advanced sociology courses for undergraduate students, while completing her PhD dissertation.',
                   },
                 ].map((pos, i, arr) => (
                   <div key={i} className={`${styles.timelineItem} ${pos.current ? styles.timelineCurrent : ''}`}>
@@ -510,7 +510,7 @@ export default function About() {
             <div className={styles.chartingGrid}>
               <div className={styles.chartingText}>
                 <p>
-                  <span className={styles.chartingLead}>In the 2000s</span> as India&apos;s economy liberalized and globalization reshaped patterns of mobility, my academic research—as a doctoral student at Michigan State University—focused on migration, transnationalism, and entrepreneurship as mechanisms of social change. This long-standing interest culminated in <em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em>, a longitudinal ethnographic study exploring the opportunities, contradictions, and human dimensions of transnational entrepreneurship.
+                  <span className={styles.chartingLead}>In the 2000s</span> as India&apos;s economy liberalized and globalization reshaped patterns of mobility, my academic research—as a doctoral student at Michigan State University—focused on migration, transnationalism, and entrepreneurship as mechanisms of social change. This long-standing interest culminated in <Link href="/book" className={styles.bookTitleLink}><em>Becoming Boundless: Indian Transnational Entrepreneurs in the Global Economy</em></Link>, a longitudinal ethnographic study exploring the opportunities, contradictions, and human dimensions of transnational entrepreneurship.
                 </p>
                 <p style={{ marginTop: '1rem' }}>
                   Though I think of myself as an interdisciplinary scholar, my work increasingly adopts a transdisciplinary orientation by engaging with practitioners and policy communities to address issues related to climate change, migration issues and clay entrepreneurs.
