@@ -32,6 +32,146 @@
   color: var(--clr-gold);
 }
 
+/* ===== Kabir Couplet Card ===== */
+.kabirCard {
+  background: linear-gradient(135deg, #ffffff 0%, #fbf6ea 100%);
+  border-radius: 22px;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  box-shadow: 0 10px 30px rgba(26, 37, 64, 0.07);
+  padding: 3.5rem 3rem 3rem;
+  margin-block: 3.5rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.kabirArtBackdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.kabirArtImage {
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.16;
+  mix-blend-mode: multiply;
+  filter: saturate(1.15) contrast(1.05);
+}
+
+.kabirArtOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.75) 15%, rgba(251, 246, 234, 0.5) 85%);
+  pointer-events: none;
+}
+
+.kabirContent {
+  position: relative;
+  z-index: 1;
+}
+
+.kabirQuoteDecoration {
+  position: absolute;
+  top: -24px;
+  left: 20px;
+  font-family: var(--ff-display);
+  font-size: 6.5rem;
+  line-height: 1;
+  color: var(--clr-gold);
+  opacity: 0.2;
+  pointer-events: none;
+  user-select: none;
+}
+
+.kabirCouplet {
+  margin: 0 0 1.75rem 0;
+  padding: 0;
+  border: none;
+}
+
+.kabirHindi {
+  font-family: 'Noto Serif Devanagari', 'Mangal', 'Devanagari MT', var(--ff-display), Georgia, serif;
+  font-size: clamp(1.3rem, 2.4vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.75;
+  color: var(--clr-navy);
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
+}
+
+.kabirCoupletCite {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--clr-gold);
+  margin-top: 1rem;
+}
+
+.kabirDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.kabirDividerLine {
+  width: 50px;
+  height: 1px;
+  background: var(--clr-gold);
+  opacity: 0.55;
+}
+
+.kabirDividerDot {
+  color: var(--clr-gold);
+  font-size: 0.85rem;
+}
+
+.kabirReflection {
+  font-family: var(--ff-body);
+  font-size: 1.08rem;
+  line-height: 1.9;
+  color: var(--clr-text-mid);
+  max-width: 68ch;
+  margin-inline: auto;
+  margin-bottom: 1.75rem;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
+}
+
+.kabirAttribution {
+  display: inline-block;
+  font-family: var(--ff-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--clr-gold);
+}
+
+@media (max-width: 640px) {
+  .kabirCard {
+    padding: 2.5rem 1.5rem 2rem;
+    margin-block: 2.5rem 1.5rem;
+    border-radius: 18px;
+  }
+  .kabirReflection {
+    font-size: 0.98rem;
+    line-height: 1.75;
+  }
+  .kabirArtImage {
+    opacity: 0.18;
+  }
+}
+
 .roadmapSection {
   margin-top: 4rem;
   border-top: 1px solid var(--clr-cream);
