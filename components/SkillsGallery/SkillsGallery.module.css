@@ -480,36 +480,114 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  padding: 3.5rem 3rem 3rem;
+  background: linear-gradient(135deg, #ffffff 0%, #fbf6ea 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(26, 37, 64, 0.07);
+  overflow: hidden;
 }
 
-.quoteMark {
+.kabirArtBackdrop {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.kabirArtImage {
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+  filter: saturate(1.15) contrast(1.05);
+}
+
+.kabirArtOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.75) 15%, rgba(251, 246, 234, 0.5) 85%);
+  pointer-events: none;
+}
+
+.quoteContent {
+  position: relative;
+  z-index: 1;
+}
+
+.quoteQuoteDecoration {
+  position: absolute;
+  top: -1.5rem;
+  left: 2rem;
   font-family: var(--ff-display);
+  font-size: 5.5rem;
+  line-height: 1;
   color: var(--clr-gold);
-  font-size: 1.4em;
-  line-height: 0;
-  vertical-align: -0.08em;
-  margin: 0 0.12em;
-  font-style: normal;
-  display: inline-block;
-  opacity: 0.9;
+  opacity: 0.22;
+  pointer-events: none;
+  user-select: none;
 }
 
-.quoteText {
-  font-family: var(--ff-display);
-  font-size: clamp(1.45rem, 2.7vw, 2.05rem);
-  font-style: italic;
-  font-weight: 400;
-  line-height: 1.7;
+.quoteCouplet {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  border: none;
+}
+
+.quoteHindi {
+  font-family: 'Noto Serif Devanagari', 'Mangal', 'Devanagari MT', var(--ff-display), Georgia, serif;
+  font-size: clamp(1.3rem, 2.3vw, 1.75rem);
+  font-weight: 500;
+  line-height: 1.8;
   color: var(--clr-navy);
-  margin-bottom: 2rem;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.02em;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.85);
 }
 
-.quoteAccentLine {
-  width: 56px;
-  height: 2px;
+.quoteCite {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: 0.82rem;
+  font-weight: 700;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--clr-gold);
+  margin-top: 1rem;
+}
+
+.quoteDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.quoteDividerLine {
+  width: 50px;
+  height: 1px;
   background: var(--clr-gold);
+  opacity: 0.55;
+}
+
+.quoteDividerDot {
+  color: var(--clr-gold);
+  font-size: 0.85rem;
+}
+
+.quoteReflection {
+  font-family: var(--ff-body);
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--clr-text-mid);
+  max-width: 68ch;
   margin-inline: auto;
+  margin-bottom: 0;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.75);
 }
 
 /* Responsive Breakpoints */

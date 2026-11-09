@@ -195,41 +195,6 @@ export default function MyOtherSelf() {
           <p>
             My two universes exist in parallel: both pottery and ethnographic research require time, attentiveness, patience, and a willingness to be changed by the material that I am working with. I find the comparison especially apt, because you begin with an idea or a research question – though the data and evidence frequently take me somewhere I did not anticipate. And yet, when the ceramic emerges slowly from my hands, or a paragraph or page of findings is written, it is deeply satisfying, almost magical, and imperfect, but uniquely mine.
           </p>
-
-          {/* Kabir Couplet & Reflection */}
-          <div className={styles.kabirCard}>
-            {/* Subtle art backdrop representing the potter and the clay */}
-            <div className={styles.kabirArtBackdrop} aria-hidden="true">
-              <Image
-                src="/kabir-potter-clay-art.jpg"
-                alt=""
-                fill
-                sizes="(max-width: 900px) 100vw, 850px"
-                className={styles.kabirArtImage}
-              />
-              <div className={styles.kabirArtOverlay} />
-            </div>
-
-            <div className={styles.kabirContent}>
-              <div className={styles.kabirQuoteDecoration} aria-hidden="true">&ldquo;</div>
-              <blockquote className={styles.kabirCouplet}>
-                <p lang="hi" className={styles.kabirHindi}>
-                  &ldquo;माटी कहे कुम्हार से, तू क्या रोंदे मोहे,<br />
-                  एक दिन ऐसा आएगा, मैं रोंदूगी तोहे&rdquo;
-                </p>
-                <cite className={styles.kabirCoupletCite}>— Kabir</cite>
-              </blockquote>
-              <div className={styles.kabirDivider} aria-hidden="true">
-                <span className={styles.kabirDividerLine} />
-                <span className={styles.kabirDividerDot}>✦</span>
-                <span className={styles.kabirDividerLine} />
-              </div>
-              <p className={styles.kabirReflection}>
-                This famous couplet, attributed to the Indian mystic poet Kabir, reminds me of the impermanence of human life. The potter who shapes and tramples the clay today will eventually return to the earth. It is a powerful reflection on mortality and the cyclical relationship between human beings and nature.
-              </p>
-              <span className={styles.kabirAttribution}>— Manashi Ray</span>
-            </div>
-          </div>
         </div>
 
         <div className={`${styles.roadmapSection} animateInit delay200`}>

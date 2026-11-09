@@ -263,7 +263,7 @@ export default function About() {
                     dept: 'Department of Psychology and Sociology',
                     institution: 'West Virginia State University',
                     current: true,
-                    detail: 'Full-time faculty member teaching graduate and undergraduate courses in sociology, Environment & Society, migration studies, social inequality, gender, family, and refugee studies while conducting research on migration, transnationalism, and global social mobility.',
+                    detail: 'Full-time faculty member teaching graduate and undergraduate courses in Sociology: Environment and Society, migration studies, social inequality, gender, family, and refugee studies.',
                   },
                   {
                     period: '2010 – 2011',
@@ -271,7 +271,7 @@ export default function About() {
                     dept: 'Department of Sociology, Anthropology and Social Work',
                     institution: 'Central Michigan University',
                     current: false,
-                    detail: 'Visiting faculty appointment teaching undergraduate sociology courses.',
+                    detail: 'Taught undergraduate Sociology courses.',
                   },
                   {
                     period: '2009 – 2010',

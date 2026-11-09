@@ -30,92 +30,57 @@ const POTTERY_GALLERY: PotteryPiece[] = [
   },
   {
     id: 3,
-    src: '/Pottery%20Pics/image%20(2).png',
-    title: 'Speckled warm amber and golden yellow shallow bowl',
-    width: 1690,
-    height: 931,
-  },
-  {
-    id: 4,
-    src: '/Pottery%20Pics/teal-bowl-tortellini-soup.png',
-    title: 'Teal bowl of tortellini vegetable soup',
-    width: 1086,
-    height: 1448,
-  },
-  {
-    id: 5,
-    src: '/Pottery%20Pics/pottery-lidded-jar.jpg',
-    title: 'Speckled celestial blue and black lidded jar',
-    width: 1024,
-    height: 768,
-  },
-  {
-    id: 6,
-    src: '/Pottery%20Pics/pottery-spiral-dish.jpg',
-    title: 'Spiral amber and turquoise ceramic dish',
-    width: 768,
-    height: 1024,
-  },
-  {
-    id: 7,
     src: '/Pottery%20Pics/pottery-sage-green-tumbler.jpg',
     title: 'Speckled sage green and ivory ceramic tumbler',
     width: 768,
     height: 1024,
   },
   {
-    id: 8,
-    src: '/Pottery%20Pics/pottery-cobalt-drip-lidded-jar.jpg',
-    title: 'Cobalt blue and crystalline dripped glaze lidded jar',
-    width: 1024,
-    height: 768,
-  },
-  {
-    id: 9,
-    src: '/Pottery%20Pics/pottery-blue-dish-interior-open.jpg',
-    title: 'Ceramic serving dish showing speckled sky blue interior',
-    width: 768,
-    height: 1024,
-  },
-  {
-    id: 10,
-    src: '/Pottery%20Pics/pottery-blue-terracotta-casserole-side.jpg',
-    title: 'Speckled sky blue ceramic dish with terracotta lid',
-    width: 1024,
-    height: 768,
-  },
-  {
-    id: 11,
+    id: 4,
     src: '/Pottery%20Pics/pottery-blue-terracotta-casserole-front.jpg',
     title: 'Speckled turquoise blue and terracotta lidded casserole',
     width: 1024,
     height: 768,
   },
   {
-    id: 12,
-    src: '/Pottery%20Pics/pottery-raw-clay-mug-bisque.jpg',
-    title: 'Handmade clay mug in bisque stage',
-    width: 768,
-    height: 1024,
-  },
-  {
-    id: 13,
-    src: '/Pottery%20Pics/pottery-turquoise-amber-spiral-dish.jpg',
-    title: 'Concentric spiral dish in turquoise and earthy amber',
-    width: 768,
-    height: 1024,
-  },
-  {
-    id: 14,
-    src: '/Pottery%20Pics/pottery-studio-mentor-session.jpg',
-    title: 'Learning and shaping clay at the wheel with my instructor',
+    id: 5,
+    src: '/Pottery%20Pics/pottery-cobalt-drip-lidded-jar.jpg',
+    title: 'Black and white glazed jar with lid',
     width: 1024,
     height: 768,
   },
   {
-    id: 15,
+    id: 6,
+    src: '/Pottery%20Pics/pottery-spiral-dish.jpg',
+    title: 'Spiral Turquoise spoon/laddle holder',
+    width: 768,
+    height: 1024,
+  },
+  {
+    id: 7,
+    src: '/Pottery%20Pics/teal-bowl-tortellini-soup.png',
+    title: 'Teal bowl of tortellini vegetable soup',
+    width: 1086,
+    height: 1448,
+  },
+  {
+    id: 8,
+    src: '/Pottery%20Pics/pottery-raw-clay-mug-bisque.jpg',
+    title: 'Unglazed coffee/tea mug',
+    width: 768,
+    height: 1024,
+  },
+  {
+    id: 9,
     src: '/Pottery%20Pics/pottery-studio-wheel-preparation.jpg',
-    title: 'Studio wheels and clay preparation',
+    title: 'The Master Potter - John Lawson and the Studio',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 10,
+    src: '/Pottery%20Pics/pottery-studio-mentor-session.jpg',
+    title: "Learning to 'Trim the pottery before bisque fire'",
     width: 1024,
     height: 768,
   },
@@ -125,23 +90,18 @@ const POTTERY_GALLERY: PotteryPiece[] = [
 // Alternating heights and harmonious pairing across both columns
 const MASONRY_COLUMNS: PotteryPiece[][] = [
   [
-    POTTERY_GALLERY[0],  // Crystalline Glazed Pot (Landscape)
-    POTTERY_GALLERY[6],  // Sage green tumbler (Portrait)
-    POTTERY_GALLERY[7],  // Cobalt drip lidded jar (Landscape)
-    POTTERY_GALLERY[12], // Concentric spiral dish in turquoise & amber (Portrait)
-    POTTERY_GALLERY[10], // Turquoise blue & terracotta lidded casserole (Landscape)
-    POTTERY_GALLERY[3],  // Teal soup bowl (Portrait)
-    POTTERY_GALLERY[14], // Studio wheels & clay preparation (Landscape)
+    POTTERY_GALLERY[0], // Crystalline Glazed Pot (Landscape)
+    POTTERY_GALLERY[2], // Sage green tumbler (Portrait)
+    POTTERY_GALLERY[4], // Black and white glazed jar with lid (Landscape)
+    POTTERY_GALLERY[6], // Teal soup bowl (Portrait)
+    POTTERY_GALLERY[8], // The Master Potter - John Lawson and the Studio (Landscape)
   ],
   [
-    POTTERY_GALLERY[1],  // Indigo mug (Landscape)
-    POTTERY_GALLERY[8],  // Open ceramic dish with blue interior (Portrait)
-    POTTERY_GALLERY[9],  // Sky blue dish with terracotta lid (Landscape)
-    POTTERY_GALLERY[5],  // Spiral amber & turquoise dish (Portrait)
-    POTTERY_GALLERY[4],  // Celestial blue & black lidded jar (Landscape)
-    POTTERY_GALLERY[11], // Handmade mug in bisque stage (Portrait)
-    POTTERY_GALLERY[2],  // Speckled warm amber shallow bowl (Wide)
-    POTTERY_GALLERY[13], // Studio session with instructor (Landscape)
+    POTTERY_GALLERY[1], // Indigo mug (Landscape)
+    POTTERY_GALLERY[3], // Casserole (Landscape) - position 4
+    POTTERY_GALLERY[5], // Spiral Turquoise spoon/laddle holder (Portrait)
+    POTTERY_GALLERY[7], // Unglazed coffee/tea mug (Portrait)
+    POTTERY_GALLERY[9], // Learning to 'Trim the pottery before bisque fire' (Landscape)
   ],
 ];
 
@@ -297,17 +257,41 @@ export default function SkillsGallery() {
         </div>
       </section>
 
-      {/* Quote Section */}
+      {/* Kabir Couplet & Reflection */}
       <section className={styles.quoteSection}>
         <div className={styles.quoteBgDecoration} aria-hidden="true" />
         <div className="container">
           <div className={`${styles.quoteCard} animateInit`}>
-            <blockquote className={styles.quoteText}>
-              <span className={styles.quoteMark} aria-hidden="true">&ldquo;</span>
-              Life is a continuous process of learning. Pottery is a cherished part of my weekly routine, offering a happy space for creativity while inspiring new ideas for research and exploration.
-              <span className={styles.quoteMark} aria-hidden="true">&rdquo;</span>
-            </blockquote>
-            <div className={styles.quoteAccentLine} />
+            {/* Pottery art backdrop representing the potter and the clay */}
+            <div className={styles.kabirArtBackdrop} aria-hidden="true">
+              <Image
+                src="/kabir-potter-clay-art.jpg"
+                alt=""
+                fill
+                sizes="(max-width: 900px) 100vw, 860px"
+                className={styles.kabirArtImage}
+              />
+              <div className={styles.kabirArtOverlay} />
+            </div>
+
+            <div className={styles.quoteContent}>
+              <div className={styles.quoteQuoteDecoration} aria-hidden="true">&ldquo;</div>
+              <blockquote className={styles.quoteCouplet}>
+                <p lang="hi" className={styles.quoteHindi}>
+                  &ldquo;माटी कहे कुम्हार से, तू क्या रोंदे मोहे,<br />
+                  एक दिन ऐसा आएगा, मैं रोंदूगी तोहे&rdquo;
+                </p>
+                <cite className={styles.quoteCite}>— Kabir</cite>
+              </blockquote>
+              <div className={styles.quoteDivider} aria-hidden="true">
+                <span className={styles.quoteDividerLine} />
+                <span className={styles.quoteDividerDot}>✦</span>
+                <span className={styles.quoteDividerLine} />
+              </div>
+              <p className={styles.quoteReflection}>
+                This couplet reminds me of the impermanence of human life. A powerful reflection on the cyclical relationship between human beings and nature.
+              </p>
+            </div>
           </div>
         </div>
       </section>
