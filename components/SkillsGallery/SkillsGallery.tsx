@@ -30,55 +30,62 @@ const POTTERY_GALLERY: PotteryPiece[] = [
   },
   {
     id: 3,
+    src: '/Pottery%20Pics/pottery-earth-and-ocean-tea-mug.jpg',
+    title: 'Earth and Ocean Tea mug',
+    width: 1024,
+    height: 768,
+  },
+  {
+    id: 4,
     src: '/Pottery%20Pics/pottery-sage-green-tumbler.jpg',
     title: 'Speckled sage green and ivory ceramic tumbler',
     width: 768,
     height: 1024,
   },
   {
-    id: 4,
+    id: 5,
     src: '/Pottery%20Pics/pottery-blue-terracotta-casserole-front.jpg',
     title: 'Speckled turquoise blue and terracotta lidded casserole',
     width: 1024,
     height: 768,
   },
   {
-    id: 5,
+    id: 6,
     src: '/Pottery%20Pics/pottery-cobalt-drip-lidded-jar.jpg',
     title: 'Black and white glazed jar with lid',
     width: 1024,
     height: 768,
   },
   {
-    id: 6,
+    id: 7,
     src: '/Pottery%20Pics/pottery-spiral-dish.jpg',
     title: 'Spiral Turquoise spoon/laddle holder',
     width: 768,
     height: 1024,
   },
   {
-    id: 7,
+    id: 8,
     src: '/Pottery%20Pics/teal-bowl-tortellini-soup.png',
     title: 'Teal bowl of tortellini vegetable soup',
     width: 1086,
     height: 1448,
   },
   {
-    id: 8,
+    id: 9,
     src: '/Pottery%20Pics/pottery-raw-clay-mug-bisque.jpg',
     title: 'Unglazed coffee/tea mug',
     width: 768,
     height: 1024,
   },
   {
-    id: 9,
+    id: 10,
     src: '/Pottery%20Pics/pottery-studio-wheel-preparation.jpg',
     title: 'The Master Potter - John Lawson and the Studio',
     width: 1024,
     height: 768,
   },
   {
-    id: 10,
+    id: 11,
     src: '/Pottery%20Pics/pottery-studio-mentor-session.jpg',
     title: "Learning to 'Trim the pottery before bisque fire'",
     width: 1024,
@@ -91,17 +98,18 @@ const POTTERY_GALLERY: PotteryPiece[] = [
 const MASONRY_COLUMNS: PotteryPiece[][] = [
   [
     POTTERY_GALLERY[0], // Crystalline Glazed Pot (Landscape)
-    POTTERY_GALLERY[2], // Sage green tumbler (Portrait)
-    POTTERY_GALLERY[4], // Black and white glazed jar with lid (Landscape)
-    POTTERY_GALLERY[6], // Teal soup bowl (Portrait)
-    POTTERY_GALLERY[8], // The Master Potter - John Lawson and the Studio (Landscape)
+    POTTERY_GALLERY[3], // Sage green tumbler (Portrait)
+    POTTERY_GALLERY[2], // Earth and Ocean Tea mug (Landscape)
+    POTTERY_GALLERY[6], // Spiral Turquoise spoon/laddle holder (Portrait)
+    POTTERY_GALLERY[5], // Black and white glazed jar with lid (Landscape)
+    POTTERY_GALLERY[9], // The Master Potter - John Lawson and the Studio (Landscape)
   ],
   [
     POTTERY_GALLERY[1], // Indigo mug (Landscape)
-    POTTERY_GALLERY[3], // Casserole (Landscape) - position 4
-    POTTERY_GALLERY[5], // Spiral Turquoise spoon/laddle holder (Portrait)
-    POTTERY_GALLERY[7], // Unglazed coffee/tea mug (Portrait)
-    POTTERY_GALLERY[9], // Learning to 'Trim the pottery before bisque fire' (Landscape)
+    POTTERY_GALLERY[4], // Casserole (Landscape)
+    POTTERY_GALLERY[7], // Teal soup bowl (Portrait)
+    POTTERY_GALLERY[8], // Unglazed coffee/tea mug (Portrait)
+    POTTERY_GALLERY[10], // Learning to 'Trim the pottery before bisque fire' (Landscape)
   ],
 ];
 

@@ -396,9 +396,9 @@ export default function BookTalks() {
             >
               <div className={styles.planningCollapsedLeft}>
                 <span className={styles.planningCollapsedIcon}>✦</span>
-                <span className={styles.planningCollapsedBadge}>Dates In Planning</span>
+                <span className={styles.planningCollapsedBadge}>Jan–Feb 2027</span>
                 <span className={styles.planningCollapsedTitle}>
-                  Scheduling Future Book Talks &amp; Lectures
+                  Future Book Talks: Presidency University, Loreto College, St Xavier&apos;s College &amp; Flame University
                 </span>
               </div>
               <button
@@ -460,13 +460,42 @@ export default function BookTalks() {
               <div className={styles.planningIconWrap}>
                 <span className={styles.planningIcon}>✦</span>
               </div>
-              <span className={styles.planningBadge}>Dates In Planning</span>
-              <h3 className={styles.planningTitle}>Scheduling Future Book Talks &amp; Lectures</h3>
+              <span className={styles.planningBadge}>Upcoming Tour · Jan–Feb 2027</span>
+              <h3 className={styles.planningTitle}>Future Book Talks &amp; Lecture Series</h3>
               <p className={styles.planningText}>
-                Upcoming book talks, seminars, and keynote lectures for{' '}
-                <em>Who Becomes Boundless?</em> are currently being scheduled for upcoming academic
-                terms and conferences.
+                Future book talks for <em>Who Becomes Boundless?</em> are scheduled in <strong>January–February 2027</strong> at:
               </p>
+
+              <div className={styles.futureVenuesGrid}>
+                <div className={styles.futureVenueCard}>
+                  <span className={styles.venueCityBadge}>Kolkata, India</span>
+                  <h4 className={styles.futureVenueName}>Presidency University</h4>
+                  <p className={styles.futureVenueType}>Book Talk &amp; Academic Seminar</p>
+                  <span className={styles.futureVenueDate}>📅 Jan–Feb, 2027</span>
+                </div>
+
+                <div className={styles.futureVenueCard}>
+                  <span className={styles.venueCityBadge}>Kolkata, India</span>
+                  <h4 className={styles.futureVenueName}>Loreto College</h4>
+                  <p className={styles.futureVenueType}>Book Talk &amp; Department Colloquium</p>
+                  <span className={styles.futureVenueDate}>📅 Jan–Feb, 2027</span>
+                </div>
+
+                <div className={styles.futureVenueCard}>
+                  <span className={styles.venueCityBadge}>Kolkata, India</span>
+                  <h4 className={styles.futureVenueName}>St Xavier&apos;s College</h4>
+                  <p className={styles.futureVenueType}>Book Talk &amp; Lecture</p>
+                  <span className={styles.futureVenueDate}>📅 Jan–Feb, 2027</span>
+                </div>
+
+                <div className={styles.futureVenueCard}>
+                  <span className={styles.venueCityBadge}>Lavale (close to Pune), India</span>
+                  <h4 className={styles.futureVenueName}>Flame University</h4>
+                  <p className={styles.futureVenueType}>Book Talk &amp; Campus Dialogue</p>
+                  <span className={styles.futureVenueDate}>📅 Jan–Feb, 2027</span>
+                </div>
+              </div>
+
               <p className={styles.planningSubtext}>
                 Would you like to invite Dr. Manashi Ray for a presentation, department colloquium, or
                 keynote dialogue at your institution?

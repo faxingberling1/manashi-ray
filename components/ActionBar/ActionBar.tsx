@@ -23,7 +23,7 @@ export default function ActionBar() {
       <div className={styles.inner}>
         <span className={styles.highlight}>Announcement:</span>
         <span className={styles.text}>
-          Future book talks at Presidency University, Kolkata and Flame University, Lavale (close to Pune), India in Jan-Feb, 2027.
+          Future Book talks at Presidency University, Loreto College and St Xavier&apos;s College, Kolkata and Flame University, Lavale (close to Pune), India in Jan-Feb, 2027.
         </span>
         <Link href="/book?tab=talks" className={styles.cta}>
           View Details &rarr;

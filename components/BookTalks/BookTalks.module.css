@@ -374,6 +374,70 @@
   margin: 0 0 2rem;
 }
 
+.futureVenuesGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin: 1.75rem 0 2rem;
+  text-align: left;
+}
+
+@media (max-width: 640px) {
+  .futureVenuesGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.futureVenueCard {
+  background: linear-gradient(145deg, #fbf8f2 0%, #ffffff 100%);
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 14px;
+  padding: 1.35rem 1.4rem;
+  box-shadow: 0 4px 14px rgba(26, 37, 64, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.futureVenueCard:hover {
+  transform: translateY(-3px);
+  border-color: var(--clr-gold);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.18);
+}
+
+.venueCityBadge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--clr-gold);
+  margin-bottom: 0.4rem;
+}
+
+.futureVenueName {
+  font-family: var(--font-heading, var(--ff-display));
+  font-size: 1.25rem;
+  color: var(--clr-navy);
+  margin: 0 0 0.35rem;
+  line-height: 1.3;
+}
+
+.futureVenueType {
+  font-size: 0.88rem;
+  color: var(--clr-text-soft);
+  margin: 0 0 0.75rem;
+}
+
+.futureVenueDate {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--clr-navy);
+  background: rgba(212, 175, 55, 0.14);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
 .planningActions {
   display: flex;
   align-items: center;
