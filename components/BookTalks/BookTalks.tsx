@@ -398,7 +398,7 @@ export default function BookTalks() {
                 <span className={styles.planningCollapsedIcon}>✦</span>
                 <span className={styles.planningCollapsedBadge}>Jan–Feb 2027</span>
                 <span className={styles.planningCollapsedTitle}>
-                  Future Book Talks: Presidency University, Loreto College, St Xavier&apos;s College &amp; Flame University
+                  Future Book Talks: Flame University (Jan 20), Presidency University, Loreto College &amp; St Xavier&apos;s College
                 </span>
               </div>
               <button
@@ -468,6 +468,13 @@ export default function BookTalks() {
 
               <div className={styles.futureVenuesGrid}>
                 <div className={styles.futureVenueCard}>
+                  <span className={styles.venueCityBadge}>Lavale (close to Pune), India</span>
+                  <h4 className={styles.futureVenueName}>Flame University</h4>
+                  <p className={styles.futureVenueType}>Book Talk &amp; Campus Dialogue</p>
+                  <span className={styles.futureVenueDate}>📅 Jan 20, 2027 · 2:30 PM – 4:00 PM</span>
+                </div>
+
+                <div className={styles.futureVenueCard}>
                   <span className={styles.venueCityBadge}>Kolkata, India</span>
                   <h4 className={styles.futureVenueName}>Presidency University</h4>
                   <p className={styles.futureVenueType}>Book Talk &amp; Academic Seminar</p>
@@ -485,13 +492,6 @@ export default function BookTalks() {
                   <span className={styles.venueCityBadge}>Kolkata, India</span>
                   <h4 className={styles.futureVenueName}>St Xavier&apos;s College</h4>
                   <p className={styles.futureVenueType}>Book Talk &amp; Lecture</p>
-                  <span className={styles.futureVenueDate}>📅 Jan–Feb, 2027</span>
-                </div>
-
-                <div className={styles.futureVenueCard}>
-                  <span className={styles.venueCityBadge}>Lavale (close to Pune), India</span>
-                  <h4 className={styles.futureVenueName}>Flame University</h4>
-                  <p className={styles.futureVenueType}>Book Talk &amp; Campus Dialogue</p>
                   <span className={styles.futureVenueDate}>📅 Jan–Feb, 2027</span>
                 </div>
               </div>

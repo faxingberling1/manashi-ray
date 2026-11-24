@@ -220,7 +220,7 @@ export default function MyOtherSelf() {
                 <span className={styles.clayEyebrow}>Gallery · Pottery</span>
                 <h4 className={styles.clayTitle}>Recent Creations in Clay</h4>
                 <p className={styles.clayText}>
-                  Explore a gallery of my creative pursuits, including pottery and future endeavors.
+                  Explore the gallery for my creative endeavors in pottery, starting July 2026.
                 </p>
                 <span className={styles.clayButton}>
                   Explore the Gallery
